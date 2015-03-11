@@ -1,0 +1,195 @@
+;;;;;;;;;DEPOT NOM : >;Les marionnettes ont une ames;Le diable est mort
+;;;;;;;;;DEPOT SURNOM : >;ames;diable
+;;;;;;;;;DEPOT TYPE : >;Flyer;Brochure
+;;;;;;;;;DEPOT QUANTITEE : >;2660;1840
+;;;;;;;;;DEPOT VOLUME : >;99.0;999.0
+;;;;;;;;;DEPOT CARTONS : >;2;5
+;;;;;;;;;DEPOT REMARQUE : >;ha oui;ha non 
+;;;;;;;;;DEPOT POID CARTONS : >;12;11
+;;;;;;;;;DEPOT NB PAQUET : >;10;32
+;;;;;;;;;DEPOT PRIX : >;0.5;0.9
+;INFO KAF : |;REF : |;NOM  : |;ADRESSE : |;CP : |;VILLE : |;INFORMATION LIEU : |;DESTINATAIRE : |;LIEU PRIX : |;;
+;;;ASSOCIATION 59 RUE DE RIVOLI;59 rue de Rivoli  ;75001;Paris;;;;15;10
+;;;ECOLE DESSIN TECH /ARTISTIQUE SORNAS;108 Rue St Honoré;75001;Paris;;;;15;10
+;;;ECOLE DU LOUVRE;Palais du Louvre Porte Jaujard;75001;Paris;;;;15;10
+;;;ESAD ;Forum des Halles;75001;Paris;;;;15;10
+;;;FORUM DES IMAGES;Porte Saint Eustache Place Carrée Forum des Halles;75001;Paris;;;;15;10
+;;;IESA;5, avenue de l’Opéra;75001;Paris;;;;15;10
+;;;MAISON DU GESTE ET DE L'IMAGE;42 Rue Saint Denis;75001;Paris;;;;15;10
+;;;OFFICE DE TOURISME DE PARIS;25 Rue des Pyramides;75001;Paris;;;;15;10
+;;;ARIAS;Galerie Colbert;75002;Paris;;;;15;10
+;;;LIBRAIRE THEATRALE;3 rue Marivaux;75002;Paris;;;;15;10
+;;;SOCIÉTÉ D’HISTOIRE DU THÉÂTRE;BNF - 58 rue de Richelieu;75002;Paris;;;;10;10
+;;;AGECIF;22 rue de Picardie;75003;Paris;;;;10;10
+;;;CENTRE CULTUREL SUEDOIS;11 rue Payenne;75003;Paris;;;;15;10
+;;;DIR GENERALE DE LA CREATION ARTISTIQUE;62 Rue Beaubourg;75003;Paris;;;;15;10
+;;;ECOLE DUPERRE;11 Rue Dupetit Thouars;75003;Paris;;;;15;10
+;;;LA GAIETE LYRIQUE;3 bis rue Papin;75003;Paris;;;;15;10
+;;;LIBRAIRIE CENTRE WALLONIE-BRUXELLES;46 Rue Quincampoix;75003;Paris;;;;10;10
+;;;LIBRAIRIE SCARAMOUCHE;161 Rue Saint Martin;75003;Paris;;;;10;10
+;;;MAISON DE LA POESIE A PARIS;Passage Molière;75003;Paris;;;;15;10
+;;;MAISON DES INITIATIVES ETUDIANTES;50 rue des tournelles;75003;Paris;;;;15;10
+;;;CITE INTERNATIONALE DES ARTS;18 rue de l'hôtel de ville;75004;Paris;;;;15;10
+;;;CLAIR DE RÊVE;35 Rue Saint-Louis-en-l'Ile;75004;Paris;;;;10;10
+;;;JEUNE THÉÂTRE NATIONAL;13 Rue des Lions Saint Paul;75004;Paris;;;;15;10
+;;;KIOSQUE JEUNES MARAIS;14 rue François Miron;75004;Paris;;;;15;10
+;;;MAISON DE L'EUROPE;35-37 rue des Francs Bourgeois;75004;Paris;;;;15;10
+;;;MICADANSES;16 rue Geoffroy-l'asnier;75004;Paris;;;;15;10
+;;;ENS ULM;45 rue d’Ulm;75005;Paris;;;;15;10
+;;;ENSAD;31 Rue d’Ulm;75005;Paris;;;;15;10
+;;;ATELIER ALBERTS -ITM;9 rue des Arènes;75005;Paris;;;;15;10
+;;;BIBLIOTHEQUE GASTON BATY;13 rue de Santeuil;75005;Paris;;;;15;10
+;;;UNIVERSITE PARIS 1 - PANTHEON;12 Place du Panthéon;75005;Paris;;;;15;10
+;;;UNIVERSITÉ PARIS 3;13 Rue De Santeuil;75005;Paris;;;;15;10
+;;;CENTRE D'ANIMATION ARRAS;Passage d'Arras;75005;Paris;;;;15;10
+;;;LA FOURMI AILEE;8 rue du Fouarre;75005;Paris;;;;10;10
+;;;LIBRAIRIE PALIMPSESTE;16 rue de Santeuil;75005;Paris;;;;15;10
+;;;MUSEE CURIE;11 rue Pierre et Marie Curie;75005;Paris;;;;15;10
+;;;LA COMEDIE SAINT-MICHEL;95 bd Saint-Michel;75005;Paris;;;;15;10
+;;;LA VIEILLE GRILLE;1 rue du Puits-dde-l'Ermite;75005;Paris;;;;15;10
+;;;LA COMEDIE CONTRESCAPE;5 rue Blainville;75005;Paris;;;;15;10
+;;;LE DESPERADO;23 rue des Ecoles;75005;Paris;;;;15;10
+;;;CHAMPO;51 rue des écoles;75005;Paris;;;;15;10
+;;;CINEMA LA CLEF;21 rue de la clef;75005;Paris;;;;10;10
+;;;CINEMA EPEE DE BOIS;100 rue Mouffetard;75005;Paris;;;;10;10
+;;;ESPACE SAINT-MICHEL;7 place Saint-michel;75005;Paris;;;;10;10
+;;;FILMOTHEQUE DU QUARTIER LATIN;9 rue champollion;75005;Paris;;;;10;10
+;;;GRAND ACTION;5 rue des écoles;75005;Paris;;;;15;10
+;;;STUDIO DES CINEASTES LES URSULINES;10 rue des Ursulines;75005;Paris;;;;15;10
+;;;STUDIO GALANDE;42 rue Galande;75005;Paris;;;;10;10
+;;;BIBLIOTHEQUE POUR TOUS DES BERNARDINS;11 bis rue des Bernardins;75005;Paris;;;;15;10
+;;;CONSERVATOIRE MUNICIPAL GABRIEL FAURE;12 rue Pontoise;75005;Paris;;;;15;10
+;;;LA SCOLA CANTORUM;269 rue Saint Jacques;75005;Paris;;;;15;10
+;;;LE CENTRE D'ANIMATION CENSIER;12 rue Censier;75005;Paris;;;;15;10
+;;;CENTRE CULTUREL IRLANDAIS;5 rue des irlandais;75005;Paris;;;;15;10
+;;;PARIS ATELIER;18 rue Poliveau;75005;Paris;;;;15;10
+;;;SOCIETE HISTORIQUE;21 place du Panthéon;75005;Paris;;;;15;10
+;;;MAISON DES JEUNES SAINT-MEDARD;3 rue du Gril;75005;Paris;;;;15;10
+;;;CRDP DE L'ACADEMIE DE PARIS;37 Rue Jacob;75006;Paris;;;;15;10
+;;;CROUS;12 rue de l'Abbaye;75006;Paris;;;;15;10
+;;;EAP ECOLE D'ARTS PLASTIQUES;10 Bis Rue de Seine;75006;Paris;;;;15;10
+;;;LIBRAIRIE LE COUPE PAPIER;19 Rue de l'Odéon;75006;Paris;;;;10;10
+;;;MAISON DES CULTURES DU MONDE;101 boulevard Raspail;75006;Paris;;;;15;10
+;;;MPAA;4 Rue Félibien;75006;Paris;;;;15;10
+;;;SCIENCES PO;56 rue des Saints Pères;75006;Paris;;;;15;10
+;;;CENTRE CULTUREL NÉERLANDAIS;121 Rue de Lille  ;75007;Paris;;;;15;10
+;;;CENTRE D’ANIMATION ESPACE BEAUJON;208 Rue du Fbg St Honoré;75008;Paris;;;;15;10
+;;;THÉÂTRE DU ROND POINT;2 Bis Av Franklin Roosevelt;75008;Paris;;;;15;10
+;;;CONSERVATOIRE NATIONAL SUPERIEUR D'ART;2 Bis Rue du Conservatoire;75009;Paris;;;;15;10
+;;;DRAC ILE DE FRANCE;45 - 47 rue Le Peletier;75009;Paris;;;;15;10
+;;;ONDA;13 Bis Rue Henri Monnier;75009;Paris;;;;15;10
+;;;SACD;9 Rue Ballu;75009;Paris;;;;10;10
+;;;THEMAA;24 Rue Saint Lazare;75009;Paris;;;;15;10
+;;;ARCADI - PÔLE RESSOURCES;51 rue du Fbg St Denis;75010;Paris;;;;15;10
+;;;CENTRE D'ANIMATION ESPACE JEMMAPES;116 Quai de Jemmapes;75010;;;;;15;10
+;;;CENTRE D'ANIMATION LA GRANGE AUX BELLE;55 Rue de la Grange aux Belles;75010;;;;;15;10
+;;;CITE EUROPEENNE DES RECOLLETS;150-154 rue du Faubourg Saint-Martin;75010;;;;;15;10
+;;;ECOLE JACQUES LECOQ;57 Rue du Fbg St Denis;75010;;;;;15;10
+;;;ESPACE CHATEAU LANDON;31 Rue Château Landon;75010;;;;;15;10
+;;;RELAIS CULTURE EUROPE;132 rue du Faubourg St Denis;75010;;;;;15;10
+;;;THÉÂTRE DES BOUFFES DU NORD;31 bis Boulevard de la Chapelle;75010;;;;;15;10
+;;;A LA FOLIE THEATRE;6 Rue de la Folie Mericourt;75011;;;;;15;10
+;;;ACADEMIE GRANDES TERRES;5 Rue de Charonne;75011;;;;;15;10
+;;;AUTREMENT;77 rue du Fbg St-Antoine;75011;;;;;15;10
+;;;CAFÉ DE LA DANSE;5 passage Louis-Philippe;75011;;;;;15;10
+;;;CENTRE D'ANIMATION MERCOEUR;4 Rue Mercoeur;75011;;;;;15;10
+;;;ECOLE BLEUE;146 Rue de Charonne;75011;;;;;15;10
+;;;ECOLE D'ART MARYSE ELOY;1 Rue Bouvier;75011;;;;;15;10
+;;;ENSCI;46-48 Rue Saint-Sabin;75011;;;;;15;10
+;;;GALERIE ANATOME;38 Rue Sedaine;75011;;;;;15;10
+;;;HORS LES MURS;68 Rue de la Folie Méricourt;75011;;;;;15;10
+;;;L'AUTRE CAFE;62 rue Jean Pierre Timbaud;75011;;;;;15;10
+;;;MAISON DES METALLOS;rue Jean Pierre Timbaud;75011;;;;;15;10
+;;;L’IMAGIGRAPHE;84 Rue Oberkampf;75011;;;;;15;10
+;;;LA MANOEUVRE;58 rue de la Roquette;75011;;;;;15;10
+;;;LA MÉNAGERIE DE VERRE;12/14 Rue Lechevin;75011;;;;;15;10
+;;;LE CAFE DES ANGES;66 Rue de la roquette;75011;;;;;15;10
+;;;LE CENTRE DES ARTS VIVANTS;4 Rue Bréguet;75011;;;;;15;10
+;;;LE DIVAN;60 Rue de la roquette;75011;;;;;15;10
+;;;LE LOCAL;18 Rue de l’Orillon;75011;;;;;15;10
+;;;LIBRALIRE;116 Rue Saint Maur;75011;;;;;15;10
+;;;MAISON DES ASSOCIATIONS DU 11ÈME;8 rue général Renault;75011;;;;;15;10
+;;;PARIS ATELIERS - VACQUERIE/ROQUETTE;3-5 rue La Vacquerie;75011;;;;;15;10
+;;;STUDIO HARMONIC;5 Passage des Taillandiers;75011;;;;;15;10
+;;;THEATRE ARTISTIC ATHEVAINS;45 Bis Rue Richard Lenoir;75011;;;;;15;10
+;;;THÉATRE DE BELLEVILLE;Passage Piver - 94 rue du Faubourg du temple;75011;;;;;15;10
+;;;THÉÂTRE DE LA BASTILLE;76 Rue de la Roquette;75011;;;;;15;10
+;;;THEATRE DE LA DANSE;77 Rue de Charonne;75011;;;;;15;10
+;;;ECOLE BOULLE;9 Rue Pierre Bourdan;75012;;;;;15;10
+;;;LE 100 - ATELIER EN COMMUN;100 rue de Charenton;75012;;;;;15;10
+;;;THÉÂTRE DE L’AQUARIUM;La Cartoucherie;75012;;;;;10;10
+;;;THÉÂTRE DE LA TEMPÊTE;Cartoucherie;75012;;;;;10;10
+;;;THÉÂTRE DU CHAUDRON;Cartoucherie;75012;;;;;10;10
+;;;THÉÂTRE DU SOLEIL;Cartoucherie;75012;;;;;15;10
+;;;COURANT D’ART FRAIS;19 Rue de la Fontaine à Mulard;75013;;;;;15;10
+;;;ECOLE SUPÉRIEURE ESTIENNE;18 Boulevard Blanqui;75013;;;;;15;10
+;;;LES GOBELINS;73 Bd St Marcel;75013;;;;;15;10
+;;;THÉÂTRE DUNOIS;108 Rue du Chevaleret;75013;;;;;15;10
+;;;CENTRE D'ANIMATION CHARLES RICHET;14/16 rue de la Maison Blanche ;75013;;;;;15;10
+;;;CENTRE D'ANIMATION BAUDRICOURT;6 rue Simone Veil;75013;;;;;15;10
+;;;CENTRE D'ANIMATION DUNOIS;61 rue Dunois;75013;;;;;15;10
+;;;CENTRE D'ANIMATION RENE GOSCINNY;14 rue René Gosciny;75013;;;;;15;10
+;;;CENTRE D'ANIMATION POTERNE PEUPLIERS;1 rue Gouthiere;75013;;;;;15;10
+;;;CENTRE D'ANIMATION DAVIEL;24 rue Daviel;75013;;;;;15;10
+;;;ENS ARCHITECHTURE PARIS VAL DE SEINE;3-15 quai Panhard Levassor;75013;;;;;15;10
+;;;BETONSALON;9 esplanade Pierre Vidal-Naquet;75013;;;;;15;10
+;;;DES MOTS ET MERVEILLES;63 boulevard St Marcel;75013;;;;;15;10
+;;;LIBRAIRIE JONAS;14/16 rue de la Maison Blanche;75013;;;;;15;10
+;;;LIBRAIRIE L'ŒIL AU VERT;59 rue de l'Amiral Mouvhez;75013;;;;;15;10
+;;;THEATRE 13;30 rue du Chevaleret;75013;;;;;15;10
+;;;UNIVERSITÉ PARIS I/ service Vie Etudiante;90 rue de Tolbiac/ Bureau C.9.02;75013;;;;;15;10
+;;;CONSERVATOIRE MAURICE RAVEL;21 rue Albert Bayet;75013;;;;;15;10
+;;;ECOLE CAMONDO;266 Bd Raspail;75014;;;;;15;10
+;;;THEATRE 14 JEAN MARIE SERREAU;20 Av Marc Sangnier;75014;;;;;15;10
+;;;FIAP (hébergement pour jeunes);30 rue cabanis;75014;;;;;15;10
+;;;ESA, service des communications;254 bd Raspail;75014;;;;;15;10
+;;;FONDATION CARTIER;261 BD Raspail;75014;;;;;15;10
+;;;CONSERVATOIRE DARIUS MILHAUD;26 RUE MOUTON DUVERNET;75014;;;;;15;10
+;;;Maison des associations;22 bis rue Deparcieux;75014;;;;;15;10
+;;;L'ENTREPOT;7/9 rue Francis de Pressensé;75014;;;;;15;10
+;;;Antenne Jeunes;40 rue Didot;75014;;;;;15;10
+;;;Maison des Pratiques amateurs;100 rue Didot;75014;;;;;15;10
+;;;CENTRE DE DANSE ALESIA;119 avenue du Général Leclerc;75014;;;;;15;10
+;;;CENTRE D'ANIMATION MARC SANGNIER;20 avenue Marc sangnier;75014;;;;;15;10
+;;;LE MOULIN À CAFÉ;9 place de la Garenne;75014;;;;;15;10
+;;;MAIRIE DU 14e ARRONDISSEMENT;Place Ferdinand Brunot;75014;;;;;15;10
+;;;THEATRE GUICHET MONTPARNASSE;15 rue du Maine;75014;;;;;15;10
+;;;ECOLE DE CONDÉ;58/60 Bd Garibaldi;75015;;;;;15;10
+;;;ENSAAMA OLIVIER DE SERRES;63/65 Rue Olivier de Serres;75015;;;;;15;10
+;;;KIOSQUE JEUNES CDM;101 quai Branly;75015;;;;;15;10
+;;;LE MONFORT;Parc Georges Brassens;75015;;;;;15;10
+;;;UNIVERSITE PARIS 1 - SAINT CHARLES;47-53 rue des bergers;75015;;;;;15;10
+;;;PALAIS DE TOKYO;13 avenue du Président Wilson;75016;;;;;15;10
+;;;CENTRE NATIONAL DU THÉÂTRE;134 rue Legendre;75017;;;;;15;10
+;;;ESAT;10 Bd Des Batignolles  ;75017;;;;;15;10
+;;;L'ETOILE DU NORD;16, rue Georgette Agutte;75018;;;;;15;10
+;;;CENTRE D’ANIMATION RENÉ BINET;66 rue René Binet;75018;;;;;15;10
+;;;CONSERVATOIRE 18EME G. CHARPENTIER;29 rue beaudelique;75018;;;;;15;10
+;;;HALLE SAINT PIERRE;2,rue Ronsard;75018;;;;;15;10
+;;;KIOSQUE JEUNES GOUTTE D'OR;Hall du centre musical Fleury Goutte d'Or;75018;;;;;15;10
+;;;LE GRAND PARQUET;Jardins d'éole;75018;;;;;15;10
+;;;AFEDAP;15 Rue Henri Murgier;75019;;;;;15;10
+;;;ART SCHOOL;7 Rue D’hautpoul;75019;;;;;15;10
+;;;CENTRE D'ANIMATION PLACE DES FÊTES;2-4 rue des Lilas;75019;;;;;15;10
+;;;CENTRE D’ANIMATION MATHIS;15 Rue Mathis;75019;;;;;15;10
+;;;COURS FLORENT;37/39 avenue Jean-Jaurès;75019;;;;;15;10
+;;;ESPACE PÉRIPHÉRIQUE;211 avenue Jean Jaurès;75019;;;;;15;10
+;;;L’ATELIER DU PLATEAU;5 rue du Plateau;75019;;;;;15;10
+;;;LE MERLE MOQUEUR - LIBRAIRIE DU 104;104 rue d'Aubervilliers;75019;;;;;10;10
+;;;LE PARC DE LA VILLETTE;211 avenue Jean Jaurès;75019;;;;;15;10
+;;;LE PLATEAU;Place Hannah Arendt;75019;;;;;15;10
+;;;LIBRAIRIE DU PARC;221 av Jean Jaurès;75019;;;;;15;10
+;;;ROSA BONHEUR;Parc des Buttes Chaumont;75019;;;;;15;10
+;;;WIP VILLETTE;211 avenue Jean Jaurès;75019;;;;;10;10
+;;;AFDAS;66/72 rue Stendhal;75020;;;;;10;10
+;;;ATELIER AZOLINE;106 rue Pelleport;75020;;;;;10;10
+;;;CONFLUENCES;190 Bd de Charonne;75020;;;;;15;10
+;;;CONSERVATOIRE GEORGES BIZET;54 rue des Cendriers;75020;;;;;15;10
+;;;EQUIPAGES;61 rue de Bagnolet;75020;;;;;15;10
+;;;ESPACE OXYGÈNE;4 impasse Cordon Boussard ;75020;;;;;15;10
+;;;L’ATELIER D’EN FACE;3, rue Constant Berthaud;75020;;;;;15;10
+;;;LA COLLINE;15 rue Malte Brun;75020;;;;;15;10
+;;;LE MERLE MOQUEUR;51, rue de Bagnolet;75020;;;;;15;10
+;;;LE TARMAC;159 Av Gambetta;75020;;;;;15;10
+;;;MPAA SAINT-BLAISE;37/39 rue Saint-Blaise ;75020;;;;;15;10
+;;;THÉÂTRE AUX MAINS NUES;7 Square des Cardeurs;75020;;;;;15;10

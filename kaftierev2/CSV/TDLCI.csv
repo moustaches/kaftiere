@@ -1,0 +1,169 @@
+;;;;;;;;;DEPOT NOM : >;Unis vers cités
+;;;;;;;;;DEPOT SURNOM : >;vers
+;;;;;;;;;DEPOT TYPE : >;Flyer
+;;;;;;;;;DEPOT QUANTITEE : >;2660
+;;;;;;;;;DEPOT VOLUME : >;99.0
+;;;;;;;;;DEPOT CARTONS : >;2
+;;;;;;;;;DEPOT REMARQUE : >;ha oui
+;;;;;;;;;DEPOT POID CARTONS : >;12
+;;;;;;;;;DEPOT NB PAQUET : >;10
+;;;;;;;;;DEPOT PRIX : >;0.5
+INFO DEVIS : |;INFO KAF : |;REF : |;NOM  : |;ADRESSE : |;CP : |;VILLE : |;INFORMATION LIEU : |;DESTINATAIRE : |;LIEU PRIX : |;
+Ok;ouvert;706;OFFICE DE TOURISME DE PARIS;25 rue des Pyramides;75001;PARIS;;GRÉGOIRE;;20
+Ok;ouvert;636;Point culture;182 rue Saint Honoré;75001;PARIS;;BARKOUK;;20
+Ok;ouvert;570;CENTRE D'ANIMATION LES HALLES LE MARAIS;Forum des halles 6-8 Place Caree;75001;PARIS;;;;20
+non localisé;inconnu;;ESAD;Forum des halles 12 Place Caree;75001;PARIS;;TOUTAIN;;20
+Ok;inconnu;;CONSERVATOIRE du centre W.A MOZART;53 rue Jean Jacques Rousseau;75001;PARIS;;;;20
+Ok;ouvert;711;MAISON DU GESTE ET DE L IMAGE;42 rue Saint Denis;75001;PARIS;;CASSAN;;20
+Ok;inconnu;;CENTRE INT. JEUNESSE BVJ;20 rue Jean Jacques Rousseau;75001;PARIS;;JEAN;;20
+Ok;ouvert;714;Forum des Images;2 rue du Cinéma;75001;PARIS;;Coulon;;20
+Ok;inconnu;;STUDIO MAGENIA (-dans la cour);16 rue St Marc;75002;PARIS;;BROUSSOLLE;;20
+Ok;ouvert;732;DGCA;62 rue Beaubourg;75003;PARIS;;;;20
+Ok;inconnu;;Maison de la poésie-Théâtre Molière;157 rue St Martin;75003;PARIS;;Hernoux;;20
+Ok;inconnu;;PARIS BIBLIOTHEQUE;3 impasse de la Planchette;75003;PARIS;;MEDRINAL;;20
+Ok;inconnu;;ECOLE DUPERRÉ / CDI;11 rue Dupetit Thouars;75003;PARIS;;SIMON;;20
+Ok;ouvert;747;CENTRE DE DANSE DU MARAIS;41 rue du Temple;75004;PARIS;;Antoine;;20
+Ok;ouvert;741;KIOSQUE JEUNE Le Marais;14 rue François Miron;75004;PARIS;;LECHALARD;;20
+Ok;ouvert;742;MICADANSES;16, rue Geoffroy L'Asnier;75004;PARIS;;Emerentienne;;20
+non localisé;inconnu;;CITE INTERNATIONALE  DES ARTS;18 rue de l' Hôtel de Ville;75004;PARIS;;BOSSU;;20
+Ok;inconnu;922;Jeune theatre national;13 rue des Lions St Paul;75004;PARIS;;QUINZONI;;20
+Ok;ouvert;736;IRCAM;1 place Igor Stravinsky;75004;PARIS;;DUCAS;;20
+Ok;inconnu;;PAVILLON DE L'ARSENAL;21 boulevard Morland;75004;PARIS;;LABASSE;;20
+Ok;ouvert;659;MAISON EUROPEENNE DE LA PHOTOGRAPHIE;82 rue François Miron;75004;PARIS;;LE GUILLANTON;;20
+Ok;ouvert;746;SECRETARIAT DU BUREAU DES SPECTACLES;31 rue des Francs-Bourgeois;75004;PARIS;;RICHARD;;20
+Ok;ouvert;573;CENTRE D'ANIMATION ARRAS;48 rue du Cardinal Lemoine;75005;PARIS;;;;20
+Ok;inconnu;;ENSAD/ARTERE/;31 rue d'Ulm;75005;PARIS;;;;20
+Ok;ouvert;572;Centre d'animation Censier;12 rue Censier ;75005;PARIS;;;;20
+Ok;inconnu;;UNIVERSITE PARIS III-Bibliothèque;13 rue de Santeuil;75005;PARIS;;;;20
+Ok;inconnu;;UNIVERSITE PARIS III/billetterie;13 rue de Santeuil;75005;PARIS;;;;40
+non localisé;inconnu;;Service culturel CROUS DE PARIS;12 rue de l'Abbaye;75005;PARIS;;;;20
+Ok;inconnu;;CONSERVATOIRE GABRIEL FAURE;12 rue de Pontoise;75005;PARIS;;;;20
+Ok;inconnu;;SCHOLA CANTORUM;269 rue Saint Jacques;75005;PARIS;;GICQUEL;;20
+Ok;inconnu;890;Université Paris IV SUAPS;1 rue Victor Cousin;75005;PARIS;;LOAKES-GOUJU;;20
+Ok;ouvert;757;Crous de Paris-Service culturel;39 av Georges Bernanos;75005;Paris;;CISSE;;20
+Ok;ouvert;572;ATELIERS CENSIER;12 rue Censier;75005;PARIS;;NKONGO;;20
+Ok;inconnu;890;Service Culturel de Paris-Sorbonne;1, rue Victor Cousin;75005;PARIS;;TOUMI;;20
+Ok;ouvert;663;CRDP DE PARIS;37 rue Jacob;75006;PARIS;;;;20
+Ok;ouvert;663;ENSBA (Beaux arts) Médiathèque;14 rue Bonaparte;75006;PARIS;;;;200
+Ok;ouvert;765;AUDITORIUM ST GERMAIN - Maison des pratiques amateurs;4 rue Félibien;75006;PARIS;;;;20
+non localisé;inconnu;;CENTRE D'ANIMATION RENNES;76 bis rue de Rennes;75006;PARIS;;;;20
+Ok;inconnu;;UNIVERSITE PARIS V DESCARTES - service comm;12 rue de L'Ecole de Médecine;75006;PARIS;;;;20
+Ok;ouvert;758;ALLIANCE FRANCAISE / service culturel;101 boulevard Raspail;75006;PARIS;;;;20
+Ok;inconnu;;UNIVERSITE PARIS II Service culturel;92 rue d'Assas;75006;PARIS;;;;20
+Ok;inconnu;;BILIOTHEQUE ANDRE MALRAUX;112 rue de Rennes;75006;PARIS;;;;20
+Ok;inconnu;;Atelier d'art théâtral;30 rue du Dragon;75006;PARIS;;DE CROZEFON;;20
+non localisé;inconnu;;CONSERVATOIRE JP RAMEAU;3 ter rue de Mabillon;75006;PARIS;;GRATADOUR;;20
+Ok;inconnu;;Académie américaine de danse à Paris;100, rue du Cherche Midi;75006;PARIS;;DESNOES;;20
+Ok;inconnu;;Atelier de Sèvres;47 rue de Sèvres;75006;PARIS;;VILLARD;;20
+non localisé;inconnu;;BUREAU DES ARTS SCIENCES PO;27 rue Saint Guillaume;75007;PARIS;;;;20
+non localisé;inconnu;;CENTRE NATIONAL DU LIVRE Hôtel d’Avejan;53 rue Verneuil;75007;PARIS;;;;20
+non localisé;inconnu;;Théâtre du Rond Point;2 rue Franklin Roosvelt;75008;PARIS;;TRACQ;;20
+Ok;inconnu;;CONSERVATOIRE NATIONAL DE REGION/PARIS;14 rue de Madrid;75008;PARIS;;;;20
+Ok;inconnu;;Jeu de Paume;1, Place de la Concorde;75008;PARIS;;BOUCHARLAT;;20
+non localisé;inconnu;;Groupe EAC;33 rue Laboetie;75008;PARIS;;CHESTA;;20
+Ok;ouvert;773;DRAC ILE DE FRANCE;47 rue Le peletier;75009;PARIS;;;;20
+Ok;ouvert;772;ATHENEE THEATRE LOUIS JOUVET;24 rue de Caumartin;75009;PARIS;;MAURICE;;20
+Ok;ouvert;558;SACD Maison des auteurs;7 rue Ballu;75009;PARIS;;;;20
+Ok;ouvert;557;SACD;9 rue Ballu;75009;PARIS;;ROTH;;20
+non localisé;inconnu;;ADAMI;14,16 rue George Ballu;75009;PARIS;;;;20
+non localisé;inconnu;;ONDA;13 bis rue Henry Monnier;75009;PARIS;;OHANA;;20
+Ok;inconnu;;ACTING INTERNATIONAL (école de théâtre);15 rue Ambroise Thomas;75009;PARIS;;;;20
+Ok;ouvert;771;CONSERVATOIRE NADIA ET LILI BOULANGER;17 rue de Rochechouart;75009;PARIS;;;;20
+Ok;ouvert;582;ESPACE JEMMAPES;116 quai de Jemmapes;75010;PARIS;;;;20
+non localisé;inconnu;;POINT EPHEMERE;190 quai de Valmy;75010;PARIS;;TANGUY;;20
+Ok;inconnu;;MAISON des ASSOCIATIONS;206 quai de valmy;75010;PARIS;;;;20
+Ok;ouvert;775;ECOLE INTERNATIONALE JACQUES LECOQ;57 rue du Faubourg Saint Denis;75010;PARIS;;Gillet;;20
+Ok;ouvert;776;CONSERVATOIRE HECTOR BERLIOZ;6 rue Pierre Bullet;75010;PARIS;;GARRAY;;20
+non localisé;inconnu;;THEATRE DES BOUFFES DU NORD;37 bis bd de la Chapelle;75010;PARIS;;;;20
+Ok;ouvert;776;CONSERVATOIRE HECTOR BERLIOZ;6 rue Pierre Bullet;75010;PARIS;;TRONO;;20
+Ok;inconnu;;STUDIO HARMONIC;5 passage des Taillandiers;75011;PARIS;;Jean-Pierre;;20
+Ok;inconnu;;LA LOGE;77 rue de Charonne;75011;PARIS;;;;20
+Ok;inconnu;;LE CENTRE DES ARTS VIVANTS;4 rue Bréguet;75011;PARIS;;FERRARI;;20
+Ok;ouvert;790;Théâtre de la Bastille;76 rue de la Roquette;75011;PARIS;;PINEAU;;20
+Ok;inconnu;;Théâtre de la Boutonnière;25 rue popincourt;75011;PARIS;;MESLEM;;20
+Ok;ouvert;779;MENAGERIE DE VERRE;12/14 rue Lechevin;75011;PARIS;;;;20
+Ok;ouvert;793;LA MAISON DES METALLOS;94 rue Jean-Pierre Timbaud;75011;PARIS;;;;20
+Ok;inconnu;;ATELIER INTERNATIONAL DE THEATRE;14 rue Crespin du Gast;75011;PARIS;;SALANT;;20
+Ok;inconnu;;Atelier PREP'ART;23 passage Ménilmontant;75011;PARIS;;;;20
+Ok;ouvert;792;CONSERVATOIRE CHARLES MUNCH;7 rue Duranti;75011;PARIS;;;;20
+non localisé;inconnu;;THEATRE ARTISTIC ATHEVAINS;45 bis rue Richard Lenoir;75011;PARIS;;DUHAMEL;;20
+non localisé;inconnu;;THEATRE DE LA DANSE;77 rue de Charonne;75011;PARIS;;HARMEL;;20
+Ok;inconnu;924;COURS SIMON;14 rue de la Vacquerie;75011;PARIS;;MARGAT;;20
+Ok;inconnu;;STUDIO DANSE THEATRE ET MUSIQUE;6 rue de la Folie Mericourt;75011;PARIS;;SCHMIDT;;20
+Ok;inconnu;;Centre Recherche Théâtre handicap;163 rue de Charenton;75012;PARIS;;Caillaud;;20
+non localisé;inconnu;;La Maison Rouge (merc au dim 11h-19h);10 boulevard de la Bastille;75012;PARIS;;Stéphanie;;20
+non localisé;inconnu;;Atelier de Paris-Carolyn Carlson;route Champ de Manœuvre;75012;PARIS;;;;20
+non localisé;inconnu;;ARTA;route Champ de Manœuvre;75012;PARIS;;BENSASSON;;20
+non localisé;inconnu;;THEATRE DE L'AQUARIUM;route Champ de Manœuvre;75012;PARIS;;CASSARD;;20
+Ok;inconnu;;CONSERVATOIRE PAUL DUKAS;53 rue du Charolais;75012;PARIS;;;;20
+Ok;inconnu;;THEATRE DUNOIS ;108 rue du Chevaleret;75013;PARIS;;;;20
+non localisé;inconnu;;BETONSALON;9 Esplanade Pierre Vidal-Naquet;75013;PARIS;;;;20
+Ok;inconnu;;BIBLIOTHEQUE Italie pas le lundi;211 blvd Vincent AURIOL;75013;PARIS;;;;20
+non localisé;inconnu;;BIBLIOTHEQUE GLACIERE;132 rue de la Glacière;75013;PARIS;;;;20
+Ok;inconnu;;THEATRE 13;30 rue du Chevaleret;75013;PARIS;;BAZIN;;20
+non localisé;inconnu;;CENTRE D'ANIMATION DAVIEL / PARIS 13;24 rue Davie;75013;PARIS;;;;20
+Ok;inconnu;;UNIVERSITÉ PARIS I/ service Vie Etudiante;90 rue de Tolbiac;75013;PARIS;;KRZYZANIAK;;20
+Ok;inconnu;;CONSERVATOIRE MAURICE RAVEL;21 rue Albert Bayet;75013;PARIS;;;;20
+Ok;inconnu;;BIBLIOTHEQUE M.  DURAND;79 rue Nationale;75013;PARIS;;METZ;;20
+Ok;ouvert;592;CENTRE D'ANIMATION DUNOIS / PARIS 13;61, rue Dunois;75013;PARIS;;YDJEDD;;20
+Ok;inconnu;;COURANT D'ART FRAIS;19 rue de la Fontaine A Mulard;75013;PARIS;;;;20
+Ok;inconnu;;FIAP (hébergement pour jeunes);30 rue cabanis;75014;PARIS;;;;20
+Ok;inconnu;;ESA, service des communications;254 bd Raspail;75014;PARIS;;;;20
+Ok;ouvert;689;FONDATION CARTIER;261 BD Raspail;75014;PARIS;;;;20
+Ok;inconnu;;BIBLIOTHEQUE G. BRASSENS;38 rue Gassendi;75014;PARIS;;;;20
+Ok;ouvert;797;CONSERVATOIRE DARIUS MILHAUD;26 RUE MOUTON DUVERNET;75014;PARIS;;;;20
+non localisé;inconnu;;Maison des associations;22 bis rue Deparcieux;75014;PARIS;;;;20
+Ok;ouvert;688;L'ENTREPOT;7/9 rue Francis de Pressensé;75014;PARIS;;;;20
+Ok;inconnu;;Atelier les Pinceaux;16 rue Francis de Pressensé;75014;Paris;;;;20
+Ok;ouvert;602;Antenne Jeunes;40 rue Didot;75014;PARIS;;;;20
+Ok;inconnu;;Maison des Pratiques amateurs;100 rue Didot;75014;PARIS;;Mainguy;;60
+non localisé;inconnu;;THEATRE 14;20 Avenue Marc Sangnier;75014;PARIS;;;;20
+Ok;inconnu;;CENTRE DE DANSE ALESIA;119 avenue du Général Leclerc;75014;PARIS;;AUBRY;;20
+non localisé;inconnu;;CENTRE D'ANIMATION MARC SANGNIER;20 avenue Marc sangnier;75014;PARIS;;;;20
+Ok;inconnu;;BIBLIOTHEQUE VANDAMNE;80, avenue du Maine;75014;PARIS;;ESPAGNET;;20
+Ok;inconnu;;LE MOULIN À CAFÉ;9 place de la Garenne;75014;PARIS;;Lem;;20
+Ok;inconnu;;MAIRIE DU 14e ARRONDISSEMENT;Place Ferdinand Brunot;75014;PARIS;;LEGUENNEC;;20
+non localisé;inconnu;;MAIRIE DU 14e ARRONDISSEMENT;Place Ferdinand Brunot;75014;PARIS;;FLAMENT;;20
+Ok;inconnu;;THEATRE GUICHET MONTPARNASSE;15 rue du Maine;75014;PARIS;;;;20
+Ok;ouvert;800;CONSERVATOIRE FREDERIC CHOPIN;43 rue Bargue;75015;PARIS;;;;20
+Ok;inconnu;;CENTRE D'ANIMATION BRANCION / PARIS 15;18 av de la porte Brancion;75015;PARIS;;;;20
+Ok;inconnu;;ENSAAMA Bibliothèque;63 rue Olivier de Serres;75015;PARIS;;LAMPEL;;20
+Ok;inconnu;;Théâtre Monfort;106 rue Brancion;75015;PARIS;;MORISSON;;20
+Ok;ouvert;604;CONSERVATOIRE FRANCIS POULENC;11 rue Jean de La Fontaine;75016;PARIS;;;;20
+Ok;inconnu;;CENTRE NATIONAL DU THEATRE;134 rue Legendre;75017;PARIS;;BERNARDIE;;20
+Ok;ouvert;606;CENTRE D'ANIMATION La JONQUIERE;88 Rue de La Jonquiere;75017;PARIS;;;;20
+non localisé;inconnu;;CONSERVATOIRE CLAUDE DEBUSSY;222 rue Courcelles;75017;PARIS;;;;20
+non localisé;inconnu;;ACADÉMIE DES ARTS CHOREGRAPHIQUES;4 BIS Cité Véron;75018;PARIS;;;;20
+non localisé;inconnu;;THEATRE OUVERT;4 bis cité Véron;75018;PARIS;;;;20
+Ok;inconnu;;RIDC : Rencontres Internationales de Danse Contemporaine;27 rue Ganneron;75018;PARIS;;;;20
+non localisé;inconnu;;ETOILE DU NORD;16 rue Georgette Agutte;75018;PARIS;;DESLOGES;;20
+Ok;ouvert;802;CONSERVATOIRE GUSTAVE CHARPENTIER;29 rue Baudelique;75018;PARIS;;;;20
+non localisé;inconnu;;Kiosque Jeune CIDJ;1 rue Fleury;75018;PARIS;;;;20
+Ok;inconnu;;Association Cirkoum;15, Passage Ramey;75018;PARIS;;;;20
+non localisé;inconnu;;Le BAL;18 impasse La défense;75018;Paris;;MEUDIC;;20
+non localisé;inconnu;;ATLA;12, villa de Guelma ;75018;Paris;;Rolland;;20
+Ok;ouvert;820;LE 104 ;5 rue curial;75019;PARIS;;VERGNE;;20
+Ok;ouvert;804;Cours Florent;37-39 av Jean Jaurès ;75019;PARIS;;COUDURIER;;20
+Ok;ouvert;700;F.R.A.C. LE PLATEAU; rue des alouettes;75019;PARIS;;Fabre;;20
+inconnu;inconnu;897;Conservatoire national supérieur de musique et de danse;209 avenue Jean-Jaurès;75019;PARIS;;;;20
+Ok;inconnu;;Cité de la Musique - Accueil A;221, avenue Jean Jaurès;75019;PARIS;;Chatenoud;;20
+Ok;ouvert;809;CONSERVATOIRE JACQUES IBERT;81 rue Armand Carrel;75019;PARIS;;;;20
+Ok;inconnu;;Grande Halle de la Villette;211 avenue Jean Jaures;75019;paris;;;;100
+Ok;inconnu;;Centre d'animation Curial;38 av de flandre;75019;PARIS;;MOLNAR;;20
+Ok;ouvert;703;la BELLEVILLOISE;19-21 rue Boyer;75020;PARIS;;;;20
+Ok;ouvert;810;CONFLUENCES (association culturelle );190 bd de Charonne;75020;PARIS;;Linossier;;20
+Ok;inconnu;;Médiathèque Marguerite Duras;115 rue de Bagnolet;75020;PARIS;;;;20
+Ok;inconnu;;THEATRE DE MENILMONTANT;15 rue du retrait;75020;PARIS;;;;20
+Ok;ouvert;704;LA MAROQUINERIE;23 rue Boyer;75020;PARIS;;DECLEIRE;;20
+Ok;inconnu;;Ecole de THEATRE LES ENFANTS TERRIBLES;157 rue Pelleport;75020;PARIS;;FEITUSSI;;20
+non localisé;inconnu;;Association L'Aquilone;1-3 rue Frederic Lemaitre;75020;PARIS;;FONTANA;;20
+inconnu;inconnu;904;BIBLIOTHEQUE ST FARGEAU;12 rue du Télégraphe;75020;PARIS;;SARTIAUX;;20
+Ok;inconnu;;ESPACE OXYGENE;4 Impasse Cordon Boussard;75020;PARIS;;TEXIER;;20
+non localisé;inconnu;;Musée d'Art Moderne de la ville de Paris;9 rue Gaston de Saint Paul;75116;PARIS;;MARQUÈS;;20
+non localisé;inconnu;;CENTRE NATIONAL DU CINEMA;12 rue de Lubeck;75116;PARIS;;PANDIANI;;20
+non localisé;inconnu;;Palais de Tokyo;2, rue de la Manutention;75116;PARIS;;WOLFF;;20
+inconnu;inconnu;909;Nouveau Théâtre de Montreuil;10 Place Jean Jaurès;93100;MONTREUIL;;GARCIA;;20
+non localisé;inconnu;;THEATRE L'ECHANGEUR;59 av du Gal de Gaulle;93170;BAGNOLET;;LEBIGOT;;20
+Ok;inconnu;;LE SAMOVAR;165 avenue Pasteur;93170;BAGNOLET;;MAHE;;20
+non localisé;inconnu;;La dynamo;9 rue Gabrielle Josserand;93500;PANTIN ;;VIGNY;;20
+non localisé;inconnu;;CND/ servic développement des publics;1 rue Victor Hugo;93507;PANTIN;;CAVALUCCI;;20

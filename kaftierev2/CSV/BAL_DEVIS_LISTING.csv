@@ -1,0 +1,85 @@
+;;;;;;;;;DEPOT NOM : >;Depress;Kill me;Rip me
+;;;;;;;;;DEPOT SURNOM : >;DEP;KM;RM
+;;;;;;;;;DEPOT TYPE : >;Flyer;Brochure;Affiche
+;;;;;;;;;DEPOT QUANTITEE : >;1000;3000;2000
+;;;;;;;;;DEPOT VOLUME : >;99.0;999.0;999.0
+;;;;;;;;;DEPOT CARTONS : >;2;5;3
+;;;;;;;;;DEPOT REMARQUE : >;ha oui;ha non ;ha bof
+;;;;;;;;;DEPOT POID CARTONS : >;12;11;4
+;;;;;;;;;DEPOT NB PAQUET : >;10;32;20
+;;;;;;;;;DEPOT PRIX : >;0.5;0.9;0.2
+;INFO KAF : |;REF : |;NOM  : |;ADRESSE : |;CP : |;VILLE : |;INFORMATION LIEU : |;DESTINATAIRE : |;LIEU PRIX : |;;;
+;;;Colette;213, rue Saint Honoré;75001;Paris;;;;4;5;6
+;;;Le Laboratoire;4, Rue du Bouloi;75001;Paris;;;;5;6;7
+;;;FORUM DES IMAGES;2, rue du Cinéma;75001;Paris;;;;6;7;8
+;;;MINISTERE DE LA CULTURE // POINT CULTURE/ DIC ;182, rue Saint Honoré;75001;Paris;;;;7;8;9
+;;;ARTS ET METIERS;60, rue de Réaumur;75003;Paris;;;;8;9;10
+;;;Mariam Goodmann;79,Rue du Temple;75003;Paris;;;;9;10;11
+;;639;Gaité Lyrique;3 bis rue Papin;75003;Paris;;;;10;11;12
+;;640;POLKA GALERIE;12, rue Saint Gilles;75003;Paris;;;;11;12;13
+;;641;GALERIE CHANTAL CROUSEL;10, rue Charlot;75003;Paris;;;;12;13;14
+;;642;SURFACE TO AIR;108, rue Vieille du Temple;75003;Paris;;;;13;14;15
+;;643;GALERIE FLORENCE LOEWY;9, rue de Thorigny ;75003;Paris;;;;14;15;16
+;;644;GALERIE PAUL FRECHES;48, rue de Montmorency;75003;Paris;;;;15;16;17
+;;645;INSTITUT SUEDOIS;11, rue Payenne;75003;Paris;;;;16;17;18
+;;646;Galerie Almine Rech;19, rue de Saintonge;75003;Paris;;;;17;18;19
+;;647;Yvon Lambert librairie;108, rue Vieille du Temple;75003;Paris;;;;18;19;20
+;;648;Galerie Xippas (à l'étage);108, rue Vieille du Temple;75003;Paris;;;;19;20;21
+;;649;Galerie Thaddaeus Ropac;7, rue Debelleyme;75003;Paris;;;;20;21;22
+;;650;Filles du Calvaire;17, rue des Filles du Calvaire;75003;Paris;;;;21;22;23
+;;651;Martine Aboucaya;5, rue Sainte Anastase;75003;Paris;;;;22;23;24
+;;652;Galerie Michel Rein;42, rue de Turenne;75003;Paris;;;;23;24;25
+;;653;GALERIE PARTICULIERE;16, rue du Perche;75003;Paris;;;;24;25;26
+;;654;PARISIENNE DE LA PHOTOGRAPHIE;3, rue des Arquebusiers;75003;Paris;;;;25;26;27
+;;655;Librairie OFR;20 rue Dupetit-Thouars;75003;Paris;;;;26;27;28
+;;656;Centre culturel Suisse;32, rue des Francs Bourgeois;75004;Paris;;;;27;28;29
+;;657;GALERIE DU JOUR AGNES B;44 rue Quincampoix;75004;Paris;;;;28;29;30
+;;658;Galerie Nathalie Obadia;3, rue du Cloître Saint Merri;75004;Paris;;;;29;30;31
+;;659;MEP;82, rue François MIRON;75004;Paris;;;;30;31;32
+;;660;Institut du Monde Arabe;1, Rue des Fossés Saint-Bernard;75005;Paris;;;;31;32;33
+;;661;ENSAD;31, rue d'Ulm;75005;Paris;;;;32;33;34
+;;662;THEATRE DE l' ODEON; 2 rue Corneille;75006;Paris;;;;33;34;35
+;;663;Beaux Arts de Paris - ENSBA;14 rue Bonaparte;75006;Paris;;;;34;35;36
+;;664;Galerie Magnum;13, rue de l'Abbaye;75006;Paris;;;;35;36;37
+;;665;Galerie Loevenbruck;6, rue Jacques Callot;75006;Paris;;;;36;37;38
+;;666;Kamel Mennour;60, rue Mazarine;75006;Paris;;;;37;38;39
+;;667;Centre Culturel Canadien;5, rue de Constantine;75007;Paris;;;;38;39;40
+;;668;Centre Calouste Gulbenkian;39 Boulevard de la Tour-Maubourg  ;75007;Paris;;;;39;40;41
+;;669;Reflet Médicis (Quartier Latin);30 avenue Marceau;75008;Paris;;;;40;41;42
+;;670;Jeu de Paume;1 place de la Concorde;75008;Paris;;;;41;42;43
+;;671;Fondation Ricard;12 rue Boissy d'Anglas;75008;Paris;;;;42;43;44
+;;672;PINACOTHEQUE DE PARIS;28, place de la Madeleine;75008;Paris;;;;43;44;45
+;;673;SCAM;5 avenue Vélasquez;75008;Paris;;;;44;45;46
+;;674;Galerie Leica Paris;59 rue Condorcet;75009;Paris;;;;45;46;47
+;;675;"Musée de la Vie romantique
+Hôtel Scheffer-Renan ";"
+16 rue Chaptal ";75009;Paris;;;;46;47;48
+;;676;GALERIE VU;58 rue Saint Lazare;75009;Paris;;;;47;48;49
+;;677;Galerie des galeries;40, bld Haussman;75009;Paris;;;;48;49;50
+;;678;ICCOM;11, Boulevard Magenta;75010;Paris;;;;49;50;51
+;;679;Centre Commercial;2 rue de Marseille;75010;Paris;;;;50;51;52
+;;680;Bibliothèque Château d’Eau ;72 rue du Faubourg Saint-Martin;75010;Paris;;;;51;52;53
+;;681;Le Point Ephémère;200, quai de Valmy;75010;Paris;;;;52;53;54
+;;682;Alimentation Générale;64, rue jean pierre timbaud;75011;Paris;;;;53;54;55
+;;683;MAGDA DANYSZ;78, Rue Amelot ;75011;Paris;;;;54;55;56
+;;684;MAISON DES MÉTALLOS;94, rue Jean-Pierre Timbaud;75011;Paris;;;;55;56;57
+;;685;Maison Rouge;10 boulevard de la bastille;75012;Paris;;;;56;57;58
+;;686;Cinémathèque française;51 rue de Bercy ;75012;Paris;;;;57;58;59
+;;687;Bétonsalon;Esplanade Pierre Vidal-Naquet;75013;Paris;;;;58;59;60
+;;688;Cinéma L'entrepôt;7, Rue Francis de Pressensé ;75014;Paris;;;;59;60;61
+;;689;Fondation Cartier;261, bld Raspail;75014;Paris;;;;60;61;62
+;;690;Fondation Henri Cartier Bresson;2, Impasse Lebouis;75014;Paris;;;;61;62;63
+;;691;Musée d'art moderne de la ville de paris;11 avenue du Président Wilson;75016;Paris;;;;62;63;64
+;;692;Palais de tokyo;3 Avenue du Président Wilson;75016;Paris;;;;63;64;65
+;;693;Le Divan du Monde ;75, Rue des Martyrs;75018;Paris;;;;64;65;66
+;;694;Kadist Foundation;19bis-21 rue des trois Frères;75018;Paris;;;;65;66;67
+;;695;LE TRIANON ;80 boulevard Rochechouart;75018;Paris;;;;66;67;68
+;;696;HALLE SAINT-PIERRE;2, rue Ronsard ;75018;Paris;;;;67;68;69
+;;697;La Femis;6, rue Francoeur  Paris 18ème;75018;Paris;;;;68;69;70
+;;698;INSTITUT DE CULTURE DE L'ISLAM;19-23, rue Léon;75018;Paris;;;;69;70;71
+;;699;Trabendo ;211, Avenue Jean Jaurès  ;75019;Paris;;;;70;71;72
+;;700;FRAC Plateau;33, rue des Alouettes;75019;Paris;;;;71;72;73
+;;701;GALERIE SUZANNE TARASIEVE;5, villa Marcel Lods;75019;Paris;;;;72;73;74
+;;702;LE CENTQUATRE le merle moqueur - librairie ;104, rue d'Aubervilliers;75019;Paris;;;;73;74;75
+;;703;Belleviloise ;19-21 Rue Boyer;75020;Paris;;;;74;75;76
+;;704;Maronquinerie ;23, rue boyer;75020;Paris;;;;75;76;77

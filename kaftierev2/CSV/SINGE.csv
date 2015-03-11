@@ -1,0 +1,64 @@
+;;;;;;;;;DEPOT NOM : >;PD;DADA;GOGO
+;;;;;;;;;DEPOT SURNOM : >;pd;da;go
+;;;;;;;;;DEPOT TYPE : >;1;3;4
+;;;;;;;;;DEPOT QUANTITEE : >;1000;3000;2000
+;;;;;;;;;DEPOT VOLUME : >;99.0;999.0;999.0
+;;;;;;;;;DEPOT CARTONS : >;2;5;3
+;;;;;;;;;DEPOT REMARQUE : >;ha oui;ha non ;ha bof
+;;;;;;;;;DEPOT POID CARTONS : >;12.0;11.0;4.0
+;;;;;;;;;DEPOT NB PAQUET : >;;;
+;;;;;;;;;DEPOT PRIX : >;0.5;0.9;0.2
+;INFO KAF : |;REF : |;NOM  : |;ADRESSE : |;CP : |;VILLE : |;INFORMATION LIEU : |;DESTINATAIRE : |;LIEU PRIX : |;;;
+;;;LIBRAIRIE IMAGIGRAPHE;84, rue Oberkampf;75011;PARIS;;;;6;8;10
+;;;MENAGERIE DE VERRE;12, rue Lèchevin;75011;PARIS;;;;8;10;12
+;;;SOUFFLE CONTINU;20/22 rue gerbier ;75011;PARIS;;;;10;12;14
+;;;THEATRE ARTISTIC ATHEVAINS;45bis, rue Richard Lenoir;75011;PARIS;;;;12;14;16
+;;;LA CARTOUCHERIE;Route du Champ de Manœuvres;75012;PARIS;;;;14;16;18
+;;;CENTRE FLEURY GOUTTE D'OR;1, rue Fleury;75018;PARIS;;;;16;18;20
+;;;AU CLAIR DE LUNE;1 Rue Ramey;75018;PARIS;;;;18;20;22
+;;;LIBRAIRIE VENDREDI ;67, rue des Martyrs;75018;PARIS;;;;20;22;24
+;;;L’ATELIER DU PLATEAU;5, rue du Plateau;75019;PARIS;;;;22;24;26
+;;;CENTRE D'ANIMATION PARIS;26, rue Clavel;75019;PARIS;;;;24;26;28
+;;;CONSERVATOIRE IBERT;81, rue Armand Carrel;75019;PARIS;;;;26;28;30
+;;;CNSMP;209, avenue Jean Jaurès;75019;PARIS;;;;28;30;32
+;;;LE VENT SE LEVE;181 avenue Jean-Jaurès;75019;PARIS;;;;30;32;34
+;;;BIBLIOTHEQUE ADULTE ;18, rue Janssen;75019;PARIS ;;;;32;34;36
+;;;CONFLUENCES;190, Bld Charonne;75020;PARIS;;;;34;36;38
+;;;LIBRAIRIE MERLE MOQUEUR;51, rue de Bagnolet;75020;PARIS;;;;36;38;40
+;;;THEATRE NATIONAL DE LA COLLINE;15 rue Malte Brun;75020;PARIS;;;;38;40;42
+;;;IRMA;22, rue Soleillet;75020;PARIS;;;;40;42;44
+;;;LIBRAIRIE ALTERITE;9, rue des Gâtines;75020;PARIS;;;;42;44;46
+;;;LA BELLEVILLOISE;19/21 rue Boyer;75020;PARIS;;;;44;46;48
+;;;ANTENNES JEUNES ;43, rue des Panoyaux;75020;PARIS;;;;46;48;50
+;;;VINGTIEME THEATRE ;7, rue des Platrières;75020;PARIS;;;;48;50;52
+;;;ANTENNES JEUNES ;39, rue Joseph Python ;75020;PARIS;;;;50;52;54
+;;;ANTENNES JEUNES ;94, Bld Davout;75020;PARIS;;;;52;54;56
+;;;ANTENNES JEUNES ;49, rue Piat;75020;PARIS;;;;54;56;58
+;;;Théâtre de la Marionnette à Paris;73 rue Mouffetard;75005;Paris;;;;55;57;59
+;;;Université Paris 3 - Médiation Culturelle;13, rue Santeuil;75231;Paris;;;;56;58;60
+;;;CONSERVATOIRE GABRIEL FAURÉ;12, rue de Pontoise;75005;Paris;;;;57;59;61
+;;;CROUS PARIS (Service des Affaires Culturelles);12, rue de l'abbaye;75006;Paris;;;;58;60;62
+;;;Université Paris Descartes - Service Communication;12, rue de l'Ecole de Médecine;75270;Paris;;;;59;61;63
+;;;Maison des cultures du monde;101, bd Raspail;75006;Paris;;;;60;62;64
+;;;CONSERVATOIRE ERIK SATIE;135 bis, rue de l’Université;75007;Paris;;;;61;63;65
+;;;LIBRAIRIE THEATRE DU ROND POINT;Rond-Point des Champs Elysée;75008;Paris;;;;62;64;66
+;;;CONSERVATOIRE CAMILLE SAINT-SAËNS;208, faubourg Saint-Honoré;75008;Paris;;;;63;65;67
+;;;SACD;11 bis, rue Ballu;75009;Paris;;;;64;66;68
+;;;CONSERVATOIRE NADIA ET LILI BOULANGER;17, rue de Rochechouart;75009;Paris;;;;65;67;69
+;;;Charpentier Art Studio - Les Feux de la Rampe ;2 rue Saulnier;75009;Paris;;;;66;68;70
+;;;Conservatoire national supérieur d'art dramatique (CNSAD);2 bis Rue du Conservatoire;75009;Paris;;;;67;69;71
+;;;DRAC Ile de France;47, rue le Peletier;75009;Paris;;;;68;70;72
+;;;Bibliothèque Château d'Eau;72 rue du Fbg St Martin;75010;Paris;;;;69;71;73
+;;;Cours Véronique Nordey;42, rue des Vinaigriers;75010;Paris;;;;70;72;74
+;;;EVA – Ecole voie de l’acteur Théâtre du Gymnase ;38, boulevard Bonne Nouvelle;75010;Paris;;;;71;73;75
+;;;Art’Aire Studio – Bérengère Basty ;115 rue Lafayette;75010;Paris;;;;72;74;76
+;;;Cours Pierre Spivakoff Espace Blanc ;24, rue Louis Blanc;75010;Paris;;;;73;75;77
+;;;CONSERVATOIRE HECTOR BERLIOZ;6, rue Pierre Bullet;75010;Paris;;;;74;76;78
+;;;Ecole Internationale de théâtre Jacques Lecoq;57 rue du Fbg Saint-Denis;75010;Paris;;;;75;77;79
+;;;Espace Jemmapes;116 quai de Jemmapes;75010;Paris;;;;76;78;80
+;;;Centre d'Animation de la Grange aux Belles;55, rue de la Grange aux Belles;75010;Paris;;;;77;79;81
+;;;Centre Verdier;11, rue de Lancry;75010;Paris;;;;78;80;82
+;;;Kiosque;3, rue de Metz;75010;Paris;;;;79;81;83
+;;;LA MAISON DES METALLOS;94 rue Jean-Pierre Timbaud;75011;Paris;;;;80;82;84
+;;;LIBRAIRIE IMAGIGRAPHE;84, rue Oberkampf;75011;Paris;;;;81;83;85
+;;;MENAGERIE DE VERRE;12, rue Lèchevin;75011;Paris;;;;82;84;86

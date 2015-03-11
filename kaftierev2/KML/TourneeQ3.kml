@@ -1,0 +1,3277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Document id="feat_279">
+	<name>TourneeQ3</name>
+	<open>1</open>
+	<Style id="stylesel_10">
+		<LineStyle id="substyle_10">
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="stylesel_8">
+		<LineStyle id="substyle_8">
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="stylesel_11">
+		<PolyStyle id="substyle_11">
+			<color>8000ff00</color>
+		</PolyStyle>
+	</Style>
+	<Style id="stylesel_14">
+		<LineStyle id="substyle_14">
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="stylesel_15">
+		<PolyStyle id="substyle_15">
+			<color>8000ff00</color>
+		</PolyStyle>
+	</Style>
+	<Style id="stylesel_12">
+		<LineStyle id="substyle_12">
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="stylesel_140">
+		<LineStyle id="substyle_14">
+			<width>5</width>
+		</LineStyle>
+	</Style>
+	<Style id="stylesel_9">
+		<PolyStyle id="substyle_9">
+			<color>80ffc0cb</color>
+		</PolyStyle>
+	</Style>
+	<StyleMap id="stylesel_141">
+		<Pair>
+			<key>normal</key>
+			<styleUrl>#stylesel_14</styleUrl>
+		</Pair>
+		<Pair>
+			<key>highlight</key>
+			<styleUrl>#stylesel_140</styleUrl>
+		</Pair>
+	</StyleMap>
+	<Style id="stylesel_13">
+		<PolyStyle id="substyle_13">
+			<color>8000ff00</color>
+		</PolyStyle>
+	</Style>
+	<Folder id="feat_280">
+		<name>Tournée 2014-02-12</name>
+		<open>1</open>
+		<ExtendedData>
+			<SchemaData schemaUrl="None">
+				<SimpleData name="kaf_objet">Tournee</SimpleData>
+				<SimpleData name="dbid">3</SimpleData>
+			</SchemaData>
+		</ExtendedData>
+		<Folder id="feat_281">
+			<name>Lieux</name>
+			<Placemark id="feat_282">
+				<name>centre d&apos;animations frère voisins</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">600</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_255">
+					<coordinates>2.2737458,48.828998,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_283">
+				<name>Centre d&apos;animations Point du jour</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">605</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_256">
+					<coordinates>2.2634237,48.8374268,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_284">
+				<name>Centre d&apos;animations  Beaujon</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">575</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_257">
+					<coordinates>2.3047225,48.87527819999999,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_285">
+				<name>Conservatoire Francis Poulenc</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">604</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_258">
+					<coordinates>2.2746361,48.8521963,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_286">
+				<name>PIJ / Antenne Jeunes 9e</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">577</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_259">
+					<coordinates>2.3427216,48.8755578,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_287">
+				<name>Antennes jeunes Haut de Malesherbes</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">609</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_260">
+					<coordinates>2.3025504,48.8923587,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_288">
+				<name>Antennes jeunes SUD</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">595</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_261">
+					<coordinates>2.3735996,48.8206942,0</coordinates>
+				</Point>
+			</Placemark>
+			<Placemark id="feat_289">
+				<name>Centre d&apos;animations  Valeyre</name>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Lieu</SimpleData>
+						<SimpleData name="dbid">576</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Point id="geom_262">
+					<coordinates>2.3449354,48.87811360000001,0</coordinates>
+				</Point>
+			</Placemark>
+		</Folder>
+	</Folder>
+	<Folder id="feat_290">
+		<name>Contrats</name>
+		<Folder id="feat_291">
+			<name>Client de oufff!!! n°37</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Contrat</SimpleData>
+					<SimpleData name="dbid">88</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_292">
+				<name>Lieux</name>
+			</Folder>
+		</Folder>
+		<Folder id="feat_293">
+			<name>Dunois n°39</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Contrat</SimpleData>
+					<SimpleData name="dbid">90</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_294">
+				<name>Lieux</name>
+			</Folder>
+		</Folder>
+		<Folder id="feat_295">
+			<name>Clavel n°4</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Contrat</SimpleData>
+					<SimpleData name="dbid">55</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_296">
+				<name>Lieux</name>
+				<Placemark id="feat_297">
+					<name>PIJ / Antenne jeunes Henri Brisson</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">612</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_263">
+						<coordinates>2.3347785,48.8983921,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_298">
+					<name>Antenne jeunes Campo Formio</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">594</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_264">
+						<coordinates>2.3592237,48.8350114,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_299">
+					<name>Point jeune</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">598</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_265">
+						<coordinates>2.3092897,48.8314237,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_300">
+					<name>GRETA</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">568</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_266">
+						<coordinates>2.4054099,48.85724149999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_301">
+					<name>Centre d&apos;animations Arras</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">573</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_267">
+						<coordinates>2.3516157,48.8466107,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_302">
+					<name>Centre d&apos;animations Brancion</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">599</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_268">
+						<coordinates>2.3003889,48.826677,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_303">
+					<name>Centre d&apos;animation Dunois</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">592</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_269">
+						<coordinates>2.3663349,48.8331026,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_304">
+					<name>PIJ / Antenne Jeune Orillon</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">584</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_270">
+						<coordinates>2.3775618,48.87058979999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_305">
+					<name>Centre d&apos;animations Clavel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">615</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_271">
+						<coordinates>2.3837711,48.87644469999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_306">
+					<name>centre d&apos;animations frère voisins</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">600</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_272">
+						<coordinates>2.2737458,48.828998,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_307">
+					<name>centre d&apos;animations Marc Sangnier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">597</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_273">
+						<coordinates>2.3065104,48.8262507,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_308">
+					<name>Centre d&apos;Animation Baudricourt</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">591</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_274">
+						<coordinates>2.3639301,48.8235098,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_309">
+					<name>centre d&apos;animations maurice ravel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">585</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_275">
+						<coordinates>2.4115664,48.8415527,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_310">
+					<name>PIJ / Antenne Jeune Claude Decean</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">587</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_276">
+						<coordinates>2.3962439,48.8385778,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_311">
+					<name>Interclub 17</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">608</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_277">
+						<coordinates>2.3149848,48.88516019999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_312">
+					<name>Centre d&apos;animations Point du jour</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">605</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_278">
+						<coordinates>2.2634237,48.8374268,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_313">
+					<name>Centre d&apos;animations La Poterne des peupliers</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">588</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_279">
+						<coordinates>2.3510481,48.8205335,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_314">
+					<name>centre d&apos;animations la jonquière</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">606</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_280">
+						<coordinates>2.319155,48.894733,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_315">
+					<name>PIJ / antenne jeune information Didot</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">602</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_281">
+						<coordinates>2.319843,48.8315186,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_316">
+					<name>Centre d&apos;animations Hébert</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">610</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_282">
+						<coordinates>2.3632877,48.8942716,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_317">
+					<name>Centre d&apos;animation Charles Richet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">589</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_283">
+						<coordinates>2.364011,48.83192420000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_318">
+					<name>Centre d&apos;animations  Beaujon</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">575</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_284">
+						<coordinates>2.3047225,48.87527819999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_319">
+					<name>espace cévennes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">631</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_285">
+						<coordinates>2.278901,48.840423,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_320">
+					<name>Centre d&apos;animation Sohane</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">601</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_286">
+						<coordinates>2.3118676,48.8356427,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_321">
+					<name>Centre d&apos;animations René Binet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">611</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_287">
+						<coordinates>2.3362958,48.899147,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_322">
+					<name>Conservatoire Francis Poulenc</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">604</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_288">
+						<coordinates>2.2746361,48.8521963,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_323">
+					<name>Centre d&apos;animatrion Jemmapes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">582</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_289">
+						<coordinates>2.3636982,48.8748947,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_324">
+					<name>centre d&apos;animations villiot</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">586</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_290">
+						<coordinates>2.3717894,48.8427054,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_325">
+					<name>Centre d&apos;animations Curial</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">616</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_291">
+						<coordinates>2.3753859,48.8956662,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_326">
+					<name>Centre d&apos;animations Mathis</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">617</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_292">
+						<coordinates>2.3748988,48.89084209999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_327">
+					<name>Centre d&apos;animations St Michel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">574</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_293">
+						<coordinates>2.3437585,48.8534712,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_328">
+					<name>PIJ / MJC Mercoeur</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">583</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_294">
+						<coordinates>2.3832287,48.8569015,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_329">
+					<name>PIJ / Antenne Jeunes Louis Loucheur</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">607</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_295">
+						<coordinates>2.3256739,48.8980843,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_330">
+					<name>Centre d&apos;animations Rébeval</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">618</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_296">
+						<coordinates>2.3782204,48.8744305,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_331">
+					<name>Antenne Jeunes  Fontaine à Mulard</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">593</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_297">
+						<coordinates>2.349386,48.8232059,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_332">
+					<name>AFDAS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">569</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_298">
+						<coordinates>2.4001428,48.863144,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_333">
+					<name>Centre Binet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">632</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_299">
+						<coordinates>2.3355236,48.900535,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_334">
+					<name>PIJ / Antenne Jeunes 9e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">577</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_300">
+						<coordinates>2.3427216,48.8755578,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_335">
+					<name>Antennes jeunes Haut de Malesherbes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">609</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_301">
+						<coordinates>2.3025504,48.8923587,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_336">
+					<name>Maison des associations</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">571</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_302">
+						<coordinates>2.3623013,48.86405209999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_337">
+					<name>Centre d&apos;animation Daviel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">590</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_303">
+						<coordinates>2.3447246,48.8281766,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_338">
+					<name>Antenne jeunes Mont Cenis</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">614</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_304">
+						<coordinates>2.3460347,48.895608,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_339">
+					<name>Antennes jeunes SUD</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">595</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_305">
+						<coordinates>2.3735996,48.8206942,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_340">
+					<name>Centre d&apos;animations Château Landon</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">579</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_306">
+						<coordinates>2.363814,48.8832165,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_341">
+					<name>Centre Social Le Pari&apos;s des faubourgs</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">581</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_307">
+						<coordinates>2.3558694,48.87513030000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_342">
+					<name>Maison des associations</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">596</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_308">
+						<coordinates>2.3612652,48.8226783,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_343">
+					<name>Centre d&apos;animations La grange aux Belles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">580</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_309">
+						<coordinates>2.3679175,48.8767018,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_344">
+					<name>Centre d&apos;animations Censier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">572</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_310">
+						<coordinates>2.3546834,48.8409412,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_345">
+					<name>Ass forum, animation, loisirs</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">570</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_311">
+						<coordinates>2.345856,48.86234699999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_346">
+					<name>Centre d&apos;animations Jean Verdier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">578</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_312">
+						<coordinates>2.360108,48.869387,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_347">
+					<name>Centre d&apos;animations  Valeyre</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">576</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_313">
+						<coordinates>2.3449354,48.87811360000001,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+		</Folder>
+		<Folder id="feat_348">
+			<name>Dunois n°2</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Contrat</SimpleData>
+					<SimpleData name="dbid">70</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_349">
+				<name>Lieux</name>
+			</Folder>
+		</Folder>
+		<Folder id="feat_350">
+			<name>Clavel n°28</name>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Contrat</SimpleData>
+					<SimpleData name="dbid">80</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_351">
+				<name>Lieux</name>
+			</Folder>
+		</Folder>
+	</Folder>
+	<Folder id="feat_352">
+		<name>Parcours</name>
+		<open>1</open>
+		<Folder id="feat_353">
+			<name>P5</name>
+			<open>1</open>
+			<Style id="stylesel_9">
+				<PolyStyle id="substyle_9">
+					<color>80ffc0cb</color>
+					<colorMode>normal</colorMode>
+					<fill>1</fill>
+					<outline>1</outline>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Parcours</SimpleData>
+					<SimpleData name="dbid">5</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_354">
+				<name>Lieux</name>
+				<Placemark id="feat_355">
+					<name>PIJ / MJC Mercoeur</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">583</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_314">
+						<coordinates>2.3832287,48.8569015,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_356">
+					<name>Centre d&apos;animations Louis Lumière</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">623</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_315">
+						<coordinates>2.4112236,48.8606861,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_357">
+					<name>Centre d&apos;animations Jean Verdier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">578</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_316">
+						<coordinates>2.360108,48.869387,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_358">
+					<name>PIJ / Antenne Jeune Orillon</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">584</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_317">
+						<coordinates>2.3775618,48.87058979999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_359">
+					<name>PIJ / Antenne Jeunes Pyhton</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">625</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_318">
+						<coordinates>2.4125752,48.8641038,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_360">
+					<name>Ass forum, animation, loisirs</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">570</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_319">
+						<coordinates>2.345856,48.86234699999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_361">
+					<name>Actes-If Maison des réseaux artistiques et culturels</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">564</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_320">
+						<coordinates>2.3953614,48.87527109999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_362">
+					<name>Centre d&apos;animations Hébert</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">610</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_321">
+						<coordinates>2.3632877,48.8942716,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_363">
+					<name>centre d&apos;animations maurice ravel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">585</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_322">
+						<coordinates>2.4115664,48.8415527,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_364">
+					<name>Centre d&apos;animations Les Amandiers</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">622</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_323">
+						<coordinates>2.3887483,48.867958,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_365">
+					<name>Centre d&apos;animatrion Jemmapes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">582</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_324">
+						<coordinates>2.3636982,48.8748947,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_366">
+					<name>PIJ / Antenne Jeune Claude Decean</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">587</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_325">
+						<coordinates>2.3962439,48.8385778,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_367">
+					<name>IRMA</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">567</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_326">
+						<coordinates>2.3926182,48.8655778,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_368">
+					<name>Antenne Jeunes Davoult</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">627</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_327">
+						<coordinates>2.4100976,48.8550805,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_369">
+					<name>DAC / Rectorat de Paris</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">565</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_328">
+						<coordinates>2.405969,48.86889900000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_370">
+					<name>Centre d&apos;Animation Solidarité</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">619</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_329">
+						<coordinates>2.3945425,48.8845312,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_371">
+					<name>centre d&apos;animations villiot</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">586</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_330">
+						<coordinates>2.3717894,48.8427054,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_372">
+					<name>Centre d&apos;Animation Places des Fêtes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">620</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_331">
+						<coordinates>2.395776,48.8781021,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_373">
+					<name>Centre d&apos;animations Château Landon</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">579</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_332">
+						<coordinates>2.363814,48.8832165,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_374">
+					<name>AFDAS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">569</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_333">
+						<coordinates>2.4001428,48.863144,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_375">
+					<name>ARCADI</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">559</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_334">
+						<coordinates>2.3536885,48.8718294,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_376">
+					<name>Espace jeune Centre social</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">621</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_335">
+						<coordinates>2.3776418,48.87379669999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_377">
+					<name>Centre d&apos;animations Rébeval</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">618</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_336">
+						<coordinates>2.3782204,48.8744305,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_378">
+					<name>Maison des associations</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">571</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_337">
+						<coordinates>2.3623013,48.86405209999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_379">
+					<name>Centre d&apos;animations Mathis</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">617</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_338">
+						<coordinates>2.3748988,48.89084209999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_380">
+					<name>Centre d&apos;animation Louis Lumière</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">626</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_339">
+						<coordinates>2.411366,48.8606616,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_381">
+					<name>Centre d&apos;animations Curial</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">616</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_340">
+						<coordinates>2.3753859,48.8956662,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_382">
+					<name>Hors les murs</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">560</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_341">
+						<coordinates>2.3708518,48.8652263,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_383">
+					<name>Centre d’animation Espace Saint Blaise</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">624</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_342">
+						<coordinates>2.4076095,48.85495110000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_384">
+					<name>GRETA</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">568</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_343">
+						<coordinates>2.4054099,48.85724149999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_385">
+					<name>Centre d&apos;animations La grange aux Belles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">580</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_344">
+						<coordinates>2.3679175,48.8767018,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_386">
+					<name>Les Funambules</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">628</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_345">
+						<coordinates>2.3842508,48.8511805,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_387">
+					<name>Centre d&apos;animations Clavel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">615</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_346">
+						<coordinates>2.3837711,48.87644469999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_388">
+					<name>Rectorat de Paris</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">566</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_347">
+						<coordinates>2.403498,48.8704652,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_389">
+					<name>Centre Social Le Pari&apos;s des faubourgs</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">581</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_348">
+						<coordinates>2.3558694,48.87513030000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_390">
+					<name>Marquise Café</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">629</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_349">
+						<coordinates>2.3758937,48.86727,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_391">
+					<name>Librairie L&apos;Arbre à lettres</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">791</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_350">
+						<coordinates>2.3734572,48.85187620000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_392">
+					<name>Café de la Danse</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">787</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_351">
+						<coordinates>2.372768,48.8538624,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_393">
+					<name>La cartoucherie Théatre de L&apos;aquirium</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">796</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_352">
+						<coordinates>2.4507951,48.8350752,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_394">
+					<name>Conservatoire Hector Berlioz</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">776</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_353">
+						<coordinates>2.3583399,48.8718249,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_395">
+					<name>Centre Wallonie Bruxelles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">734</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_354">
+						<coordinates>2.3513449,48.8610242,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_396">
+					<name>Bibliothèque Forney</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">740</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_355">
+						<coordinates>2.3593695,48.8533724,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_397">
+					<name>Le Point Ephémère</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">681</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_356">
+						<coordinates>2.3681408,48.88122799999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_398">
+					<name>Pôle Simon Lefranc</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">749</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_357">
+						<coordinates>2.3535342,48.86008,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_399">
+					<name>Artistic Athévain</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">786</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_358">
+						<coordinates>2.381104,48.8566125,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_400">
+					<name>CENTRE DE DANSE DU MARAIS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">747</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_359">
+						<coordinates>2.3539635,48.8595554,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_401">
+					<name>Théâtre de l&apos;Echangeur</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">827</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_360">
+						<coordinates>2.4164401,48.8629717,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_402">
+					<name>Ménagerie de Verre</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">779</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_361">
+						<coordinates>2.376708,48.8632767,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_403">
+					<name>Cours Florent</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">804</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_362">
+						<coordinates>2.3737194,48.8837153,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_404">
+					<name>Acting International</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">808</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_363">
+						<coordinates>2.3856783,48.8791815,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_405">
+					<name>Centre Wallonie Bruxelles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">712</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_364">
+						<coordinates>2.3505623,48.8610149,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_406">
+					<name>Librairie Wallonie Bruxelles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">735</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_365">
+						<coordinates>2.3505623,48.8610149,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_407">
+					<name>CENTRE CULTUREL SUISSE et LIBRAIRIE CCS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">728</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_366">
+						<coordinates>2.3592821,48.85838029999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_408">
+					<name>Maison des contes et des histoires</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">748</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_367">
+						<coordinates>2.3558524,48.8598672,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_409">
+					<name>AICOM PARIS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">729</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_368">
+						<coordinates>2.3552647,48.8681946,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_410">
+					<name>Boutique livres et DVD Mk2 Quai de Loire</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">819</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_369">
+						<coordinates>2.371657,48.883792,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_411">
+					<name>BIBLIOTHEQUE ADULTE FAIDHERBE</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">782</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_370">
+						<coordinates>2.3839559,48.8515687,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_412">
+					<name>Conservatoire Charles Münch</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">792</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_371">
+						<coordinates>2.3848833,48.86104169999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_413">
+					<name>Ecole Charles Dullin</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">774</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_372">
+						<coordinates>2.3654847,48.8748887,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_414">
+					<name>BIBLIOTHEQUE ADULTE PARMENTIER</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">783</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_373">
+						<coordinates>2.3789262,48.860151,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_415">
+					<name>Maison des initiatives étudiantes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">731</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_374">
+						<coordinates>2.3673196,48.8562304,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_416">
+					<name>Librairie L&apos;équipage</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">825</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_375">
+						<coordinates>2.3987925,48.8574316,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_417">
+					<name>Librairie du 104 et Accueil du 104</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">820</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_376">
+						<coordinates>2.3714737,48.8899404,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_418">
+					<name>librairie Le Comptoir des mots</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">823</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_377">
+						<coordinates>2.3987098,48.864383,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_419">
+					<name>Le local</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">781</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_378">
+						<coordinates>2.3757792,48.87002480000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_420">
+					<name>Espace st roch</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">709</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_379">
+						<coordinates>2.3326024,48.8659833,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_421">
+					<name>L’ATELIER DU PLATEAU</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">806</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_380">
+						<coordinates>2.3851795,48.87794409999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_422">
+					<name>La cartoucherie Théâtre du Soleil</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">794</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_381">
+						<coordinates>2.4507951,48.8350752,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_423">
+					<name>Centre LGBT Paris-ÎdF</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">733</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_382">
+						<coordinates>2.3543698,48.86302919999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_424">
+					<name>Mairie du 1e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">710</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_383">
+						<coordinates>2.3411188,48.86013799999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_425">
+					<name>Les Déchargeurs</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">707</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_384">
+						<coordinates>2.3459692,48.8596748,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_426">
+					<name>Mairie du 4e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">743</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_385">
+						<coordinates>2.3553172,48.8559279,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_427">
+					<name>Cours Florent</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">805</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_386">
+						<coordinates>2.3729998,48.8913061,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_428">
+					<name>Ministère de la culture Immeuble des bons enfants</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">636</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_387">
+						<coordinates>2.3388977,48.8625095,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_429">
+					<name>Librairie Gâtines</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">826</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_388">
+						<coordinates>2.3976996,48.8652731,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_430">
+					<name>Librairie Quilombo</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">784</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_389">
+						<coordinates>2.39258,48.85290319999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_431">
+					<name>Théâtre de la Colline</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">812</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_390">
+						<coordinates>2.3975585,48.8646159,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_432">
+					<name>Ministère de la Culture et de la Communication</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">732</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_391">
+						<coordinates>2.3548296,48.8633436,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_433">
+					<name>Le laboratoire de la création</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">705</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_392">
+						<coordinates>2.3424983,48.8614173,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_434">
+					<name>Conservatoire Mozart</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">715</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_393">
+						<coordinates>2.3479337,48.8616941,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_435">
+					<name>Conservatoire Georges Bizet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">814</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_394">
+						<coordinates>2.3893742,48.8662387,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_436">
+					<name>AGECIF</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">725</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_395">
+						<coordinates>2.3627686,48.8638706,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_437">
+					<name>Office du Tourisme de Paris</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">706</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_396">
+						<coordinates>2.333647,48.8660938,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_438">
+					<name>Au QG formation</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">811</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_397">
+						<coordinates>2.4010827,48.8507661,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_439">
+					<name>Direction des Affaires Culturelles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">746</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_398">
+						<coordinates>2.3610529,48.8575467,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_440">
+					<name>Maison des métallos</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">793</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_399">
+						<coordinates>2.3776726,48.8677366,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_441">
+					<name>Centre de doc° et de format° de la Ville</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">737</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_400">
+						<coordinates>2.3536857,48.8563987,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_442">
+					<name>Mairie du 2e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">718</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_401">
+						<coordinates>2.3403472,48.866806,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_443">
+					<name>Maison du Geste et de l&apos;Image</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">711</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_402">
+						<coordinates>2.3484915,48.8604376,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_444">
+					<name>Espace Kiron</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">778</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_403">
+						<coordinates>2.3851989,48.857892,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_445">
+					<name>IRCAM</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">736</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_404">
+						<coordinates>2.3513889,48.8594444,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_446">
+					<name>mairie du 10e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">777</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_405">
+						<coordinates>2.3572353,48.871749,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_447">
+					<name>Confluences</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">810</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_406">
+						<coordinates>2.3917605,48.8580236,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_448">
+					<name>Pôle Emploi Spectacle</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">788</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_407">
+						<coordinates>2.3668992,48.8669119,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_449">
+					<name>Librairie la Manœuvre</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">789</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_408">
+						<coordinates>2.3735473,48.8551155,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_450">
+					<name>KIOSQUE JEUNES LE MARAIS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">741</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_409">
+						<coordinates>2.3554569,48.8558984,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_451">
+					<name>Forum des Images</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">714</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_410">
+						<coordinates>2.3456466,48.8638522,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_452">
+					<name>Librairie Le Merle moqueur</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">813</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_411">
+						<coordinates>2.3978815,48.85705659999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_453">
+					<name>Micadanses</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">742</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_412">
+						<coordinates>2.3562053,48.8545814,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_454">
+					<name>Les Cahiers de Colette</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">727</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_413">
+						<coordinates>2.3544838,48.86086389999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_455">
+					<name>Cours Simon</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">780</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_414">
+						<coordinates>2.385019,48.85824319999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_456">
+					<name>Ecole Nat Sup d&apos;Architecture de Paris</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">818</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_415">
+						<coordinates>2.3741868,48.8748165,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_457">
+					<name>Gaité Lyrique</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">639</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_416">
+						<coordinates>2.3540041,48.8668378,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_458">
+					<name>Ecole de l&apos;Acteur Côté Cour</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">717</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_417">
+						<coordinates>2.350456,48.8654943,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_459">
+					<name>Librairie de la BHVP</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">739</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_418">
+						<coordinates>2.3613988,48.8567392,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_460">
+					<name>Librairie Le Genre Urbain</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">824</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_419">
+						<coordinates>2.3797263,48.87267400000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_461">
+					<name>Librairie L&apos;arbres à lettres</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">730</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_420">
+						<coordinates>2.3650744,48.8658247,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_462">
+					<name>La belle Lurette</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">745</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_421">
+						<coordinates>2.3656491,48.85370939999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_463">
+					<name>Bibliothèque Marguerite Audoux</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">719</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_422">
+						<coordinates>2.3601236,48.8635945,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_464">
+					<name>Association culturelle CNAM (pas facile à trouver !)</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">721</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_423">
+						<coordinates>2.3542902,48.8667255,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_465">
+					<name>Mairie du 3e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">720</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_424">
+						<coordinates>2.3613364,48.8637558,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_466">
+					<name>Conservatoire Jacques Ibert</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">809</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_425">
+						<coordinates>2.3720604,48.8828375,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_467">
+					<name>Ecole Jacques Lecoq</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">775</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_426">
+						<coordinates>2.3537133,48.87194360000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_468">
+					<name>Théâtre de la Bastille</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">790</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_427">
+						<coordinates>2.3754442,48.8558642,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_469">
+					<name>Bibliothèque Charlotte Delbo</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">716</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_428">
+						<coordinates>2.3405837,48.8664578,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Placemark id="feat_470">
+				<name>C 5</name>
+				<styleUrl>#stylesel_8</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Chemin</SimpleData>
+						<SimpleData name="dbid">5</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<LineString id="geom_429">
+					<coordinates>
+						2.3326024,48.8659833,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark id="feat_471">
+				<name>S 5</name>
+				<styleUrl>#stylesel_9</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Shape</SimpleData>
+						<SimpleData name="dbid">5</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Polygon id="geom_430">
+					<outerBoundaryIs>
+						<LinearRing id="geom_431">
+							<coordinates>
+								2.36891869111093,48.8418710680889,0 2.4035628352331,48.83271343474409,0 2.45998961201829,48.8334194338159,0 2.42998016189891,48.87271826437091,0 2.39531573134171,48.89354440162059,0 2.3614443216204,48.9017509705523,0 2.35941056330898,48.8853156342655,0 2.35182424893862,48.87793623339689,0 2.35126633719849,48.870799031739,0 2.34308083455169,48.86998466383609,0 2.33043724766567,48.8688334870957,0 2.33074278385788,48.86323842252281,0 2.33998577863266,48.858680614933,0 2.35858048711907,48.8512621340989,0 2.36891869111093,48.8418710680889,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+		<Folder id="feat_473">
+			<name>P1</name>
+			<open>1</open>
+			<Style id="stylesel_11">
+				<PolyStyle id="substyle_11">
+					<color>8000ff00</color>
+					<colorMode>normal</colorMode>
+					<fill>1</fill>
+					<outline>1</outline>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Parcours</SimpleData>
+					<SimpleData name="dbid">1</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_474">
+				<name>Lieux</name>
+				<Placemark id="feat_475">
+					<name>Centre d&apos;animations René Binet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">611</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_432">
+						<coordinates>2.3362958,48.899147,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_476">
+					<name>SACD librairie</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">557</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_433">
+						<coordinates>2.3308887,48.881581,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_477">
+					<name>PIJ / Antenne Jeunes Louis Loucheur</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">607</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_434">
+						<coordinates>2.3256739,48.8980843,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_478">
+					<name>Interclub 17</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">608</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_435">
+						<coordinates>2.3149848,48.88516019999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_479">
+					<name>PIJ / Antenne jeunes Henri Brisson</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">612</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_436">
+						<coordinates>2.3347785,48.8983921,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_480">
+					<name>SACD acceuil</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">558</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_437">
+						<coordinates>2.3306619,48.8815814,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_481">
+					<name>Antenne jeunes Mont Cenis</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">614</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_438">
+						<coordinates>2.3460347,48.895608,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_482">
+					<name>Centre national du Théâtre</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">562</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_439">
+						<coordinates>2.3230845,48.889378,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_483">
+					<name>centre d&apos;animations la jonquière</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">606</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_440">
+						<coordinates>2.319155,48.894733,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_484">
+					<name>Office du Tourisme de Paris</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">563</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_441">
+						<coordinates>2.3437224,48.8829464,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_485">
+					<name>Le Petit ney</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">630</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_442">
+						<coordinates>2.3368979,48.8987593,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_486">
+					<name>Centre Binet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">632</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_443">
+						<coordinates>2.3355236,48.900535,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_487">
+					<name>Librairie L&apos;Humeur Vagabonde</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">816</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_444">
+						<coordinates>2.3410627,48.8946793,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_488">
+					<name>Cons. municipal du 18 eme</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">802</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_445">
+						<coordinates>2.3476809,48.8933823,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_489">
+					<name>Conservatoire Claude Debussy</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">801</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_446">
+						<coordinates>2.3122096,48.8820998,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_490">
+					<name>Mains D&apos;oeuvres (salle de concerts, événements)</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">828</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_447">
+						<coordinates>2.3389786,48.9052052,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_491">
+					<name>La Femis</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">697</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_448">
+						<coordinates>2.3426507,48.8900387,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_492">
+					<name>SACD</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">769</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_449">
+						<coordinates>2.3305753,48.88172770000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_493">
+					<name>LIBRAIRIE VENDREDI</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">817</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_450">
+						<coordinates>2.339634,48.8817761,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_494">
+					<name>ONDA</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">770</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_451">
+						<coordinates>2.3371761,48.879851,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_495">
+					<name>Librairie Anima</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">815</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_452">
+						<coordinates>2.3376841,48.8854304,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Placemark id="feat_496">
+				<name>C 1</name>
+				<styleUrl>#stylesel_10</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Chemin</SimpleData>
+						<SimpleData name="dbid">1</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<LineString id="geom_453">
+					<coordinates>
+						2.3122096,48.8820998,0 2.3149848,48.88516019999999,0 2.319155,48.894733,0 2.3256739,48.8980843,0 2.3347785,48.8983921,0 2.3368979,48.8987593,0 2.3362958,48.899147,0 2.3355236,48.900535,0 2.3389786,48.9052052,0 2.3460347,48.895608,0 2.3476809,48.8933823,0 2.3426507,48.8900387,0 2.3376841,48.8854304,0 2.3437224,48.8829464,0 2.339634,48.8817761,0 2.3371761,48.879851,0 2.3308887,48.881581,0 2.3305753,48.88172770000001,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark id="feat_497">
+				<name>S 1</name>
+				<styleUrl>#stylesel_11</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Shape</SimpleData>
+						<SimpleData name="dbid">1</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Polygon id="geom_454">
+					<outerBoundaryIs>
+						<LinearRing id="geom_455">
+							<coordinates>
+								2.35179308416062,48.890216807709,0 2.34514112362958,48.9099782324226,0 2.3203451357872,48.90133587530521,0 2.29998509900216,48.87871829073669,0 2.33694637052528,48.8780170005038,0 2.34908292960682,48.8834470651687,0 2.35179308416062,48.890216807709,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+		<Folder id="feat_499">
+			<name>P3</name>
+			<Style id="stylesel_13">
+				<PolyStyle id="substyle_13">
+					<color>8000ff00</color>
+					<colorMode>normal</colorMode>
+					<fill>1</fill>
+					<outline>1</outline>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Parcours</SimpleData>
+					<SimpleData name="dbid">3</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_500">
+				<name>Lieux</name>
+				<Placemark id="feat_501">
+					<name>Librairie comme un roman</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">723</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_456">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_502">
+					<name>La Bellevilloise   (café, concerts, événements)</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">822</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_457">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_503">
+					<name>Mots et merveilles</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">755</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_458">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_504">
+					<name>LE VENT SE LEVE</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">803</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_459">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_505">
+					<name>Librairie La Friche</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">785</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_460">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_506">
+					<name>La cartoucherie Théatre de la Tempète</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">795</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_461">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_507">
+					<name>La Maroquinerie  (salle de concert/ restau)</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">821</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_462">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_508">
+					<name>Bibliothèque Baudoyer</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">744</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_463">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_509">
+					<name>Librairie du Spectacle Garnier Arnoult</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">766</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_464">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_510">
+					<name>Librairie La Boucherie</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">756</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_465">
+						<coordinates>0,0,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Placemark id="feat_511">
+				<name>C 3</name>
+				<styleUrl>#stylesel_12</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Chemin</SimpleData>
+						<SimpleData name="dbid">3</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<LineString id="geom_466">
+					<coordinates>
+						0,0,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark id="feat_512">
+				<name>S 3</name>
+				<styleUrl>#stylesel_13</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Shape</SimpleData>
+						<SimpleData name="dbid">3</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Polygon id="geom_467">
+					<outerBoundaryIs>
+						<LinearRing id="geom_468">
+							<coordinates>
+								0.146203445840252,0.0981973583927815,0 -0.06418747811683061,0.0059308518061542,0 0.0649615773673307,-0.126087943110266,0 0.146203445840252,0.0981973583927815,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+		<Folder id="feat_514">
+			<name>P4</name>
+			<open>1</open>
+			<Style id="stylesel_15">
+				<PolyStyle id="substyle_15">
+					<color>8000ff00</color>
+					<colorMode>normal</colorMode>
+					<fill>1</fill>
+					<outline>1</outline>
+				</PolyStyle>
+			</Style>
+			<ExtendedData>
+				<SchemaData schemaUrl="None">
+					<SimpleData name="kaf_objet">Parcours</SimpleData>
+					<SimpleData name="dbid">4</SimpleData>
+				</SchemaData>
+			</ExtendedData>
+			<Folder id="feat_515">
+				<name>Lieux</name>
+				<Placemark id="feat_516">
+					<name>Centre d&apos;animations Censier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">572</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_469">
+						<coordinates>2.3546834,48.8409412,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_517">
+					<name>Centre d&apos;animations Arras</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">573</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_470">
+						<coordinates>2.3516157,48.8466107,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_518">
+					<name>Centre d&apos;animations La Poterne des peupliers</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">588</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_471">
+						<coordinates>2.3510481,48.8205335,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_519">
+					<name>Centre d&apos;animations Brancion</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">599</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_472">
+						<coordinates>2.3003889,48.826677,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_520">
+					<name>Centre d&apos;Animation Baudricourt</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">591</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_473">
+						<coordinates>2.3639301,48.8235098,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_521">
+					<name>Centre d&apos;animation Daviel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">590</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_474">
+						<coordinates>2.3447246,48.8281766,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_522">
+					<name>Centre d&apos;animation Dunois</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">592</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_475">
+						<coordinates>2.3663349,48.8331026,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_523">
+					<name>Centre d&apos;animation Sohane</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">601</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_476">
+						<coordinates>2.3118676,48.8356427,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_524">
+					<name>Antenne jeunes Campo Formio</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">594</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_477">
+						<coordinates>2.3592237,48.8350114,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_525">
+					<name>Antenne Jeunes  Fontaine à Mulard</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">593</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_478">
+						<coordinates>2.349386,48.8232059,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_526">
+					<name>Centre d&apos;animation Charles Richet</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">589</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_479">
+						<coordinates>2.364011,48.83192420000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_527">
+					<name>DDJS</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">561</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_480">
+						<coordinates>2.375785,48.82595600000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_528">
+					<name>Centre d&apos;animations St Michel</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">574</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_481">
+						<coordinates>2.3437585,48.8534712,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_529">
+					<name>PIJ / antenne jeune information Didot</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">602</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_482">
+						<coordinates>2.319843,48.8315186,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_530">
+					<name>centre d&apos;animations Marc Sangnier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">597</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_483">
+						<coordinates>2.3065104,48.8262507,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_531">
+					<name>Point jeune</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">598</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_484">
+						<coordinates>2.3092897,48.8314237,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_532">
+					<name>Maison des associations</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">596</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_485">
+						<coordinates>2.3612652,48.8226783,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_533">
+					<name>espace cévennes</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">631</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_486">
+						<coordinates>2.278901,48.840423,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_534">
+					<name>ANRAT</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">798</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_487">
+						<coordinates>2.3380549,48.8364859,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_535">
+					<name>Mairie du 5e</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">752</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_488">
+						<coordinates>2.3444932,48.8465518,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_536">
+					<name>L&apos;harmattan</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">751</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_489">
+						<coordinates>2.349117,48.8485663,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_537">
+					<name>Ecole Normale Supérieure - Bureau des Arts</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">753</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_490">
+						<coordinates>2.3440345,48.84183669999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_538">
+					<name>Conservatoire JP Rameau</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">764</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_491">
+						<coordinates>2.3352732,48.85194820000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_539">
+					<name>Librairie L&apos;écume des pages</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">762</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_492">
+						<coordinates>2.3322174,48.8542155,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_540">
+					<name>Librairie Lire Elire</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">750</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_493">
+						<coordinates>2.3541927,48.8403615,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_541">
+					<name>Maison des cultures du monde</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">758</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_494">
+						<coordinates>2.328528,48.8462713,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_542">
+					<name>Librairie l&apos;Escalier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">759</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_495">
+						<coordinates>2.33953,48.850258,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_543">
+					<name>Théâtre de la Cité internationale</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">799</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_496">
+						<coordinates>2.3387068,48.8200968,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_544">
+					<name>Librairie Tschann</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">760</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_497">
+						<coordinates>2.3311657,48.84169369999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_545">
+					<name>Sciences Po - Bureau des Arts</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">767</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_498">
+						<coordinates>2.3299682,48.8537346,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_546">
+					<name>Librairie Le Coupe-Papier</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">763</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_499">
+						<coordinates>2.3387254,48.85020470000001,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_547">
+					<name>Conservatoire Frédéric Chopin</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">800</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_500">
+						<coordinates>2.3089985,48.8379053,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_548">
+					<name>Librairie La Hune</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">761</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_501">
+						<coordinates>2.3334316,48.8537833,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_549">
+					<name>Beaux Arts de Paris - ENSBA</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">663</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_502">
+						<coordinates>2.3346182,48.85660769999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_550">
+					<name>Maison des pratiques artistiques amateurs - Auditorium saint germain</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">765</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_503">
+						<coordinates>2.3367095,48.8519141,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_551">
+					<name>CROUS Paris</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">757</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_504">
+						<coordinates>2.3373843,48.8402168,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_552">
+					<name>Librairie Compagnie</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">754</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_505">
+						<coordinates>2.3435675,48.85011249999999,0</coordinates>
+					</Point>
+				</Placemark>
+				<Placemark id="feat_553">
+					<name>Conservatoire Darius Milhaud</name>
+					<ExtendedData>
+						<SchemaData schemaUrl="None">
+							<SimpleData name="kaf_objet">Lieu</SimpleData>
+							<SimpleData name="dbid">797</SimpleData>
+						</SchemaData>
+					</ExtendedData>
+					<Point id="geom_506">
+						<coordinates>2.3258768,48.8324434,0</coordinates>
+					</Point>
+				</Placemark>
+			</Folder>
+			<Placemark id="feat_554">
+				<name>C 4</name>
+				<styleUrl>#stylesel_141</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Chemin</SimpleData>
+						<SimpleData name="dbid">4</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<LineString id="geom_507">
+					<coordinates>
+						2.278901,48.840423,0 2.309064818965554,48.8380400552351,0 2.311864744482452,48.83540219820608,0 2.309372056232621,48.83118577090641,0 2.320312164369605,48.83126955934156,0 2.326358888332243,48.8323980590613,0 2.300805992653838,48.82699440802104,0 2.306589942805446,48.82599155380494,0 2.338894421584425,48.82022417915949,0 2.351281275318191,48.82044402073921,0 2.349820048444191,48.82325785828412,0 2.344844931068759,48.8284709572448,0 2.360815228395203,48.82271585044731,0 2.36431130277192,48.82334474092212,0 2.375653323618776,48.82640166673295,0 2.364367950739337,48.83237149989588,0 2.367062512334048,48.83309180284931,0 2.359001248791697,48.83513261105353,0 2.355057539963734,48.84135049090062,0 2.353905950773367,48.84013285815797,0 2.343968554297227,48.84202115916662,0 2.338397892873858,48.83623506783896,0 2.337503480437824,48.8403448090916,0 2.331313935174359,48.841730318091,0 2.328415695073547,48.84635731344721,0 2.329870688205544,48.85378488467245,0 2.332483231233258,48.85399945452274,0 2.333442564770707,48.8538313135996,0 2.335300058099616,48.85197739446732,0 2.336644365290002,48.85172446392633,0 2.338634648399422,48.85012230482572,0 2.33991177344602,48.85029097010827,0 2.343621450619087,48.85016358333734,0 2.344964159592973,48.84634223473218,0 2.349375988111966,48.84864834477766,0 2.351929870780869,48.84679682812533,0 2.344260865935861,48.85344890615504,0 2.334589271693264,48.85695274030745,0 
+					</coordinates>
+				</LineString>
+			</Placemark>
+			<Placemark id="feat_555">
+				<name>S 4</name>
+				<styleUrl>#stylesel_15</styleUrl>
+				<ExtendedData>
+					<SchemaData schemaUrl="None">
+						<SimpleData name="kaf_objet">Shape</SimpleData>
+						<SimpleData name="dbid">4</SimpleData>
+					</SchemaData>
+				</ExtendedData>
+				<Polygon id="geom_508">
+					<outerBoundaryIs>
+						<LinearRing id="geom_509">
+							<coordinates>
+								2.38923357769573,48.8280479518482,0 2.35737364890123,48.85069061684201,0 2.32459854539031,48.8626498748276,0 2.29678534455304,48.8618345007345,0 2.2691513586326,48.8392592665366,0 2.28818587022523,48.8287282498908,0 2.34554014493358,48.81697389435151,0 2.37790831276249,48.8218704060875,0 2.38923357769573,48.8280479518482,0 
+							</coordinates>
+						</LinearRing>
+					</outerBoundaryIs>
+				</Polygon>
+			</Placemark>
+		</Folder>
+	</Folder>
+</Document>
+</kml>

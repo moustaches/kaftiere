@@ -1,0 +1,86 @@
+;;;;;;;;;DEPOT NOM : >;Clemenceau;Kroutcheff;Staline
+;;;;;;;;;DEPOT SURNOM : >;DP;DC;DS
+;;;;;;;;;DEPOT TYPE : >;Flyer;Brochure;Affiche
+;;;;;;;;;DEPOT QUANTITEE : >;1000;3000;2000
+;;;;;;;;;DEPOT VOLUME : >;99.0;999.0;999.0
+;;;;;;;;;DEPOT CARTONS : >;2;5;3
+;;;;;;;;;DEPOT REMARQUE : >;ha oui;ha non ;ha bof
+;;;;;;;;;DEPOT POID CARTONS : >;12;11;4
+;;;;;;;;;DEPOT NB PAQUET : >;10;32;20
+;;;;;;;;;DEPOT PRIX : >;0.5;0.9;0.2
+;INFO KAF : |;REF : |;NOM  : |;ADRESSE : |;CP : |;VILLE : |;INFORMATION LIEU : |;DESTINATAIRE : |;LIEU PRIX : |;;;
+;;330;DRAC;49 rue Le Peletier;75009;Paris;;;;1;2;3
+;;331;SACD librairie;7, rue Ballu;75009;Paris;;;;3;6;9
+;;332;SACD acceuille;9 rue Ballu;75009;Paris;;;;5;10;15
+;;333;Arcadi;51 Rue du Faubourg Saint-Denis;75010;Paris;;;;7;14;21
+;;334;hors les murs;68 rue de la folie méricourt;75011;Paris;;;;9;18;27
+;;335;DDJS;6 rue eugene oudiné;75013;Paris;;;;11;22;33
+;;336;Centre national du Théâtre;134, rue Legendre;75017;Paris;;;;13;26;39
+;;337;Office du Tourisme de Paris;72 bd Rochechouart;75018;Paris;;;;15;30;45
+;;338;Actes-If Maison des réseaux artistiques et culturels;221, rue de Belleville;75019;Paris;;;;17;34;51
+;;339;DAC / Rectorat de Paris;44 rue alphonse penaud;75019;Paris;;;;19;38;57
+;;340;Rectorat de Paris;94, avenue Gambetta;75020;Paris;;;;21;42;63
+;;341;IRMA;22 rue Soleillet;75020;Paris;;;;23;46;69
+;;342;GRETA;14 rue Courat;75020;Paris;;;;25;50;75
+;;343;AFDAS;72 rue Stendhal;75020;Paris;;;;27;54;81
+;;344;Ass forum, animation, loisirs;8, place Carrée;75001;Paris;;;;29;58;87
+;;345;Maison des associations;5, rue Perré;75003;Paris;;;;31;62;93
+;;346;Centre d'animations Censier;12, rue de Censier;75005;Paris;;;;33;66;99
+;;347;Centre d'animations Arras;48, rue du Cardinal Lemoine;75005;Paris;;;;35;70;105
+;;348;Centre d'animations St Michel;9, place St Michel;75006;Paris;;;;37;74;111
+;;349;Centre d'animations  Beaujon;208, rue du Faubourg St Honoré;75009;Paris;;;;39;78;117
+;;350;Centre d'animations  Valeyre;24, rue Rochechouart;75009;Paris;;;;41;82;123
+;;351;PIJ / Antenne Jeunes 9e;60 rue Lafayette;75009;Paris;;;;43;86;129
+;;352;Centre d'animations Jean Verdier;11, rue de Lancry;75010;Paris;;;;45;90;135
+;;353;Centre d'animations Château Landon;31, rue Château Landon;75010;Paris;;;;47;94;141
+;;354;Centre d'animations La grange aux Belles;6, rue boy Zelensky;75010;Paris;;;;49;98;147
+;;355;Centre Social Le Pari's des faubourgs;107 bis, rue du faubourg Saint Denis;75010;Paris;;;;51;102;153
+;;356;Centre d'animatrion Jemmapes;116, quai de Jemmapes;75011;Paris;;;;53;106;159
+;;357;PIJ / MJC Mercoeur;4, rue Mercoeur;75011;Paris;;;;55;110;165
+;;358;PIJ / Antenne Jeune Orillon;43 rue de l'Orillon;75011;Paris;;;;57;114;171
+;;359;centre d'animations maurice ravel;6 av maurice ravel;75012;Paris;;;;59;118;177
+;;360;centre d'animations villiot;36 quai de la rapée;75012;Paris;;;;61;122;183
+;;361;PIJ / Antenne Jeune Claude Decean;91 rue Claude Decaen;75012;Paris;;;;63;126;189
+;;362;Centre d'animations La Poterne des peupliers;1, rue Gouthière;75013;Paris;;;;65;130;195
+;;363;Centre d'animation Charles Richet;12, rue du Docteur Charles richet;75013;Paris;;;;67;134;201
+;;364;Centre d'animation Daviel;24, rue Daviel;75013;Paris;;;;69;138;207
+;;365;Centre d'Animation Baudricourt;6, rue Simone Weil;75013;Paris;;;;71;142;213
+;;366;Centre d'animation Dunois;61, rue Dunois;75013;Paris;;;;73;146;219
+;;367;Antenne Jeunes  Fontaine à Mulard;15 rue de la fontaine à Mulard;75013;Paris;;;;75;150;225
+;;368;Antenne jeunes Campo Formio;23 rue Campo Formio;75013;Paris;;;;77;154;231
+;;369;Antennes jeunes SUD;3 av Joseph Bedier;75013;Paris;;;;79;158;237
+;;370;Maison des associations;11 rue caillaux;75013;Paris;;;;81;162;243
+;;371;centre d'animations Marc Sangnier;20, avenue marc Sangnier;75014;Paris;;;;83;166;249
+;;372;Point jeune;183, rue de vercingétorix;75014;Paris;;;;85;170;255
+;;373;Centre d'animations Brancion;18, avenue de la Porte Brancion;75015;Paris;;;;87;174;261
+;;374;centre d'animations frère voisins;36 av colonel pierre avia;75015;Paris;;;;89;178;267
+;;375;Centre d'animation Sohane;20, rue Georges Duhamel;75015;Paris;;;;91;182;273
+;;376;PIJ / antenne jeune information Didot;40 rue didot;75015;Paris;;;;93;186;279
+;;377;espace cévennes;9, rue de la Montagne d'Aula;75015;Paris;;;;95;190;285
+;;378;Conservatoire Francis Poulenc;11, rue de la fontaine;75016;Paris;;;;97;194;291
+;;379;Centre d'animations Point du jour;1 rue général malleterre;75016;Paris;;;;99;198;297
+;;380;centre d'animations la jonquière;88, rue la jonquière;75017;Paris;;;;101;202;303
+;;381;PIJ / Antenne Jeunes Louis Loucheur;3 rue Louis Loucheur;75017;Paris;;;;103;206;309
+;;382;Interclub 17;47, rue de Saussure;75017;Paris;;;;105;210;315
+;;383;Antennes jeunes Haut de Malesherbes;27 rue Marguerite Long;75017;Paris;;;;107;214;321
+;;384;Centre d'animations Hébert;12, rue des fillettes;75018;Paris;;;;109;218;327
+;;385;Centre d'animations René Binet;66, rue René Binet;75018;Paris;;;;111;222;333
+;;386;PIJ / Antenne jeunes Henri Brisson;5 rue Henri Brisson;75018;Paris;;;;113;226;339
+;;387;Centre Binet;66, av. de la Pte de Montmartre;75018;Paris;;;;115;230;345
+;;388;Antenne jeunes Mont Cenis;119 rue du Mont Cenis;75018;Paris;;;;117;234;351
+;;389;Centre d'animations Clavel;26, rue clavel;75019;Paris;;;;119;238;357
+;;390;Centre d'animations Curial;90, rue curial;75019;Paris;;;;121;242;363
+;;391;Centre d'animations Mathis;15, rue mathis;75019;Paris;;;;123;246;369
+;;392;Centre d'animations Rébeval;36, rue Rebéval;75019;Paris;;;;125;250;375
+;;393;Centre d'Animation Solidarité;135, bd Sérurier;75019;Paris;;;;127;254;381
+;;394;Centre d'Animation Places des Fêtes;4, rue des Lilas;75019;Paris;;;;129;258;387
+;;395;Espace jeune Centre social;17 rue jules Romain;75019;Paris;;;;131;262;393
+;;396;Centre d'animations Les Amandiers;110, rue des Amandiers;75020;Paris;;;;133;266;399
+;;397;Centre d'animations Louis Lumière;48, rue Louis Lumière;75020;Paris;;;;135;270;405
+;;398;Centre d’animation Espace Saint Blaise;1 rue Pauline Kergomard;75020;Paris;;;;137;274;411
+;;399;PIJ / Antenne Jeunes Pyhton;39 rue Joseph Pyhton;75020;Paris;;;;139;278;417
+;;400;Centre d'animation Louis Lumière;46 rue Louis Lumière;75020;Paris;;;;141;282;423
+;;401;Antenne Jeunes Davoult;93 bd Davoult;75020;Paris;;;;143;286;429
+;;402;Les Funambules;12, rue Faidherbe;75011;Paris;;;;145;290;435
+;;403;Marquise Café;74, rue Jean-Pierre Timbaud;75011;Paris;;;;147;294;441
+;;404;Le Petit ney;10 avenue de la porte montmartre;75018;Paris;;;;149;298;447
