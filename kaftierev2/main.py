@@ -12,6 +12,7 @@ from qt.fenetres import MainFenetre
 
 if __name__=="__main__":  
     print("c'est parti")
+    print("vraiment parti")
     app=QApplication(sys.argv)
     mainFenetre = MainFenetre()
     sys.exit(app.exec_())
