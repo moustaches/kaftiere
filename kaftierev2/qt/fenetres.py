@@ -1493,7 +1493,7 @@ class FenetreKml(Fenetre):
         
     def createFenetre(self):
         self.labelObjetK=KLabelPixmap(parent=self, mere=self.mere)
-        self.textCheminFichier=QtGui.QLineEdit('{}/KML/TourneeQ3.kml'.format(os.getcwd()), parent=self)
+        self.textCheminFichier=QtGui.QLineEdit(parent=self)
         self.textEditKlmInfo=QtGui.QTextEdit(parent=self)
         self.boutExporter= QtGui.QPushButton("Exporter Kml",parent=self)
         self.boutActualiser= QtGui.QPushButton("Actualiser",parent=self)
@@ -1535,7 +1535,7 @@ class FenetreKml(Fenetre):
     def exporterCheminFichier(self):
         chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
         if chemin:
-            Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination="{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+            Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination=chemin[0])
             self.textCheminFichier.setText(chemin[0])
 
 
