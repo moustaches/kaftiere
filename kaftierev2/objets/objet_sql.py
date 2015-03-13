@@ -544,7 +544,7 @@ class SqlAdresseK(SqlObjetK):
 
 class SqlDepotK(SqlObjetK):
     """Sous class sql du depot"""
-    SQL_ARGS=['nom','surnom','volume','poid','prix_unite','remarque','nb_paquet','nb_carton','dbid_genre','dbid_contrat']#,'quantite' a supprimer
+    SQL_ARGS=['nom','surnom','volume','poid','prix_unite','remarque','nb_paquet','nb_carton','quantite','dbid_genre','dbid_contrat']
     INIT_SQL_ARGS= {'nom':'Sans nom',
                     'surnom':'Sans nom',
                     'volume':0,
@@ -604,7 +604,5 @@ class SqlDepotK(SqlObjetK):
         if composentes:
             for lieu, quantite in self.dictLieuQuantite.items():
                 if lieu.dbid:self._insLieuQuantite(lieu.dbid,quantite)
-            
-            
             
             

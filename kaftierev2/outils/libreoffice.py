@@ -104,7 +104,7 @@ def styleFeuilleREF(sheet =None,index=(None, None), tournee=None):
                 dict_depot_pedaleur[ind_depot]+=nb_depot
                 sheet.getCellByPosition(index[0]+ind_pedaleur+ind_parcours+1,index[1]+ind_depot).setValue(nb_depot)#edition des nb depot/parcours
         for ind_depot, depot in dict_depot_index.items():
-            pour_cent_depot_pedaleur=dict_depot_pedaleur[ind_depot]/depot.quantite
+            pour_cent_depot_pedaleur=dict_depot_pedaleur[ind_depot]/depot.infoQuantiteDepot
             sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setValue(pour_cent_depot_pedaleur)#edition des % depot/pedaleur
         ind_pedaleur+=(ind_parcours+1)
 
