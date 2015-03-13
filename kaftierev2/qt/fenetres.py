@@ -5,6 +5,7 @@ Created on 8 mai 2013
 '''
 import datetime
 
+import os
 from PySide import QtCore,QtGui
 from objets.mere import Mere
 from outils.dock import DocK
@@ -55,7 +56,7 @@ class InitFenetre(Fenetre):
         self.label.setGeometry(QtCore.QRect(10, 230, 361, 17))
         self.label_2 = QtGui.QLabel(parent=self)
         self.label_2.setGeometry(QtCore.QRect(20, 10, 341, 171))
-        self.label_2.setPixmap(QtGui.QPixmap("/home/moustache/prog/DIV/logo.jpeg"))
+        self.label_2.setPixmap(QtGui.QPixmap("{}/DIV/logo.jpeg".format(os.getcwd())))
         self.text=QtGui.QTextEdit(parent=self)
         self.text.setGeometry(QtCore.QRect(10, 300, 360, 150))
         
@@ -1317,7 +1318,7 @@ class FenetreEditAdresseDB(Fenetre):
         
     def importerDock(self):
         """importer un document cvs pour matcher et geocoder"""
-        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","/home/moustache/prog/CSV/")
+        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","{}/CSV/".format(os.getcwd()))
         if fichier_csv:
             self.fichier =fichier_csv[0] 
             self.dock=DocK(parent=self,mere=self.mere)
@@ -1454,7 +1455,7 @@ class FenetreImportListing(Fenetre):
         
     def importerDock(self):
         """importer un document cvs pour matcher et geocoder"""
-        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","/home/moustache/workspace/kaftierev2/CSV")
+        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","{}/CSV".format(os.getcwd()))
         if fichier_csv:
             self.fichier =fichier_csv[0] 
             self.dock=DocK(parent=self,mere=self.mere)
@@ -1492,7 +1493,7 @@ class FenetreKml(Fenetre):
         
     def createFenetre(self):
         self.labelObjetK=KLabelPixmap(parent=self, mere=self.mere)
-        self.textCheminFichier=QtGui.QLineEdit('/home/moustache/workspace/kaftierev2/KML/TourneeQ3.kml', parent=self)
+        self.textCheminFichier=QtGui.QLineEdit('{}/KML/TourneeQ3.kml'.format(os.getcwd()), parent=self)
         self.textEditKlmInfo=QtGui.QTextEdit(parent=self)
         self.boutExporter= QtGui.QPushButton("Exporter Kml",parent=self)
         self.boutActualiser= QtGui.QPushButton("Actualiser",parent=self)
@@ -1532,9 +1533,9 @@ class FenetreKml(Fenetre):
         self.textEditKlmInfo.setText(self.kmlInfo())
     
     def exporterCheminFichier(self):
-        chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","/home/moustache/workspace/kaftierev2/KML/"+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+        chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
         if chemin:
-            Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination="/home/moustache/workspace/kaftierev2/KML/"+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+            Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination="{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
             self.textCheminFichier.setText(chemin[0])
 
 
@@ -1598,9 +1599,9 @@ class FenetreTamponade(Fenetre):
         acction(tournee=self.objetK)
     
     def ouvrirCheminFichier(self):
-        chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","/home/moustache/workspace/kaftierev2/KML/"+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+        chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
         if chemin:
-            Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination="/home/moustache/workspace/kaftierev2/KML/"+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+            Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination="{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
             self.textCheminFichier.setText(chemin[0])
 
 

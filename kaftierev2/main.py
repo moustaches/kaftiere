@@ -8,10 +8,6 @@ import sys
 from PySide.QtGui import QApplication
 from qt.fenetres import MainFenetre
 
-
-
-
-
 if __name__=="__main__":  
     print("c'est parti")
     print("vraiment parti")
