@@ -1,6 +1,6 @@
-from PySide import QtCore, QtGui
+from PyQt5 import QtCore, QtWidgets,QtWidgets
 
-class ComboBoxGeoResultDelegate(QtGui.QStyledItemDelegate):
+class ComboBoxGeoResultDelegate(QtWidgets.QStyledItemDelegate):
     def __init__(self,parent=None,mere=None):
         super(ComboBoxGeoResultDelegate, self).__init__(parent)
         self.parent=parent
@@ -18,8 +18,8 @@ class ComboBoxGeoResultDelegate(QtGui.QStyledItemDelegate):
     
     def createEditor(self, parent, option, index):
         if not index.isValid():return False
-        self.comboBox = QtGui.QComboBox(parent)
-        self.comboBox.setSizeAdjustPolicy(QtGui.QComboBox.AdjustToContents)
+        self.comboBox = QtWidgets.QComboBox(parent)
+        self.comboBox.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         lieu = index.data(QtCore.Qt.UserRole)
         for dict_resel_lieu in lieu.adresse._listResultatGeo:
             self.comboBox.addItem(self.titleEdition(dict_resel_lieu))
@@ -35,12 +35,12 @@ class ComboBoxGeoResultDelegate(QtGui.QStyledItemDelegate):
         index.model().setData(index, editor.currentIndex(), QtCore.Qt.EditRole)
 
     def paint(self, painter, option, index):
-        opt= QtGui.QStyleOptionComboBox()
+        opt= QtWidgets.QStyleOptionComboBox()
         opt.rect= option.rect
-        QtGui.QStyledItemDelegate.paint(self, painter, option, index)
+        QtWidgets.QStyledItemDelegate.paint(self, painter, option, index)
 
 
-class ComboBoxDelegate(QtGui.QStyledItemDelegate):
+class ComboBoxDelegate(QtWidgets.QStyledItemDelegate):
     def __init__(self,parent=None,mere=None,comboBoxTable=None,comboBoxArg=None):
         super(ComboBoxDelegate, self).__init__(parent)
         self.parent=parent
@@ -51,8 +51,8 @@ class ComboBoxDelegate(QtGui.QStyledItemDelegate):
     def createEditor(self, parent, option, index):
         if not index.isValid():return False
         self.currentIndex=index  
-        self.comboBox = QtGui.QComboBox(parent)
-        self.comboBox.setSizeAdjustPolicy(QtGui.QComboBox.AdjustToContents)
+        self.comboBox = QtWidgets.QComboBox(parent)
+        self.comboBox.setSizeAdjustPolicy(QtWidgets.QComboBox.AdjustToContents)
         for genre in self.comboBoxTable.data_arg[self.comboBoxArg]:
             if isinstance(genre,int):genre=str(genre)
             self.comboBox.addItem(genre)
@@ -72,12 +72,12 @@ class ComboBoxDelegate(QtGui.QStyledItemDelegate):
         index.model().setData(index, editor.currentText(), QtCore.Qt.EditRole)
 
     def paint(self, painter, option, index):
-        opt= QtGui.QStyleOptionComboBox()
+        opt= QtWidgets.QStyleOptionComboBox()
         opt.rect=option.rect
-        QtGui.QStyledItemDelegate.paint(self, painter, option, index)
+        QtWidgets.QStyledItemDelegate.paint(self, painter, option, index)
 
 
-class GridTourneeDelegate(QtGui.QStyledItemDelegate):
+class GridTourneeDelegate(QtWidgets.QStyledItemDelegate):
     def __init__(self,parent=None,mere=None):
         super(GridTourneeDelegate, self).__init__(parent)    
     
@@ -87,10 +87,10 @@ class GridTourneeDelegate(QtGui.QStyledItemDelegate):
         painter.drawLine(option.rect.bottomLeft(), option.rect.bottomRight())
         if index.column()<1:painter.drawLine(option.rect.topRight(), option.rect.bottomRight())
         painter.restore()
-        QtGui.QStyledItemDelegate.paint(self, painter, option, index)
+        QtWidgets.QStyledItemDelegate.paint(self, painter, option, index)
 
 
-class LineEditDelegate(QtGui.QStyledItemDelegate):
+class LineEditDelegate(QtWidgets.QStyledItemDelegate):
     def __init__(self,parent=None):
         super(LineEditDelegate, self).__init__(parent)
         self.parent=parent
@@ -98,7 +98,7 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
     def createEditor(self, parent, option, index):
         if not index.isValid():return False
         self.currentIndex=index  
-        self.lineEdit = QtGui.QLineEdit(parent)
+        self.lineEdit = QtWidgets.QLineEdit(parent)
         return self.lineEdit
               
     def setEditorData(self, editor, index):
@@ -114,7 +114,7 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 
 
 
-# class ButtonGeolocDelegate(QtGui.QStyledItemDelegate):
+# class ButtonGeolocDelegate(QtWidgets.QStyledItemDelegate):
 #     geolocalisation = QtCore.Signal()
 #     def __init__(self,parent=None,mere=None):
 #         super(ButtonGeolocDelegate, self).__init__(parent)
@@ -123,14 +123,14 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 # 
 #     def createEditor(self, parent, option, index):
 #         if not index.isValid():return False
-#         self.bout =  QtGui.QPushButton(parent)
+#         self.bout =  QtWidgets.QPushButton(parent)
 #         self.bout.clicked.connect(lambda bout_index:self.parent.parent.geolocalisation(index=bout_index))
 #         return self.bout
 # 
 #     def paint(self, painter, option, index):
-#         optButton= QtGui.QStyleOptionButton()
+#         optButton= QtWidgets.QStyleOptionButton()
 #         optButton.rect= option.rect
-#         QtGui.QApplication.style().drawControl(QtGui.QStyle.CE_PushButton, optButton, painter)
+#         QtWidgets.QApplication.style().drawControl(QtWidgets.QStyle.CE_PushButton, optButton, painter)
         
 
 # class ComboBoxCpVilleDelegate(ComboBoxDelegate):        
@@ -145,7 +145,7 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 #         row=index.row()
 #         index.model().setData(QtCore.QModelIndex(row,self.), editor.currentText(), QtCore.Qt.EditRole)
 
-# class CalendarDelegate(QtGui.QStyledItemDelegate):
+# class CalendarDelegate(QtWidgets.QStyledItemDelegate):
 #     def __init__(self,parent=None):
 #         super(calendarDelegate, self).__init__(parent)
 #         self.parent= parent
@@ -153,8 +153,8 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 #     def createEditor(self, parent, option, index):
 #         if not index.isValid():return False
 #         self.currentIndex=index  
-#         self.calendar = QtGui.QCalendarWidget(parent)
-#         self.calendar = QtGui.QDateTimeEdit(parent)
+#         self.calendar = QtWidgets.QCalendarWidget(parent)
+#         self.calendar = QtWidgets.QDateTimeEdit(parent)
 #         self.calendar.setDisplayFormat("dd.MM.yyyy")
 #         self.calendar.setCalendarPopup(True)
 #         value = index.data(QtCore.Qt.DisplayRole)
@@ -173,9 +173,9 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 # #        date = index.model().data(index, QtCore.Qt.DisplayRole)
 # #        myOption = option
 # #        myOption.displayAlignment = QtCore.Qt.AlignCenter | QtCore.Qt.AlignVCenter
-# #        QtGui.QStyledItemDelegate.paint(painter, myOption, index)
+# #        QtWidgets.QStyledItemDelegate.paint(painter, myOption, index)
 # 
-# class RailDelegate(QtGui.QStyledItemDelegate):
+# class RailDelegate(QtWidgets.QStyledItemDelegate):
 #     def __init__(self,parent=None,mere=None):
 #         super(RailDelegate, self).__init__(parent)    
 # 
@@ -190,23 +190,23 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 #         pixmap = index.model().data(index,QtCore.Qt.DecorationRole)
 #         painter.drawPixmap(option.rect, pixmap)
 
-#class ListDragDrougDelegate(QtGui.QStyledItemDelegate):
+#class ListDragDrougDelegate(QtWidgets.QStyledItemDelegate):
 #    def __init__(self,parent=None,mere=None):
 #        super(ListDragDrougDelegate, self).__init__(parent)     
 #        self.parent=parent
 #        self.mere=mere
 #        
-#    def paint(self,painter,option= QtGui.QStyleOptionViewItem(),index=None):
-#        widgetList=QtGui.QListView()
+#    def paint(self,painter,option= QtWidgets.QStyleOptionViewItem(),index=None):
+#        widgetList=QtWidgets.QListView()
 #        widgetList.resize(option.rect.width(),option.rect.height())
 #        tournee=index.model().data(index,QtCore.Qt.UserRole)
 #        for contrat in tournee.listContrat:
-#            dbid_item=QtGui.QListItem()
+#            dbid_item=QtWidgets.QListItem()
 #            dbid_item.setText(str(contrat.dbid))
 #            widgetList.addItem(dbid_item)
 #        #painter.translate(option.rect.topLeft())
 #  #      widgetList.render(painter, option.rect.topLeft(),option.rect )
-##        opt= QtGui.QStyleOptionViewItem()
+##        opt= QtWidgets.QStyleOptionViewItem()
 ##        opt.rect=option.rect
 #        painter.save()
 ##        painter.setClipRect(option.rect)
@@ -214,11 +214,11 @@ class LineEditDelegate(QtGui.QStyledItemDelegate):
 #        widgetList.render(painter, option.rect.topLeft(),option.rect )
 #        painter.restore()
 #
-#    def sizeHint(self,option=QtGui.QStyleOptionViewItem, index=None):
-#        widgetList=QtGui.QListWidget()
+#    def sizeHint(self,option=QtWidgets.QStyleOptionViewItem, index=None):
+#        widgetList=QtWidgets.QListWidget()
 #        tournee=index.model().data(index,QtCore.Qt.UserRole)
 #        for contrat in tournee.listContrat:
-#            dbid_item=QtGui.QListWidgetItem()
+#            dbid_item=QtWidgets.QListWidgetItem()
 #            dbid_item.setText(str(contrat.dbid))
 #            widgetList.addItem(dbid_item)
 #        return widgetList.sizeHint()

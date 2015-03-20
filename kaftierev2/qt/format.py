@@ -1,4 +1,4 @@
-from PySide import QtGui, QtCore
+from PyQt5 import QtWidgets, QtCore,QtGui
 
 class KafDrag(QtGui.QDrag):
     """class pour drag drop information"""

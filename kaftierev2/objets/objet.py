@@ -127,6 +127,13 @@ class ParcoursK(SqlParcoursK, ObjetK):
         return quantite_depot
 
     @property
+    def dictDepotQuantite(self):
+        """retourne dict {depots:nb_depot} du parcours """
+        dict_depot={}
+        for depot in self.tournee.listDepot:dict_depot[depot]=self.quantiteDepot(depot)
+        return dict_depot
+
+    @property
     def volume(self):
         """returne volume"""
         volume=0
@@ -674,13 +681,23 @@ class PedaleurK(SqlPedaleurK, ObjetK):
         ObjetK.__init__(self, mere)
         
     def listParcoursDepuisTournee(self, tournee):
-        """retourne les parcours du pedaleur dans la tournée"""
+        """retourne liste de parcours du pedaleur dans la tournée"""
         list_parcours=[]
         for parcours in tournee.listParcours:
             if parcours.pedaleur==self:list_parcours.append(parcours)
         return list_parcours
 
+    def dictDepotDepuisParours(self, parcours):
+        """retourne dict {depots:nb_depot} d'un pedaleur pour un parcours """
+        return parcours.dictDepotQuantite
 
-
+    def dictDepotDepuisTournee(self, tournee):
+        """retourne dict {depots:nb_depot} d'un pedaleur pour une tournee """
+        dict_depot_tournee={}
+        for parcours in self.listParcoursDepuisTournee(tournee):
+            dict_depot_quantite_parcours=parcours.dictDepotQuantite
+            for depot in dict_depot_quantite_parcours:
+                dict_depot_tournee[depot] = dict_depot_quantite_parcours.get(depot, 0) + dict_depot_tournee.get(depot,0)
+        return dict_depot_tournee
 
 

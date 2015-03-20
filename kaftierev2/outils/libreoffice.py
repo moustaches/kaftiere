@@ -30,25 +30,17 @@ def colonneFeuilleREF(sheet =None,index=(None, None), tournee=None):
     ind_list_client=[]
     ind_client=0
 
-    sheet.CharFontName = "Arial"
-    sheet.CharHeight = 10
-    sheet.ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust', 'LEFT')#uno.Enum('com.sun.star.style.ParagraphAdjust.LEFT')
-
     for client in tournee.listClient:
         ind_list_client.append(ind_client+2)
         sheet.getCellByPosition(index[0]-1,index[1]+ind_client+2).setString(client.surnom)#edition des clients
-        sheet.getCellByPosition(index[0]-1,index[1]+ind_client+2).ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust','LEFT')#style des clients
-        sheet.getCellByPosition(index[0]-1,index[1]+ind_client+2).CharWeight=uno.getConstantByName('com.sun.star.awt.FontWeight.BOLD')
         i_contrat=0
         for contrat in client.listContratDepuisTournee(tournee):
             for depot in contrat.listDepot:
-                ind_depot=ind_client+i_contrat+3
+                ind_depot=ind_client+i_contrat+2
                 sheet.getCellByPosition(index[0],index[1]+ind_depot).setString(depot.surnom)#edition des depots
-                sheet.getCellByPosition(index[0],index[1]+ind_depot).ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust','RIGHT')#style des depots
-                sheet.getCellByPosition(index[0],index[1]+ind_depot).CharPosture=uno.Enum('com.sun.star.awt.FontSlant','ITALIC')
                 dict_depot_index[ind_depot]=depot
-                i_contrat=i_contrat+1
-        ind_client+=(i_contrat+1)  
+                i_contrat+=1    
+        ind_client+=i_contrat  
                 
     ind_pedaleur=0
     for pedaleur in tournee.listPedaleur:
@@ -62,10 +54,11 @@ def colonneFeuilleREF(sheet =None,index=(None, None), tournee=None):
                 dict_depot_pedaleur[ind_depot]+=nb_depot
                 sheet.getCellByPosition(index[0]+ind_pedaleur+ind_parcours+2,index[1]+ind_depot).setValue(nb_depot)#edition des nb depot/parcours
         for ind_depot, depot in dict_depot_index.items():
-            pour_cent_depot_pedaleur=dict_depot_pedaleur[ind_depot]/depot.quantite
-            sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setValue(pour_cent_depot_pedaleur)#edition des % depot/pedaleur
-            sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setPropertyValue( "NumberFormat", 10 )#style des % depot/pedaleur
-            sheet.getCellByPosition(index[0]+ind_pedaleur+2,index[1]+ind_depot).setValue(dict_depot_pedaleur[ind_depot])#edition des totales depot/pedaleur
+            if depot.infoQuantiteDepot:
+                pour_cent_depot_pedaleur=dict_depot_pedaleur[ind_depot]/depot.infoQuantiteDepot
+                sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setValue(pour_cent_depot_pedaleur)#edition des % depot/pedaleur
+                sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setPropertyValue( "NumberFormat", 10 )#style des % depot/pedaleur
+                sheet.getCellByPosition(index[0]+ind_pedaleur+2,index[1]+ind_depot).setValue(dict_depot_pedaleur[ind_depot])#edition des totales depot/pedaleur
         sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]).setString(pedaleur.surnom)#edition des pedaleurs
         sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]).ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust','CENTER')#style pedaleurs
         sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]).CharWeight=uno.getConstantByName('com.sun.star.awt.FontWeight.BOLD')   
@@ -79,15 +72,27 @@ def colonneFeuilleREF(sheet =None,index=(None, None), tournee=None):
 def styleFeuilleREF(sheet =None,index=(None, None), tournee=None):
     dict_depot_index={}
     ind_client=0
+    ind_list_client=[]
+    
+    sheet.CharFontName = "Arial"
+    sheet.CharHeight = 10
+    sheet.ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust', 'LEFT')#uno.Enum('com.sun.star.style.ParagraphAdjust.LEFT')
     
     for client in tournee.listClient:
+        ind_list_client.append(ind_client+2)
+        sheet.getCellByPosition(index[0]-1,index[1]+ind_client+2).ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust','LEFT')#style des clients
+        sheet.getCellByPosition(index[0]-1,index[1]+ind_client+2).CharWeight=uno.getConstantByName('com.sun.star.awt.FontWeight.BOLD')
         i_contrat=0
-        for contrat in client.listContratDepuisTournee(tournee):#edition des depots
+        for contrat in client.listContratDepuisTournee(tournee):
             for depot in contrat.listDepot:
-                ind_depot=ind_client+i_contrat+3
+                ind_depot=ind_client+i_contrat+2
+                sheet.getCellByPosition(index[0],index[1]+ind_depot).ParaAdjust=uno.Enum('com.sun.star.style.ParagraphAdjust','RIGHT')#style des depots
+                sheet.getCellByPosition(index[0],index[1]+ind_depot).CharPosture=uno.Enum('com.sun.star.awt.FontSlant','ITALIC')
                 dict_depot_index[ind_depot]=depot
-                i_contrat=i_contrat+1
-        ind_client+=(i_contrat+1)  
+                i_contrat+=1
+            sheet.getCellRangeByPosition((index[0]-1, index[1]+ind_client+2,index[0]-1, index[1]+ind_client+2+i_contrat).merge(True)
+        ind_client+=i_contrat    
+
                 
     ind_pedaleur=0
     for pedaleur in tournee.listPedaleur:
@@ -96,17 +101,17 @@ def styleFeuilleREF(sheet =None,index=(None, None), tournee=None):
         sheet.getCellRangeByPosition(index[0],index[1]+ind_client+2).CharWeight=uno.getConstantByName('com.sun.star.awt.FontWeight.BOLD')
         ind_parcours=0
         dict_depot_pedaleur=defaultdict(int)
-        for parcours in pedaleur.listParcoursDepuisTournee(tournee):
-            sheet.getCellByPosition(index[0]+ind_pedaleur+ind_parcours+2,index[1]+1).setString(parcours.dbid)#edition des parcours
-            ind_parcours+=1
-            for ind_depot, depot in dict_depot_index.items():
-                nb_depot=parcours.quantiteDepot(depot)
-                dict_depot_pedaleur[ind_depot]+=nb_depot
-                sheet.getCellByPosition(index[0]+ind_pedaleur+ind_parcours+1,index[1]+ind_depot).setValue(nb_depot)#edition des nb depot/parcours
-        for ind_depot, depot in dict_depot_index.items():
-            pour_cent_depot_pedaleur=dict_depot_pedaleur[ind_depot]/depot.infoQuantiteDepot
-            sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setValue(pour_cent_depot_pedaleur)#edition des % depot/pedaleur
-        ind_pedaleur+=(ind_parcours+1)
+#         for parcours in pedaleur.listParcoursDepuisTournee(tournee):
+#             sheet.getCellByPosition(index[0]+ind_pedaleur+ind_parcours+2,index[1]+1).setString(parcours.dbid)#edition des parcours
+#             ind_parcours+=1
+#             for ind_depot, depot in dict_depot_index.items():
+#                 nb_depot=parcours.quantiteDepot(depot)
+#                 dict_depot_pedaleur[ind_depot]+=nb_depot
+#                 sheet.getCellByPosition(index[0]+ind_pedaleur+ind_parcours+1,index[1]+ind_depot).setValue(nb_depot)#edition des nb depot/parcours
+#         for ind_depot, depot in dict_depot_index.items():
+#             pour_cent_depot_pedaleur=dict_depot_pedaleur[ind_depot]/depot.infoQuantiteDepot
+#             sheet.getCellByPosition(index[0]+ind_pedaleur+1,index[1]+ind_depot).setValue(pour_cent_depot_pedaleur)#edition des % depot/pedaleur
+#         ind_pedaleur+=(ind_parcours+1)
 
 def ligneFeuilleDeRoute(sheet =None,index=None,num=None, lieu=None, info_depot=None):
     sheet.getCellByPosition(0,index*2).setValue(num)

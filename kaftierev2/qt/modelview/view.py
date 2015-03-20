@@ -1,13 +1,13 @@
 '''
-Created on 8 mai 2013
+Created on 8 mai 2013------------------------------------
 
 @author: moustache
 '''
-from PySide import QtCore, QtGui
+from PyQt5 import QtCore, QtWidgets,QtGui
 from qt.format import KafDrag
 from qt.modelview.delegate import GridTourneeDelegate,ComboBoxDelegate,ComboBoxGeoResultDelegate,LineEditDelegate
 
-class TableView(QtGui.QTableView):
+class TableView(QtWidgets.QTableView):
     """Super class des Tableview"""
     def __init__(self,parent=None,mere=None,**arguments):
         super(TableView, self).__init__(parent)
@@ -17,7 +17,7 @@ class TableView(QtGui.QTableView):
         self.setAcceptDrops(True)#accepte de drooper les items
         self.setDropIndicatorShown(True)#indique quand item est draggind and dropping
         self.setFont(self.parent.FONT['table'])
-        self.horizontalHeader().setResizeMode(QtGui.QHeaderView.ResizeToContents)
+        self.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.ResizeToContents)
         #self.horizontalHeader().setStretchLastSection(True)
         self._initNext(**arguments)
     
@@ -29,14 +29,14 @@ class ViewClient(TableView):
     """Tableau gestion du client dans la fenetre Client/Contrat/Pedaleur"""
     def _initNext(self):
         self.setSortingEnabled(True)
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
 
 class ViewContrat(TableView):
     """Tableau gestion du contrat dans la fenetre Client/Contrat/Pedaleur"""
     def _initNext(self):
         self.setSortingEnabled(True)
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
     def dragEnterEvent(self, event):
         if event.mimeData().hasFormat("item-contrat"):
@@ -55,7 +55,7 @@ class ViewContrat(TableView):
 #        if event.mimeData().hasFormat('item-contrat'):
 #            itemData = event.mimeData().data('item-contrat')
 #            dataStream = QtCore.QDataStream(itemData, QtCore.QIODevice.ReadOnly)
-#            pixmap = QtGui.QPixmap()
+#            pixmap = QtWidgets.QPixmap()
 #            dbid=QtCore.QByteArray()
 #            dataStream >> pixmap >> dbid
 #            ind=self.indexAt(event.pos())      
@@ -77,7 +77,7 @@ class ViewContrat(TableView):
 class ViewPedaleur(TableView):
     """Tableau gestion du pedaleur dans la fenetre Client/Contrat/Pedaleur"""
     def _initNext(self):
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
     def startDrag(self, supportedActions):
         objetK = self.model().data(self.currentIndex(),QtCore.Qt.UserRole)
@@ -139,7 +139,7 @@ class ViewTournee(TableView):
 class ViewParcours(TableView):
     """Tableau gestion du parcours dans la fenetre Tournée/Parcours"""
     def _initNext(self):
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectColumns)     
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectColumns)     
      
     def dropEvent(self, event):
         if event.mimeData().hasFormat('PedaleurQ'):
@@ -173,14 +173,14 @@ class ViewParcours(TableView):
 class ViewLieuDB(TableView):
     def _initNext(self):
         self.setSortingEnabled(True)
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         genre_delegate=ComboBoxDelegate(parent=self,comboBoxTable=self.mere.genreslieux_tb,comboBoxArg='genre')
         self.setItemDelegateForColumn(3,genre_delegate)
 
 
 class ViewLieuEditAdresse(TableView):
     def _initNext(self):
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         cp_delegate=ComboBoxDelegate(parent=self,comboBoxTable=self.mere.cpvilles_tb,comboBoxArg='cp')
         res_geo_delegate=ComboBoxGeoResultDelegate(parent=self)
         ville_delegate=ComboBoxDelegate(parent=self,comboBoxTable=self.mere.cpvilles_tb,comboBoxArg='ville')
@@ -192,11 +192,11 @@ class ViewLieuEditAdresse(TableView):
   
 class ViewMatchingLieu(TableView):
     def _initNext(self):
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
 class ViewImportListing(TableView):
     def _initNext(self):
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         cp_delegate=ComboBoxDelegate(parent=self,comboBoxTable=self.mere.cpvilles_tb,comboBoxArg='cp')
         res_geo_delegate=ComboBoxGeoResultDelegate(parent=self)
         ville_delegate=ComboBoxDelegate(parent=self,comboBoxTable=self.mere.cpvilles_tb,comboBoxArg='ville')
@@ -208,7 +208,7 @@ class ViewImportListing(TableView):
         
 class ViewMatchingListing(TableView):
     def _initNext(self):
-        self.setSelectionBehavior(QtGui.QAbstractItemView.SelectRows)
+        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
 
 class ViewDepotLieuQuantite(TableView):
     def _initNext(self):

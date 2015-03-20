@@ -4,8 +4,9 @@ Created on 7 mai 2013
 @author: moustache
 '''
 
-from PySide import QtCore, QtGui
+from PyQt5 import QtCore, QtWidgets,QtGui
 from objets.objet import PedaleurK,ParcoursK,AdresseK,ClientK,ContratK,DepotK,LieuK,TourneeK
+
 
 
 class QTobjet():
@@ -145,7 +146,6 @@ class TourneeQ(QTobjet,TourneeK):
         painter.setPen(QtCore.Qt.black)
         painter.setFont(QtGui.QFont("Arial", 10))
         painter.drawText(QtCore.QRectF(0,0,lg_pix,20), QtCore.Qt.AlignCenter, "T-{}".format(self.dbid))
-
         painter.setFont(QtGui.QFont("Arial", 6))
         painter.drawText(QtCore.QRectF(0,20,60,10), "Nb : {}  L: {}   P: {}".format(len(self.listParcours), len(self.listLieuContrats),int(self.prix)))
         return pix

@@ -4,7 +4,7 @@ Created on 8 mai 2013
 @author: moustache
 '''
 
-from PySide import QtCore, QtGui
+from PyQt5 import QtCore, QtWidgets,QtWidgets
 
 class Model(QtCore.QAbstractTableModel):
     def __init__(self,parent=None,mere=None,**arguments):
@@ -54,7 +54,7 @@ class ModelLieuDB(Model):
             ind=self.parent.modelProxyLieuDB.mapFromSource(self.createIndex(var[0],var[1]))
             self.parent.viewTableLieuDB.scrollTo(ind)
             self.parent.viewTableLieuDB.selectionModel().clear()
-            self.parent.viewTableLieuDB.selectionModel().select(ind,QtGui.QItemSelectionModel.SelectCurrent)
+            self.parent.viewTableLieuDB.selectionModel().select(ind,QtWidgets.QItemSelectionModel.SelectCurrent)
 
     def initData(self):
         self.listLieu=[]
@@ -388,7 +388,7 @@ class ModelParcours(Model):
     def tourneeChanged(self):
         if self.parent.tournee:
             self.listParcours=[]
-            self.reset()
+            #self.reset()
             for parcours in self.parent.tournee.listParcours:
                 self.ajouterParcours(parcours)     
             
@@ -526,9 +526,9 @@ class ModelLieuEditAdresse(Model):
         elif role == QtCore.Qt.CheckStateRole:
             if colonne==8:return  self.listLieuGeoCheck[row]
         if role == QtCore.Qt.BackgroundRole:
-            if self.listLieu[row].dbid:return QtGui.QBrush(QtCore.Qt.green) 
-            elif self.listLieu[row].adresseProvisoire.latitude != 0:return QtGui.QBrush(QtCore.Qt.yellow)       
-            return QtGui.QBrush(QtCore.Qt.red)
+            if self.listLieu[row].dbid:return QtWidgets.QBrush(QtCore.Qt.green) 
+            elif self.listLieu[row].adresseProvisoire.latitude != 0:return QtWidgets.QBrush(QtCore.Qt.yellow)       
+            return QtWidgets.QBrush(QtCore.Qt.red)
         if role == QtCore.Qt.UserRole:
             return self.listLieu[row]
         return None   
@@ -716,8 +716,8 @@ class ModelImportListing(Model):
                 return  self.listLieuGeoCheck[row]
         if role == QtCore.Qt.BackgroundRole:
             if colonne==1:
-                if self.listLieu[row].isAcceptable[0]:return QtGui.QBrush(QtCore.Qt.green)   
-                return QtGui.QBrush(QtCore.Qt.red)
+                if self.listLieu[row].isAcceptable[0]:return QtWidgets.QBrush(QtCore.Qt.green)   
+                return QtWidgets.QBrush(QtCore.Qt.red)
             return None
         if role == QtCore.Qt.UserRole:return self.listLieu[row]
         return None   

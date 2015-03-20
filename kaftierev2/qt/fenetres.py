@@ -6,7 +6,7 @@ Created on 8 mai 2013
 import datetime
 
 import os
-from PySide import QtCore,QtGui
+from PyQt5 import QtCore,QtWidgets,QtGui
 from objets.mere import Mere
 from outils.dock import DocK
 from qt.modelview.view import ViewPedaleur,ViewParcours,ViewLieuDB,ViewLieuEditAdresse,ViewMatchingLieu,ViewClient,ViewContrat, ViewTournee, ViewImportListing, ViewMatchingListing, ViewDepotLieuQuantite
@@ -15,7 +15,7 @@ from outils.kml import Kml, KmlParser
 from qt.widget.widgets import KLabelPixmap, KComboBoxCouleur
 
 
-class Fenetre(QtGui.QWidget):
+class Fenetre(QtWidgets.QWidget):
     """super class fenetre
     --> parent: fenetre dont elle est logiquement issue
     --> mere: super class de gestion des K-objets
@@ -47,17 +47,17 @@ class InitFenetre(Fenetre):
     def createFenetre(self):
         self.setWindowTitle('Chargement')
         self.resize(395, 460)
-        self.okButton = QtGui.QPushButton("Ok", parent=self)
+        self.okButton = QtWidgets.QPushButton("Ok", parent=self)
         self.okButton.setGeometry(QtCore.QRect(10, 250, 361, 41))
-        self.progressBar = QtGui.QProgressBar(parent=self)
+        self.progressBar = QtWidgets.QProgressBar(parent=self)
         self.progressBar.setGeometry(QtCore.QRect(10, 200, 361, 31))
         self.progressBar.setValue(0)
-        self.label = QtGui.QLabel(parent=self)
+        self.label = QtWidgets.QLabel(parent=self)
         self.label.setGeometry(QtCore.QRect(10, 230, 361, 17))
-        self.label_2 = QtGui.QLabel(parent=self)
+        self.label_2 = QtWidgets.QLabel(parent=self)
         self.label_2.setGeometry(QtCore.QRect(20, 10, 341, 171))
         self.label_2.setPixmap(QtGui.QPixmap("{}/DIV/logo.jpeg".format(os.getcwd())))
-        self.text=QtGui.QTextEdit(parent=self)
+        self.text=QtWidgets.QTextEdit(parent=self)
         self.text.setGeometry(QtCore.QRect(10, 300, 360, 150))
         
     def createConnection(self):
@@ -81,7 +81,7 @@ class InitFenetre(Fenetre):
         if label:self.label.setText(label)
         if i_tot:self.text.append("Les {} {} chargé en {}s".format(i_tot,label,val_time))
           
-class MainFenetre(QtGui.QMainWindow):
+class MainFenetre(QtWidgets.QMainWindow):
     """fenetre main kaftiere"""
     def __init__(self,parent=None):
         super(MainFenetre, self).__init__()
@@ -114,19 +114,19 @@ class MainFenetre(QtGui.QMainWindow):
         else : self.fenetreParcours.refreshToolBar()    
     
     def createAction(self):
-        self.exitAction = QtGui.QAction('Exit', self)
+        self.exitAction = QtWidgets.QAction('Exit', self)
         self.exitAction.setShortcut('Ctrl+Q')
         self.exitAction.triggered.connect(self.close)
 
-        self.fenetreOutilKmlAction= QtGui.QAction('Kml', self)
+        self.fenetreOutilKmlAction= QtWidgets.QAction('Kml', self)
         self.fenetreOutilKmlAction.setShortcut('Ctrl+K')
         self.fenetreOutilKmlAction.triggered.connect(self.outilKmlAction)
 
-        self.fenetreOutilTamponadeAction= QtGui.QAction('Tamponade', self)
+        self.fenetreOutilTamponadeAction= QtWidgets.QAction('Tamponade', self)
         self.fenetreOutilTamponadeAction.setShortcut('Ctrl+T')
         self.fenetreOutilTamponadeAction.triggered.connect(self.outilTamponadeAction)
 
-        self.fenetreOutilLieuDBAction= QtGui.QAction('DB Lieu', self)
+        self.fenetreOutilLieuDBAction= QtWidgets.QAction('DB Lieu', self)
         self.fenetreOutilLieuDBAction.setShortcut('Ctrl+L')
         self.fenetreOutilLieuDBAction.triggered.connect(self.outilLieuDBAction)
 
@@ -150,21 +150,21 @@ class MainFenetre(QtGui.QMainWindow):
         self.toolBar.addAction(self.exitAction)    
       
         self.menuBarK =self.menuBar()
-        self.menuFentreOutils =QtGui.QMenu( 'Outils', self.menuBarK)
+        self.menuFentreOutils =QtWidgets.QMenu( 'Outils', self.menuBarK)
         self.menuFentreOutils.addAction(self.fenetreOutilLieuDBAction)
         self.menuFentreOutils.addAction(self.fenetreOutilKmlAction)        
         self.menuFentreOutils.addAction(self.fenetreOutilTamponadeAction)
         self.menuFentreOutils.addAction(self.exitAction)
         self.menuBarK.addAction(self.menuFentreOutils.menuAction())
 
-        centralwidget = QtGui.QWidget(self)
+        centralwidget = QtWidgets.QWidget(self)
         self.setCentralWidget(centralwidget)
 
         self.fenetreClient=FenetreClient(parent=self,mere=self.mere)
         self.fenetreContrat=FenetreContrat(parent=self,mere=self.mere)
         self.fenetrePedaleur=FenetrePedaleur(parent=self,mere=self.mere)
 
-        self.ongletClientContratPedaleur=QtGui.QTabWidget()
+        self.ongletClientContratPedaleur=QtWidgets.QTabWidget()
         self.ongletClientContratPedaleur.addTab(self.fenetreClient,"Client")
         self.fenetreClient.parentTab=self.ongletClientContratPedaleur
         self.ongletClientContratPedaleur.addTab(self.fenetreContrat,"Contrat")
@@ -172,7 +172,7 @@ class MainFenetre(QtGui.QMainWindow):
         self.ongletClientContratPedaleur.addTab(self.fenetrePedaleur,"Pedaleur")
         self.fenetreContrat.parentTab=self.ongletClientContratPedaleur
         
-        self.dockWidgetClientContratPedaleur=QtGui.QDockWidget('Client - Contrat - Pedaleur', parent=self)
+        self.dockWidgetClientContratPedaleur=QtWidgets.QDockWidget('Client - Contrat - Pedaleur', parent=self)
         self.dockWidgetClientContratPedaleur.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea)
         self.dockWidgetClientContratPedaleur.setWidget(self.ongletClientContratPedaleur)
         self.addDockWidget(QtCore.Qt.LeftDockWidgetArea, self.dockWidgetClientContratPedaleur)
@@ -180,22 +180,22 @@ class MainFenetre(QtGui.QMainWindow):
         self.fenetreTournee=FenetreTournee(parent=self,mere=self.mere)
         self.fenetreParcours=FenetreParcours(parent=self,mere=self.mere)
         
-        self.ongletTourneeParcours=QtGui.QTabWidget()
+        self.ongletTourneeParcours=QtWidgets.QTabWidget()
         self.ongletTourneeParcours.addTab(self.fenetreTournee,"Tournee")
         self.fenetreTournee.parentTab=self.ongletTourneeParcours
         self.ongletTourneeParcours.addTab(self.fenetreParcours,"Parcours")
         self.fenetreParcours.parentTab=self.ongletTourneeParcours
 
-        self.dockWidgetTourneeParcours=QtGui.QDockWidget('Tournee - Parcours', parent=self)
+        self.dockWidgetTourneeParcours=QtWidgets.QDockWidget('Tournee - Parcours', parent=self)
         self.dockWidgetTourneeParcours.setAllowedAreas(QtCore.Qt.BottomDockWidgetArea)
         self.dockWidgetTourneeParcours.setWidget(self.ongletTourneeParcours)
         self.addDockWidget(QtCore.Qt.RightDockWidgetArea, self.dockWidgetTourneeParcours)
         
-#        self.wOnglet2=QtGui.QTabWidget()
+#        self.wOnglet2=QtWidgets.QTabWidget()
 #        self.wOnglet2.addTab(self.fenetreLieuDB,"Lieux DataBase")
 #        self.wOnglet2.addTab(self.fenetreSelectLieu,"Lieux")
 #
-#        self.dockWidgetClientContrat2=QtGui.QDockWidget('Lieux qui lieullent', parent=self)
+#        self.dockWidgetClientContrat2=QtWidgets.QDockWidget('Lieux qui lieullent', parent=self)
 #        self.dockWidgetClientContrat2.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea)
 #        self.dockWidgetClientContrat2.setWidget(self.wOnglet2)
 #        self.addDockWidget(QtCore.Qt.LeftDockWidgetArea, self.dockWidgetClientContrat2)
@@ -215,7 +215,7 @@ class FenetreTournee(Fenetre):
          
     def createFenetre(self):
         self.viewTournee=ViewTournee(parent=self,mere=self.mere)
-        layTourneeTable = QtGui.QGridLayout()
+        layTourneeTable = QtWidgets.QGridLayout()
         layTourneeTable.addWidget(self.viewTournee,0,0,8,4)      
         self.setLayout(layTourneeTable)   
 
@@ -228,19 +228,19 @@ class FenetreTournee(Fenetre):
         selModelTournee.currentChanged.connect(lambda :self.selTourneeChanged(tournee=self.modelTournee.data(self.viewTournee.currentIndex(),QtCore.Qt.UserRole)))
 
     def createAction(self):
-        self.actionNouvelleTournee = QtGui.QAction('Nouvelle tournee', self)
+        self.actionNouvelleTournee = QtWidgets.QAction('Nouvelle tournee', self)
         self.actionNouvelleTournee.setShortcut('Ctrl+N')
         self.actionNouvelleTournee.setStatusTip('Creer une nouvelle tournee (Ctrl+N)')
         self.actionNouvelleTournee.triggered.connect(self.nouvelleTournee)
-        self.actionSupprimerTournee = QtGui.QAction('Supprimer tournee', self)
+        self.actionSupprimerTournee = QtWidgets.QAction('Supprimer tournee', self)
         self.actionSupprimerTournee.setShortcut('Ctrl+S')
         self.actionSupprimerTournee.setStatusTip('Supprimer la tournee (Ctrl+S)')
         self.actionSupprimerTournee.triggered.connect(lambda : self.supprimerTournee(self.selectedTournee))
-        self.actionVoirParcours = QtGui.QAction('Voir parcours', self)
+        self.actionVoirParcours = QtWidgets.QAction('Voir parcours', self)
         self.actionVoirParcours.setShortcut('Ctrl+O')
         self.actionVoirParcours.setStatusTip('Voir les parcours de la tournee (Ctrl+O)')
         self.actionVoirParcours.triggered.connect(lambda : self.voirParcours(self.selectedTournee))
-        self.actionExporterKml = QtGui.QAction('Exporter Kml', self)
+        self.actionExporterKml = QtWidgets.QAction('Exporter Kml', self)
         self.actionExporterKml.setShortcut('Ctrl+K')
         self.actionExporterKml.setStatusTip('Exporter la tournee Kml pour visualiser avec google map (Ctrl+K)')
         self.actionExporterKml.triggered.connect(lambda : self.exporterKml(self.selectedTournee)) 
@@ -283,14 +283,14 @@ class FenetreParcours(Fenetre):
     """fenetre Parcours"""
     
     def createModel(self):
-         self.modelParcours=ModelParcours(parent=self,mere=self.mere)
-         self.viewParcours.setModel(self.modelParcours)
+        self.modelParcours=ModelParcours(parent=self,mere=self.mere)
+        self.viewParcours.setModel(self.modelParcours)
          
     def createFenetre(self):
-         self.viewParcours=ViewParcours(parent=self,mere=self.mere)   
-         layContratTable = QtGui.QGridLayout()
-         layContratTable.addWidget(self.viewParcours,0,0,2,4) 
-         self.setLayout(layContratTable)
+        self.viewParcours=ViewParcours(parent=self,mere=self.mere)   
+        layContratTable = QtWidgets.QGridLayout()
+        layContratTable.addWidget(self.viewParcours,0,0,2,4) 
+        self.setLayout(layContratTable)
          
     def _initNext(self, **arguments):
         self.tournee=arguments.get('tournee')
@@ -306,11 +306,11 @@ class FenetreParcours(Fenetre):
         selModelParcours.currentChanged.connect(lambda :self.selParcoursChanged(parcours=self.modelParcours.data(self.viewParcours.currentIndex(),QtCore.Qt.UserRole)))
 
     def createAction(self):
-        self.actionNouveauParcours = QtGui.QAction('Nouveau parcours', self)
+        self.actionNouveauParcours = QtWidgets.QAction('Nouveau parcours', self)
         self.actionNouveauParcours.setShortcut('Ctrl+N')
         self.actionNouveauParcours.setStatusTip('Creer un nouveau parcours (Ctrl+N)')
         self.actionNouveauParcours.triggered.connect(self.nouveauParcours)
-        self.actionSupprimerParcours = QtGui.QAction('Supprimer parcours', self)
+        self.actionSupprimerParcours = QtWidgets.QAction('Supprimer parcours', self)
         self.actionSupprimerParcours.setShortcut('Ctrl+S')
         self.actionSupprimerParcours.setStatusTip('Supprimer parcours (Ctrl+S)')
         self.actionSupprimerParcours.triggered.connect(lambda : self.supprimerParcours(self.selectedParcours))
@@ -346,9 +346,9 @@ class FenetreDepotLieuQuantite(Fenetre):
     
     def createFenetre(self):
         self.viewDepotLieuQuantite=ViewDepotLieuQuantite(parent=self,mere=self.mere)       
-        self.boutSuppDepot= QtGui.QPushButton("Supprimer", parent=self)
-        self.boutNouvDepot= QtGui.QPushButton("Nouveau", parent=self)
-        layTable = QtGui.QGridLayout()
+        self.boutSuppDepot= QtWidgets.QPushButton("Supprimer", parent=self)
+        self.boutNouvDepot= QtWidgets.QPushButton("Nouveau", parent=self)
+        layTable = QtWidgets.QGridLayout()
         layTable.addWidget(self.boutNouvDepot,0,0,1,1)
         layTable.addWidget(self.boutSuppDepot,0,1,1,1)
         layTable.addWidget(self.viewDepotLieuQuantite,1,0,5,3)  
@@ -411,30 +411,30 @@ class FenetreEditDepot(Fenetre):
         self.comboGenre.setEditText(self.depot.genre)
           
     def createFenetre(self):       
-        self.boutOkDepot= QtGui.QPushButton("Ok", parent=self)
-        self.boutAnnDepot= QtGui.QPushButton("Annuler", parent=self)
-        self.labelDbid=QtGui.QLabel('Dbid')
-        self.labelNom=QtGui.QLabel('Nom')
-        self.labelSurnom=QtGui.QLabel('Surnom')
-        self.labelVolume=QtGui.QLabel('Volume')
-        self.labelPoid=QtGui.QLabel('Poid')
-        self.labelPrix=QtGui.QLabel('Prix')
-        self.labelRemarque=QtGui.QLabel('Remarque')
-        self.labelNbCarton=QtGui.QLabel('Nb carton')
-        self.labelNbPaquet=QtGui.QLabel('Nb paquet')
-        self.labelGenre=QtGui.QLabel('Genre')
-        self.labelQuantite=QtGui.QLabel('Quantite')
-        self.label2Dbid=QtGui.QLabel()
-        self.textNom=QtGui.QLineEdit()
-        self.textSurnom=QtGui.QLineEdit()
-        self.spinQuantite=QtGui.QSpinBox()
-        self.spinVolume=QtGui.QDoubleSpinBox()
-        self.spinPoid=QtGui.QDoubleSpinBox()
-        self.spinPrix=QtGui.QDoubleSpinBox()
-        self.textRemarque=QtGui.QLineEdit()
-        self.spinNbCarton=QtGui.QSpinBox()
-        self.spinNbPaquet=QtGui.QSpinBox()
-        self.comboGenre=QtGui.QComboBox()        
+        self.boutOkDepot= QtWidgets.QPushButton("Ok", parent=self)
+        self.boutAnnDepot= QtWidgets.QPushButton("Annuler", parent=self)
+        self.labelDbid=QtWidgets.QLabel('Dbid')
+        self.labelNom=QtWidgets.QLabel('Nom')
+        self.labelSurnom=QtWidgets.QLabel('Surnom')
+        self.labelVolume=QtWidgets.QLabel('Volume')
+        self.labelPoid=QtWidgets.QLabel('Poid')
+        self.labelPrix=QtWidgets.QLabel('Prix')
+        self.labelRemarque=QtWidgets.QLabel('Remarque')
+        self.labelNbCarton=QtWidgets.QLabel('Nb carton')
+        self.labelNbPaquet=QtWidgets.QLabel('Nb paquet')
+        self.labelGenre=QtWidgets.QLabel('Genre')
+        self.labelQuantite=QtWidgets.QLabel('Quantite')
+        self.label2Dbid=QtWidgets.QLabel()
+        self.textNom=QtWidgets.QLineEdit()
+        self.textSurnom=QtWidgets.QLineEdit()
+        self.spinQuantite=QtWidgets.QSpinBox()
+        self.spinVolume=QtWidgets.QDoubleSpinBox()
+        self.spinPoid=QtWidgets.QDoubleSpinBox()
+        self.spinPrix=QtWidgets.QDoubleSpinBox()
+        self.textRemarque=QtWidgets.QLineEdit()
+        self.spinNbCarton=QtWidgets.QSpinBox()
+        self.spinNbPaquet=QtWidgets.QSpinBox()
+        self.comboGenre=QtWidgets.QComboBox()        
         self.labelDbid.setBuddy(self.label2Dbid)
         self.labelNom.setBuddy(self.textNom)
         self.labelSurnom.setBuddy(self.textSurnom)
@@ -446,7 +446,7 @@ class FenetreEditDepot(Fenetre):
         self.labelNbCarton.setBuddy(self.spinNbCarton)
         self.labelNbPaquet.setBuddy( self.spinNbPaquet)
         self.labelGenre.setBuddy( self.comboGenre)
-        layDepot = QtGui.QGridLayout()
+        layDepot = QtWidgets.QGridLayout()
         layDepot.addWidget(self.labelDbid,0,0,1,1)
         layDepot.addWidget(self.labelNom,1,0,1,1)
         layDepot.addWidget(self.labelSurnom,2,0,1,1)
@@ -510,11 +510,11 @@ class FenetreSelectLieu(Fenetre):
 #         self.tableSelectLieu1=selectLieuView(parent=self,mere=self.mere)
 #         self.tableSelectLieu2=selectLieuView(parent=self,mere=self.mere)
 #          
-#         self.boutAjouterGD= QtGui.QPushButton("-->", parent=self)
-#         self.boutAjouterDG= QtGui.QPushButton("<--", parent=self)
-#         self.boutDesafecter= QtGui.QPushButton("Desafecter", parent=self)
+#         self.boutAjouterGD= QtWidgets.QPushButton("-->", parent=self)
+#         self.boutAjouterDG= QtWidgets.QPushButton("<--", parent=self)
+#         self.boutDesafecter= QtWidgets.QPushButton("Desafecter", parent=self)
 #          
-#         lay = QtGui.QGridLayout()
+#         lay = QtWidgets.QGridLayout()
 #         lay.addWidget(self.tableSelectLieu1,0,0,8,5)
 #         lay.addWidget(self.tableSelectLieu2,0,7,8,5)
 #         lay.addWidget(self.boutAjouterGD,3,6,1,1)
@@ -538,34 +538,34 @@ class FenetreEditLieuDB(Fenetre):
         self.initComboAdresse()
 
     def createFenetre(self):
-        self.labelNom=QtGui.QLabel("Nom",parent=self)
-        self.textNom=QtGui.QLineEdit("Sans Nom",parent=self)
+        self.labelNom=QtWidgets.QLabel("Nom",parent=self)
+        self.textNom=QtWidgets.QLineEdit("Sans Nom",parent=self)
         self.labelNom.setBuddy( self.textNom)     
         
-        self.labelAdresse=QtGui.QLabel("Adresse",parent=self)
-        self.comboAdresse=QtGui.QComboBox(parent=self)
+        self.labelAdresse=QtWidgets.QLabel("Adresse",parent=self)
+        self.comboAdresse=QtWidgets.QComboBox(parent=self)
         self.labelAdresse.setBuddy(self.comboAdresse)  
         
-        self.checkPricipal=QtGui.QCheckBox("Principale", parent=self)
-        self.boutNouv= QtGui.QPushButton("Nouveau",parent=self)
-        self.boutSupp= QtGui.QPushButton("Supprimer",parent=self)
-        self.boutEdit= QtGui.QPushButton("Editer",parent=self)  
+        self.checkPricipal=QtWidgets.QCheckBox("Principale", parent=self)
+        self.boutNouv= QtWidgets.QPushButton("Nouveau",parent=self)
+        self.boutSupp= QtWidgets.QPushButton("Supprimer",parent=self)
+        self.boutEdit= QtWidgets.QPushButton("Editer",parent=self)  
       
-        self.labelGenre=QtGui.QLabel("Genre",parent=self)
-        self.comboGenre=QtGui.QComboBox(parent=self)
+        self.labelGenre=QtWidgets.QLabel("Genre",parent=self)
+        self.comboGenre=QtWidgets.QComboBox(parent=self)
         self.labelGenre.setBuddy(self.comboGenre)       
         
-        self.labelPertinence=QtGui.QLabel("Pertinence",parent=self)
-        self.textPertinence=QtGui.QLineEdit("0",parent=self)
+        self.labelPertinence=QtWidgets.QLabel("Pertinence",parent=self)
+        self.textPertinence=QtWidgets.QLineEdit("0",parent=self)
         self.labelPertinence.setBuddy( self.textPertinence)
         
-        self.labelComment=QtGui.QLabel("Commentaire",parent=self)
-        self.textComment=QtGui.QTextEdit("Sans commentaire",parent=self)
+        self.labelComment=QtWidgets.QLabel("Commentaire",parent=self)
+        self.textComment=QtWidgets.QTextEdit("Sans commentaire",parent=self)
         self.labelComment.setBuddy(self.textComment)
          
-        self.boutOk= QtGui.QPushButton("Ok",parent=self)
-        self.boutAnn= QtGui.QPushButton("Annuler",parent=self)
-        lay = QtGui.QGridLayout()
+        self.boutOk= QtWidgets.QPushButton("Ok",parent=self)
+        self.boutAnn= QtWidgets.QPushButton("Annuler",parent=self)
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.labelNom,0,0,1,1)
         lay.addWidget(self.textNom,0,1,1,1)
         lay.addWidget(self.labelAdresse,1, 0,1,1)
@@ -641,7 +641,7 @@ class FenetreLieuDB(Fenetre):
     
     def createModel(self):
         self.modelLieuDB=ModelLieuDB(parent=self,mere=self.mere)
-        self.modelProxyLieuDB=QtGui.QSortFilterProxyModel(parent=self)
+        self.modelProxyLieuDB=QtWidgets.QSortFilterProxyModel(parent=self)
         self.modelProxyLieuDB.setSourceModel(self.modelLieuDB)
         self.modelProxyLieuDB.setDynamicSortFilter(True)
         self.viewTableLieuDB.setModel(self.modelProxyLieuDB)  
@@ -649,15 +649,15 @@ class FenetreLieuDB(Fenetre):
   
     def createFenetre(self):
         self.viewTableLieuDB=ViewLieuDB(parent=self,mere=self.mere)
-        self.boutNouv= QtGui.QPushButton("Nouveau",parent=self)
-        self.boutEdit= QtGui.QPushButton("Editer",parent=self)
-        self.boutSupp= QtGui.QPushButton("Supprimer",parent=self)
-        self.boutFusion= QtGui.QPushButton("Fusionner",parent=self)
-        self.labelRechecher=QtGui.QLabel("Rechercher",parent=self)
-        self.textRechercher=QtGui.QLineEdit()
+        self.boutNouv= QtWidgets.QPushButton("Nouveau",parent=self)
+        self.boutEdit= QtWidgets.QPushButton("Editer",parent=self)
+        self.boutSupp= QtWidgets.QPushButton("Supprimer",parent=self)
+        self.boutFusion= QtWidgets.QPushButton("Fusionner",parent=self)
+        self.labelRechecher=QtWidgets.QLabel("Rechercher",parent=self)
+        self.textRechercher=QtWidgets.QLineEdit()
         self.labelRechecher.setBuddy(self.textRechercher)
-        self.labelComment=QtGui.QLabel("Commentaire", parent=self)
-        lay = QtGui.QGridLayout()
+        self.labelComment=QtWidgets.QLabel("Commentaire", parent=self)
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.viewTableLieuDB,0,0,8,8)
         lay.addWidget(self.boutNouv,9,4,1,1)
         lay.addWidget(self.boutEdit,9,5,1,1)        
@@ -710,7 +710,7 @@ class FenetreClient(Fenetre):
          
     def createFenetre(self):
         self.viewClient=ViewClient(parent=self,mere=self.mere)
-        layClientTable = QtGui.QGridLayout()
+        layClientTable = QtWidgets.QGridLayout()
         layClientTable.addWidget(self.viewClient,0,0,8,4)      
         self.setLayout(layClientTable)   
 
@@ -723,19 +723,19 @@ class FenetreClient(Fenetre):
         selModelClient.currentChanged.connect(lambda :self.selClientChanged(client=self.modelClient.data(self.viewClient.currentIndex(),QtCore.Qt.UserRole)))
 
     def createAction(self):
-        self.actionNouveauClient = QtGui.QAction('Nouveau client', self)
+        self.actionNouveauClient = QtWidgets.QAction('Nouveau client', self)
         self.actionNouveauClient.setShortcut('Ctrl+N')
         self.actionNouveauClient.setStatusTip('Creer un nouveau client (Ctrl+N)')
         self.actionNouveauClient.triggered.connect(self.nouveauClient)
-        self.actionEditerClient = QtGui.QAction('Editer client', self)
+        self.actionEditerClient = QtWidgets.QAction('Editer client', self)
         self.actionEditerClient.setShortcut('Ctrl+E')
         self.actionEditerClient.setStatusTip('Editer client (Ctrl+E)')
         self.actionEditerClient.triggered.connect(lambda : self.editerClient(self.selectedClient))
-        self.actionSupprimerClient = QtGui.QAction('Supprimer client', self)
+        self.actionSupprimerClient = QtWidgets.QAction('Supprimer client', self)
         self.actionSupprimerClient.setShortcut('Ctrl+S')
         self.actionSupprimerClient.setStatusTip('Supprimer client (Ctrl+S)')
         self.actionSupprimerClient.triggered.connect(lambda : self.supprimerClient(self.selectedClient))
-        self.actionVoirContrat = QtGui.QAction('Voir contrats', self)
+        self.actionVoirContrat = QtWidgets.QAction('Voir contrats', self)
         self.actionVoirContrat.setShortcut('Ctrl+O')
         self.actionVoirContrat.setStatusTip('Voir les contrats du client (Ctrl+O)')
         self.actionVoirContrat.triggered.connect(lambda : self.voirContrat(self.selectedClient))
@@ -790,18 +790,18 @@ class FenetreEditClient(Fenetre):
         self.comboGenre.model().sort(0,QtCore.Qt.AscendingOrder)
 
     def createFenetre(self):
-        self.labelNom=QtGui.QLabel("Nom",parent=self)
-        self.textNom=QtGui.QLineEdit("Sans Nom",parent=self)
+        self.labelNom=QtWidgets.QLabel("Nom",parent=self)
+        self.textNom=QtWidgets.QLineEdit("Sans Nom",parent=self)
         self.labelNom.setBuddy( self.textNom)     
-        self.labelSurnom=QtGui.QLabel("Surnom",parent=self)
-        self.textSurnom=QtGui.QLineEdit("Sans Surnom",parent=self)
+        self.labelSurnom=QtWidgets.QLabel("Surnom",parent=self)
+        self.textSurnom=QtWidgets.QLineEdit("Sans Surnom",parent=self)
         self.labelSurnom.setBuddy( self.textSurnom)  
-        self.labelGenre=QtGui.QLabel("Genre",parent=self)
-        self.comboGenre=QtGui.QComboBox(parent=self)
+        self.labelGenre=QtWidgets.QLabel("Genre",parent=self)
+        self.comboGenre=QtWidgets.QComboBox(parent=self)
         self.labelGenre.setBuddy(self.comboGenre)    
-        self.boutOk= QtGui.QPushButton("Ok",parent=self)
-        self.boutAnn= QtGui.QPushButton("Annuler",parent=self)
-        lay = QtGui.QGridLayout()
+        self.boutOk= QtWidgets.QPushButton("Ok",parent=self)
+        self.boutAnn= QtWidgets.QPushButton("Annuler",parent=self)
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.labelNom,0,0,1,1)
         lay.addWidget(self.textNom,0,1,1,1)
         lay.addWidget(self.labelSurnom,1, 0,1,1)
@@ -839,21 +839,21 @@ class FenetreEditPedaleur(Fenetre):
         self.comboCouleur.setCurrentIndex(self.comboCouleur.color_list.index(self.pedaleur.couleur))
 
     def createFenetre(self):
-        self.labelNom=QtGui.QLabel("Nom",parent=self)
-        self.textNom=QtGui.QLineEdit("Sans Nom",parent=self)
+        self.labelNom=QtWidgets.QLabel("Nom",parent=self)
+        self.textNom=QtWidgets.QLineEdit("Sans Nom",parent=self)
         self.labelNom.setBuddy( self.textNom)     
-        self.labelPrenom=QtGui.QLabel("Prenom",parent=self)
-        self.textPrenom=QtGui.QLineEdit("Sans Prenom",parent=self)
+        self.labelPrenom=QtWidgets.QLabel("Prenom",parent=self)
+        self.textPrenom=QtWidgets.QLineEdit("Sans Prenom",parent=self)
         self.labelPrenom.setBuddy( self.textPrenom) 
-        self.labelSurnom=QtGui.QLabel("Surnom",parent=self)
-        self.textSurnom=QtGui.QLineEdit("Sans Surnom",parent=self)
+        self.labelSurnom=QtWidgets.QLabel("Surnom",parent=self)
+        self.textSurnom=QtWidgets.QLineEdit("Sans Surnom",parent=self)
         self.labelSurnom.setBuddy( self.textSurnom)          
-        self.labelCouleur=QtGui.QLabel("Couleur",parent=self)
+        self.labelCouleur=QtWidgets.QLabel("Couleur",parent=self)
         self.comboCouleur=KComboBoxCouleur(parent=self)
         self.labelCouleur.setBuddy(self.comboCouleur)    
-        self.boutOk= QtGui.QPushButton("Ok",parent=self)
-        self.boutAnn= QtGui.QPushButton("Annuler",parent=self)
-        lay = QtGui.QGridLayout()
+        self.boutOk= QtWidgets.QPushButton("Ok",parent=self)
+        self.boutAnn= QtWidgets.QPushButton("Annuler",parent=self)
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.labelNom,0,0,1,1)
         lay.addWidget(self.textNom,0,1,1,1)
         lay.addWidget(self.labelPrenom,1, 0,1,1)
@@ -893,8 +893,8 @@ class FenetreContrat(Fenetre):
          
     def createFenetre(self):
         self.viewContrat=ViewContrat(parent=self,mere=self.mere)
-        self.comboGenre=QtGui.QComboBox(parent=self)      
-        layContratTable = QtGui.QGridLayout()
+        self.comboGenre=QtWidgets.QComboBox(parent=self)      
+        layContratTable = QtWidgets.QGridLayout()
         layContratTable.addWidget(self.comboGenre,0,0,1,1)
         layContratTable.addWidget(self.viewContrat,1,0,2,4) 
         self.setLayout(layContratTable)
@@ -916,27 +916,27 @@ class FenetreContrat(Fenetre):
         selModelContrat.currentChanged.connect(lambda :self.selContratChanged(contrat=self.modelContrat.data(self.viewContrat.currentIndex(),QtCore.Qt.UserRole)))
 
     def createAction(self):
-        self.actionNouveauContrat = QtGui.QAction('Nouveau contrat', self)
+        self.actionNouveauContrat = QtWidgets.QAction('Nouveau contrat', self)
         self.actionNouveauContrat.setShortcut('Ctrl+N')
         self.actionNouveauContrat.setStatusTip('Creer un nouveau contrat (Ctrl+N)')
         self.actionNouveauContrat.triggered.connect(self.nouveauContrat)
-        self.actionEditerContrat = QtGui.QAction('Editer contrat', self)
+        self.actionEditerContrat = QtWidgets.QAction('Editer contrat', self)
         self.actionEditerContrat.setShortcut('Ctrl+E')
         self.actionEditerContrat.setStatusTip('Editer contrat (Ctrl+E)')
         self.actionEditerContrat.triggered.connect(lambda : self.editerContrat(self.selectedContrat))
-        self.actionSupprimerContrat = QtGui.QAction('Supprimer contrat', self)
+        self.actionSupprimerContrat = QtWidgets.QAction('Supprimer contrat', self)
         self.actionSupprimerContrat.setShortcut('Ctrl+S')
         self.actionSupprimerContrat.setStatusTip('Supprimer contrat (Ctrl+S)')
         self.actionSupprimerContrat.triggered.connect(lambda : self.supprimerContrat(self.selectedContrat))
-        self.actionEditerDepotLieu = QtGui.QAction('Editer Depot/Lieu', self)
+        self.actionEditerDepotLieu = QtWidgets.QAction('Editer Depot/Lieu', self)
         self.actionEditerDepotLieu.setShortcut('Ctrl+D')
         self.actionEditerDepotLieu.setStatusTip('Editer les depots et les lieux du contrat (Ctrl+D)')
         self.actionEditerDepotLieu.triggered.connect(lambda : self.editerDepotQuantite(self.selectedContrat))
-        self.actionExporterKml = QtGui.QAction('Exporter Kml', self)
+        self.actionExporterKml = QtWidgets.QAction('Exporter Kml', self)
         self.actionExporterKml.setShortcut('Ctrl+K')
         self.actionExporterKml.setStatusTip('Exporter le contrat Kml pour visualiser avec google map (Ctrl+K)')
         self.actionExporterKml.triggered.connect(lambda : self.exporterKml(self.selectedContrat))        
-        self.actionImporterCVS = QtGui.QAction('Importer CVS', self)
+        self.actionImporterCVS = QtWidgets.QAction('Importer CVS', self)
         self.actionImporterCVS.setShortcut('Ctrl+O')
         self.actionImporterCVS.setStatusTip('Importer un fichier CSV (Ctrl+O)')
         self.actionImporterCVS.triggered.connect(lambda : self.importListing(self.selectedContrat))
@@ -999,7 +999,7 @@ class FenetrePedaleur(Fenetre):
 
     def createFenetre(self):
         self.viewPedaleur=ViewPedaleur(parent=self,mere=self.mere)
-        layPedaleurTable = QtGui.QGridLayout()
+        layPedaleurTable = QtWidgets.QGridLayout()
         layPedaleurTable.addWidget(self.viewPedaleur,0,0,8,4)      
         self.setLayout(layPedaleurTable)   
 
@@ -1011,15 +1011,15 @@ class FenetrePedaleur(Fenetre):
         selModelPedaleur.currentChanged.connect(lambda :self.selPedaleurChanged(pedaleur=self.modelPedaleur.data(self.viewPedaleur.currentIndex(),QtCore.Qt.UserRole)))
 
     def createAction(self):
-        self.actionNouveauPedaleur = QtGui.QAction('Nouveau pedaleur', self)
+        self.actionNouveauPedaleur = QtWidgets.QAction('Nouveau pedaleur', self)
         self.actionNouveauPedaleur.setShortcut('Ctrl+N')
         self.actionNouveauPedaleur.setStatusTip('Creer un nouveau pedaleur (Ctrl+N)')
         self.actionNouveauPedaleur.triggered.connect(self.nouveauPedaleur)
-        self.actionEditerPedaleur = QtGui.QAction('Editer pedaleur', self)
+        self.actionEditerPedaleur = QtWidgets.QAction('Editer pedaleur', self)
         self.actionEditerPedaleur.setShortcut('Ctrl+E')
         self.actionEditerPedaleur.setStatusTip('Editer pedaleur (Ctrl+E)')
         self.actionEditerPedaleur.triggered.connect(lambda : self.editerPedaleur(self.selectedPedaleur))
-        self.actionSupprimerPedaleur = QtGui.QAction('Supprimer pedaleur', self)
+        self.actionSupprimerPedaleur = QtWidgets.QAction('Supprimer pedaleur', self)
         self.actionSupprimerPedaleur.setShortcut('Ctrl+S')
         self.actionSupprimerPedaleur.setStatusTip('Supprimer pedaleur (Ctrl+S)')
         self.actionSupprimerPedaleur.triggered.connect(lambda : self.supprimerPedaleur(self.selectedPedaleur))
@@ -1070,30 +1070,30 @@ class FenetreEditContrat(Fenetre):
 
 
     def createFenetre(self):
-        self.labelRemise=QtGui.QLabel("Remise",parent=self)
-        self.textRemise=QtGui.QLineEdit("0",parent=self)
+        self.labelRemise=QtWidgets.QLabel("Remise",parent=self)
+        self.textRemise=QtWidgets.QLineEdit("0",parent=self)
         self.labelRemise.setBuddy( self.textRemise)  
-        self.labelGenre=QtGui.QLabel("Genre",parent=self)
-        self.comboGenre=QtGui.QComboBox(parent=self)
+        self.labelGenre=QtWidgets.QLabel("Genre",parent=self)
+        self.comboGenre=QtWidgets.QComboBox(parent=self)
         self.labelGenre.setBuddy(self.comboGenre)     
-        self.labelOuverture=QtGui.QLabel("date ouverture",parent=self)
-        self.dateEditOuverture=QtGui.QDateEdit(parent=self)
+        self.labelOuverture=QtWidgets.QLabel("date ouverture",parent=self)
+        self.dateEditOuverture=QtWidgets.QDateEdit(parent=self)
         self.dateEditOuverture.setCalendarPopup(True)
         self.labelOuverture.setBuddy(self.dateEditOuverture)   
-        self.labelCloture=QtGui.QLabel("date cloture",parent=self)
-        self.dateEditCloture=QtGui.QDateEdit(parent=self)
+        self.labelCloture=QtWidgets.QLabel("date cloture",parent=self)
+        self.dateEditCloture=QtWidgets.QDateEdit(parent=self)
         self.dateEditCloture.setCalendarPopup(True)
         self.labelCloture.setBuddy(self.dateEditCloture) 
-#        self.labelDebutPrestation=QtGui.QLabel("date debut de prestation",parent=self)
+#        self.labelDebutPrestation=QtWidgets.QLabel("date debut de prestation",parent=self)
 #        self.dateEditDebutPrestation=KDateComboBox(parent=self)
 #        self.labelDebutPrestation.setBuddy(self.dateKDEDebutPrestation) 
-#        self.labelFinPrestation=QtGui.QLabel("date fin prestation",parent=self)
+#        self.labelFinPrestation=QtWidgets.QLabel("date fin prestation",parent=self)
 #        self.dateKDEFinPrestation=KDateComboBox(parent=self)
 #        self.labelFinPrestation.setBuddy(self.dateKDEFinPrestation)    
-        self.boutOk= QtGui.QPushButton("Ok",parent=self)
-        self.boutAnn= QtGui.QPushButton("Annuler",parent=self)
+        self.boutOk= QtWidgets.QPushButton("Ok",parent=self)
+        self.boutAnn= QtWidgets.QPushButton("Annuler",parent=self)
         
-        lay = QtGui.QGridLayout()         
+        lay = QtWidgets.QGridLayout()         
         lay.addWidget(self.labelGenre,0,0,1,1)
         lay.addWidget(self.comboGenre, 0,1,1,1)
         lay.addWidget(self.labelRemise,1,0,1,1)
@@ -1144,20 +1144,20 @@ class FenetreEditContrat(Fenetre):
 #        self.resize(1000, 600)
 #        self.viewImportUserLieu=ViewImportUserLieu(parent=self,mere=self.mere)
 #        self.viewMatchingLieu=ViewMatchingLieu(parent=self,mere=self.mere)
-#        self.boutAjoutLieu= QtGui.QPushButton("Ajouter", parent=self)
-#        self.boutSuppLieu= QtGui.QPushButton("Supprimer", parent=self)
-#        self.boutGeoLieu= QtGui.QPushButton("Geoloc", parent=self)
-#        self.boutImporter= QtGui.QPushButton("Importer", parent=self)
-#        self.boutOk= QtGui.QPushButton("Ok", parent=self)
-#        self.boutAnnule= QtGui.QPushButton("Annulé", parent=self)
-#        self.progressBarGeoLieu = QtGui.QProgressBar(parent=self)
+#        self.boutAjoutLieu= QtWidgets.QPushButton("Ajouter", parent=self)
+#        self.boutSuppLieu= QtWidgets.QPushButton("Supprimer", parent=self)
+#        self.boutGeoLieu= QtWidgets.QPushButton("Geoloc", parent=self)
+#        self.boutImporter= QtWidgets.QPushButton("Importer", parent=self)
+#        self.boutOk= QtWidgets.QPushButton("Ok", parent=self)
+#        self.boutAnnule= QtWidgets.QPushButton("Annulé", parent=self)
+#        self.progressBarGeoLieu = QtWidgets.QProgressBar(parent=self)
 #        self.progressBarGeoLieu.setValue(0)
-#        self.sliderMatching = QtGui.QSlider(QtCore.Qt.Horizontal,parent=self)
+#        self.sliderMatching = QtWidgets.QSlider(QtCore.Qt.Horizontal,parent=self)
 #        self.sliderMatching.setMaximum(100)
 #        self.sliderMatching.setMinimum(0)
 #        self.sliderMatching.setValue(10)
-#        self.labelSliderMatching=QtGui.QLabel(parent=self)
-#        lay = QtGui.QGridLayout()
+#        self.labelSliderMatching=QtWidgets.QLabel(parent=self)
+#        lay = QtWidgets.QGridLayout()
 #        lay.addWidget(self.viewImportUserLieu,0,0,8,10)
 #        lay.addWidget(self.viewMatchingLieu,0,10,8,10)
 #        lay.addWidget(self.boutAjoutLieu,8,0,1,2)
@@ -1210,7 +1210,7 @@ class FenetreEditContrat(Fenetre):
 #        
 #    def importerDock(self):
 #        """importer un document cvs pour matcher et geocoder"""
-#        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","/home/moustache/prog/workspace/KAFTIERE_2.0.1/CSV/")
+#        fichier_csv = QtWidgets.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","/home/moustache/prog/workspace/KAFTIERE_2.0.1/CSV/")
 #        if fichier_csv:
 #            self.fichier =fichier_csv[0] 
 #            self.dock=DocK(parent=self,mere=self.mere)
@@ -1241,20 +1241,20 @@ class FenetreEditAdresseDB(Fenetre):
         self.resize(1000, 600)
         self.viewLieuEditAdresse=ViewLieuEditAdresse(parent=self,mere=self.mere)
         self.viewMatchingLieu=ViewMatchingLieu(parent=self,mere=self.mere)
-        self.boutAjoutLieu= QtGui.QPushButton("Ajouter", parent=self)
-        self.boutSuppLieu= QtGui.QPushButton("Supprimer", parent=self)
-        self.boutGeoLieu= QtGui.QPushButton("Geoloc", parent=self)
-        self.boutImporter= QtGui.QPushButton("Importer", parent=self)
-        self.boutOk= QtGui.QPushButton("Ok", parent=self)
-        self.boutAnnule= QtGui.QPushButton("Annulé", parent=self)
-        self.progressBarGeoLieu = QtGui.QProgressBar(parent=self)
+        self.boutAjoutLieu= QtWidgets.QPushButton("Ajouter", parent=self)
+        self.boutSuppLieu= QtWidgets.QPushButton("Supprimer", parent=self)
+        self.boutGeoLieu= QtWidgets.QPushButton("Geoloc", parent=self)
+        self.boutImporter= QtWidgets.QPushButton("Importer", parent=self)
+        self.boutOk= QtWidgets.QPushButton("Ok", parent=self)
+        self.boutAnnule= QtWidgets.QPushButton("Annulé", parent=self)
+        self.progressBarGeoLieu = QtWidgets.QProgressBar(parent=self)
         self.progressBarGeoLieu.setValue(0)
-        self.sliderMatching = QtGui.QSlider(QtCore.Qt.Horizontal,parent=self)
+        self.sliderMatching = QtWidgets.QSlider(QtCore.Qt.Horizontal,parent=self)
         self.sliderMatching.setMaximum(100)
         self.sliderMatching.setMinimum(0)
         self.sliderMatching.setValue(0)
-        self.labelSliderMatching=QtGui.QLabel( parent=self)
-        lay = QtGui.QGridLayout()
+        self.labelSliderMatching=QtWidgets.QLabel( parent=self)
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.viewLieuEditAdresse,0,0,8,10)
         lay.addWidget(self.viewMatchingLieu,0,10,8,10)
         lay.addWidget(self.boutAjoutLieu,8,0,1,2)
@@ -1318,7 +1318,7 @@ class FenetreEditAdresseDB(Fenetre):
         
     def importerDock(self):
         """importer un document cvs pour matcher et geocoder"""
-        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","{}/CSV/".format(os.getcwd()))
+        fichier_csv = QtWidgets.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","{}/CSV/".format(os.getcwd()))
         if fichier_csv:
             self.fichier =fichier_csv[0] 
             self.dock=DocK(parent=self,mere=self.mere)
@@ -1354,36 +1354,36 @@ class FenetreImportListing(Fenetre):
         self.resize(1000, 600)
         self.viewImportListing=ViewImportListing(parent=self,mere=self.mere)
         self.viewMatchingListing=ViewMatchingListing(parent=self,mere=self.mere)
-        self.boutGeoLieu= QtGui.QPushButton("Geoloc", parent=self)
-        self.boutImporter= QtGui.QPushButton("Importer", parent=self)
-        self.boutExporter=QtGui.QPushButton("Exporter", parent=self)
-        self.boutOk= QtGui.QPushButton("Ok", parent=self)
-        self.boutAnnule= QtGui.QPushButton("Annulé", parent=self)
-        self.progressBarGeoLieu = QtGui.QProgressBar(parent=self)
+        self.boutGeoLieu= QtWidgets.QPushButton("Geoloc", parent=self)
+        self.boutImporter= QtWidgets.QPushButton("Importer", parent=self)
+        self.boutExporter=QtWidgets.QPushButton("Exporter", parent=self)
+        self.boutOk= QtWidgets.QPushButton("Ok", parent=self)
+        self.boutAnnule= QtWidgets.QPushButton("Annulé", parent=self)
+        self.progressBarGeoLieu = QtWidgets.QProgressBar(parent=self)
         self.progressBarGeoLieu.setValue(0)
-        self.sliderMatching = QtGui.QSlider(QtCore.Qt.Horizontal,parent=self)
+        self.sliderMatching = QtWidgets.QSlider(QtCore.Qt.Horizontal,parent=self)
         self.sliderMatching.setMaximum(100)
         self.sliderMatching.setMinimum(0)
         self.sliderMatching.setValue(0)
-        self.labelSliderMatching=QtGui.QLabel( parent=self)
+        self.labelSliderMatching=QtWidgets.QLabel( parent=self)
         
-        layListingTable = QtGui.QGridLayout()
+        layListingTable = QtWidgets.QGridLayout()
         layListingTable.addWidget(self.viewImportListing,0,0,8,10)
         layListingTable.addWidget(self.boutGeoLieu,8,4,1,2)
         layListingTable.addWidget(self.boutImporter,8,6,1,2)
         layListingTable.addWidget(self.boutExporter,8,8,1,2)
         
-        layMatchingTable = QtGui.QGridLayout()
+        layMatchingTable = QtWidgets.QGridLayout()
         layMatchingTable.addWidget(self.viewMatchingListing,0,0,8,10)
         layMatchingTable.addWidget(self.progressBarGeoLieu,10,0,1,10)    
         layMatchingTable.addWidget(self.sliderMatching,9,0,1,9)
         layMatchingTable.addWidget(self.labelSliderMatching,9,9,1,1)
 
-        layValidation = QtGui.QGridLayout()
+        layValidation = QtWidgets.QGridLayout()
         layValidation.addWidget(self.boutOk,0,10,1,2)
         layValidation.addWidget(self.boutAnnule,0,12,1,2)
 
-        lay=QtGui.QVBoxLayout()
+        lay=QtWidgets.QVBoxLayout()
         lay.addLayout(layListingTable)
         lay.addLayout(layMatchingTable)
         lay.addLayout(layValidation)
@@ -1455,7 +1455,7 @@ class FenetreImportListing(Fenetre):
         
     def importerDock(self):
         """importer un document cvs pour matcher et geocoder"""
-        fichier_csv = QtGui.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","{}/CSV".format(os.getcwd()))
+        fichier_csv = QtWidgets.QFileDialog.getOpenFileName(self,"Ouvrir un CVS","{}/CSV".format(os.getcwd()))
         if fichier_csv:
             self.fichier =fichier_csv[0] 
             self.dock=DocK(parent=self,mere=self.mere)
@@ -1472,14 +1472,14 @@ class FenetreImportListing(Fenetre):
                     self.modelImportListing.ajouterLieu(lieu)
 
     def exporterDock(self):
-        fichier_cible_csv = QtGui.QFileDialog.getSaveFileName(self,"Expoter un CVS",self.dock.source[:-4]+"_DEVIS_LISTING.csv")
+        fichier_cible_csv = QtWidgets.QFileDialog.getSaveFileName(self,"Expoter un CVS",self.dock.source[:-4]+"_DEVIS_LISTING.csv")
         if fichier_cible_csv:
             dock_export=DocK(parent=self,mere=self.mere)
             dock_export.listDepot=self.listDepot
             dock_export.listLieu=self.listLieu
             dock_export.exporter(association_lieu_quantite=False)
-            if dock_export.sauver(destination=fichier_cible_csv[0]):QtGui.QFileDialog(self, "Exportation du CVS a Réussit !")
-            else :QtGui.QFileDialog(self, "Exportation du CVS a Echoué !")
+            if dock_export.sauver(destination=fichier_cible_csv[0]):QtWidgets.QFileDialog(self, "Exportation du CVS a Réussit !")
+            else :QtWidgets.QFileDialog(self, "Exportation du CVS a Echoué !")
                 
     def closeEvent(self, event):
         if hasattr(self.parent,"comboAdresse"):self.parent.initComboAdresse()
@@ -1493,12 +1493,12 @@ class FenetreKml(Fenetre):
         
     def createFenetre(self):
         self.labelObjetK=KLabelPixmap(parent=self, mere=self.mere)
-        self.textCheminFichier=QtGui.QLineEdit(parent=self)
-        self.textEditKlmInfo=QtGui.QTextEdit(parent=self)
-        self.boutExporter= QtGui.QPushButton("Exporter Kml",parent=self)
-        self.boutActualiser= QtGui.QPushButton("Actualiser",parent=self)
+        self.textCheminFichier=QtWidgets.QLineEdit(parent=self)
+        self.textEditKlmInfo=QtWidgets.QTextEdit(parent=self)
+        self.boutExporter= QtWidgets.QPushButton("Exporter Kml",parent=self)
+        self.boutActualiser= QtWidgets.QPushButton("Actualiser",parent=self)
 
-        lay = QtGui.QGridLayout()
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.labelObjetK,0,0,1,1)
         lay.addWidget(self.boutExporter,1,0,1,1)
         lay.addWidget(self.textCheminFichier,1,1,1,2)
@@ -1533,7 +1533,7 @@ class FenetreKml(Fenetre):
         self.textEditKlmInfo.setText(self.kmlInfo())
     
     def exporterCheminFichier(self):
-        chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+        chemin=QtWidgets.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
         if chemin:
             Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination=chemin[0])
             self.textCheminFichier.setText(chemin[0])
@@ -1547,16 +1547,16 @@ class FenetreTamponade(Fenetre):
     def createFenetre(self):
         self.labelObjetK=KLabelPixmap(parent=self, mere=self.mere)
         
-        self.textCheminFichier=QtGui.QLineEdit(parent=self)
-        self.labelTamponade=QtGui.QTextEdit("", parent=self)
-        self.boutOuvrir= QtGui.QPushButton("Ouvrir",parent=self)
-        self.boutTamponner= QtGui.QPushButton("Tamponner",parent=self)
-        self.boutImporter= QtGui.QPushButton("Importer",parent=self)
+        self.textCheminFichier=QtWidgets.QLineEdit(parent=self)
+        self.labelTamponade=QtWidgets.QTextEdit("", parent=self)
+        self.boutOuvrir= QtWidgets.QPushButton("Ouvrir",parent=self)
+        self.boutTamponner= QtWidgets.QPushButton("Tamponner",parent=self)
+        self.boutImporter= QtWidgets.QPushButton("Importer",parent=self)
 
 #        self.modelLieuTamponade=ModelTamponade(parent=self,mere=self.mere)
 #        self.viewTableTamponade.setModel(self.modelTamponade)  
 
-        lay = QtGui.QGridLayout()
+        lay = QtWidgets.QGridLayout()
         lay.addWidget(self.labelObjetK,0,0,1,1)
         lay.addWidget(self.boutOuvrir,1,0,1,1)
         lay.addWidget(self.textCheminFichier,1,1,1,2)
@@ -1599,7 +1599,7 @@ class FenetreTamponade(Fenetre):
         acction(tournee=self.objetK)
     
     def ouvrirCheminFichier(self):
-        chemin=QtGui.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
+        chemin=QtWidgets.QFileDialog.getSaveFileName(self,"Expoter un KML","{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
         if chemin:
             Kml(racine=self.objetK, nom=self.objetK.__class__.__name__+str(self.objetK.dbid), destination="{}/KML/".format(os.getcwd())+self.objetK.__class__.__name__+str(self.objetK.dbid)+".kml")
             self.textCheminFichier.setText(chemin[0])

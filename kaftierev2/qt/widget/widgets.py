@@ -1,11 +1,11 @@
-from PySide import QtCore, QtGui
+from PyQt5 import QtCore, QtWidgets,QtWidgets
 
-class KLabelPixmap(QtGui.QLabel):
+class KLabelPixmap(QtWidgets.QLabel):
     def __init__(self,parent=None,mere=None):
         super(KLabelPixmap, self).__init__(parent)
         self.parent=parent
         self.mere=mere
-        self.setFrameStyle(QtGui.QFrame.Panel | QtGui.QFrame.Sunken)
+        self.setFrameStyle(QtWidgets.QFrame.Panel | QtWidgets.QFrame.Sunken)
         self.setLineWidth(2)
         self.setAcceptDrops(True)
 
@@ -39,7 +39,7 @@ class KLabelPixmap(QtGui.QLabel):
             event.ignore()
 
 
-class KComboBox(QtGui.QComboBox):
+class KComboBox(QtWidgets.QComboBox):
     def __init__(self,parent=None,mere=None,comboBoxTable=None,comboBoxArg=None, kobjet=None):
         super(KComboBox, self).__init__(parent)
         self.parent=parent
@@ -53,7 +53,7 @@ class KComboBox(QtGui.QComboBox):
         self.comboBox.model().sort(0,QtCore.Qt.AscendingOrder)
         
 
-class KComboBoxCouleur(QtGui.QComboBox):
+class KComboBoxCouleur(QtWidgets.QComboBox):
     COLOR_LIST = ['#ff0000','#00ff00','#0000ff','#ffff00','#ffd700','#ffc0cb', '#ffe4c4','#fffff0',
                 '#000000','#ffffff','#ee82ee', '#c0c0c0','#228b22','#a52a3a','#d2691e','#fffff0','#ffa500']  
     
@@ -62,9 +62,9 @@ class KComboBoxCouleur(QtGui.QComboBox):
         self.parent=parent
         self.color_list = KComboBoxCouleur.COLOR_LIST
         for color in self.color_list:
-            pix=QtGui.QPixmap(50,30)
-            pix.fill(QtGui.QColor(color))
-            self.addItem(QtGui.QIcon(pix), '')
+            pix=QtWidgets.QPixmap(50,30)
+            pix.fill(QtWidgets.QColor(color))
+            self.addItem(QtWidgets.QIcon(pix), '')
         
 
 
