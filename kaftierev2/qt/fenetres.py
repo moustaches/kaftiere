@@ -641,7 +641,7 @@ class FenetreLieuDB(Fenetre):
     
     def createModel(self):
         self.modelLieuDB=ModelLieuDB(parent=self,mere=self.mere)
-        self.modelProxyLieuDB=QtWidgets.QSortFilterProxyModel(parent=self)
+        self.modelProxyLieuDB=QtCore.QSortFilterProxyModel(parent=self)
         self.modelProxyLieuDB.setSourceModel(self.modelLieuDB)
         self.modelProxyLieuDB.setDynamicSortFilter(True)
         self.viewTableLieuDB.setModel(self.modelProxyLieuDB)  

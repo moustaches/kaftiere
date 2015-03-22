@@ -23,7 +23,7 @@ class Model(QtCore.QAbstractTableModel):
             else: return None
         else:return None
  
-    def columnCount(self, parent): 
+    def columnCount(self, parent=None):
         return len(self.HEADERDATA) 
     
     def insertRows(self,row=0,count=0,index=QtCore.QModelIndex()):
@@ -58,7 +58,6 @@ class ModelLieuDB(Model):
 
     def initData(self):
         self.listLieu=[]
-        self.reset()
         for lieu in self.mere.dictLieu.values():
             self.ajouterLieu(lieu)
 
@@ -209,7 +208,6 @@ class ModelContrat(Model):
                 
     def clientChanged(self):
         if self.parent.client:
-            self.listContrat=[]
             self.reset()
             for contrat in self.parent.client.listContrat:
                 if contrat.genre==self._genreContrat:
@@ -220,8 +218,12 @@ class ModelContrat(Model):
         self.insertRows()
  
     def supprimerContrat(self,contrat):
-        self.listClient.remove(contrat)
-        self.removeColumns()
+        self.removeRows(self.listContrat.index(contrat),1)
+        
+    def reset(self):
+        self.beginResetModel()
+        self.listContrat=[]
+        self.endResetModel()
 
     def flags(self, index):
         if not index.isValid():
@@ -242,10 +244,10 @@ class ModelContrat(Model):
             return self.listContrat[row]
         return None   
             
-    def rowCount(self, parent): 
+    def rowCount(self, parent=None): 
         return len(self.listContrat)
 
-
+    
 class ModelPedaleur(Model):
     """Model pourla creation,edition et gestion des pedaleur"""
     def _initNext(self,**arguments):
@@ -387,8 +389,7 @@ class ModelParcours(Model):
 
     def tourneeChanged(self):
         if self.parent.tournee:
-            self.listParcours=[]
-            #self.reset()
+            self.reset()
             for parcours in self.parent.tournee.listParcours:
                 self.ajouterParcours(parcours)     
             
@@ -397,8 +398,14 @@ class ModelParcours(Model):
         self.insertColumns(self.listParcours.index(parcours)+1, 1)
         
     def supprimerParcours(self,parcours):
-        self.removeColumns(self.listParcours.index(parcours)+1, 1)
-        self.listParcours.remove(parcours)
+        if parcours in self.listParcours:
+            self.removeColumns(self.listParcours.index(parcours)+1, 1)
+            self.listParcours.remove(parcours)
+            
+    def reset(self):
+        self.beginResetModel()
+        self.listParcours=[]
+        self.endResetModel()
 
     def flags(self, index):
         if not index.isValid():
@@ -492,6 +499,11 @@ class ModelLieuEditAdresse(Model):
         self.HEADERDATA=['N°','Etat','Lieux','Adresse','         Cp         ','  Ville  ','latitude','longitude','GEO','           Resultat geoloc             ']
         self.listLieu=[]
         self.listLieuGeoCheck=[]
+        
+    def reset(self):
+        self.beginResetModel()
+        self.listLieu=[]
+        self.endResetModel()
         
     def ajouterLieu(self,lieu):
         lieu._choixLieu=None
@@ -589,6 +601,10 @@ class ModelMatchingLieu(Model):
             if self.lieu._listInfoLieuRes:
                 for dict_lieu_reslt in self.lieu._listInfoLieuRes:
                     self.insertRows()
+                    
+    def reset(self):
+        self.beginResetModel()
+        self.endResetModel()
   
     def matching(self,lieu=None,distance=100):
         """need info """
@@ -675,7 +691,7 @@ class ModelImportListing(Model):
         if lieu.dbid:self.listLieuGeoCheck.append(QtCore.Qt.Unchecked)
         else:self.listLieuGeoCheck.append(QtCore.Qt.Checked)
         self.insertRows()
-    
+        
     def flags(self, index):
         if not index.isValid():
             return None
@@ -784,6 +800,10 @@ class ModelMatchingListing(Model):
     def _initNext(self,**arguments):
         self.HEADERDATA=['Type','N°','Etat','Pertinence','Saturation','Nom','Adresse', 'Cp', 'Ville', 'Distance', 'Latitude', 'Longitude']
         self.lieu=None
+        
+    def reset(self):
+        self.beginResetModel()
+        self.endResetModel()
         
     def rafraichir(self):
         if self.lieu:
