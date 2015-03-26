@@ -606,3 +606,34 @@ class SqlDepotK(SqlObjetK):
                 if lieu.dbid:self._insLieuQuantite(lieu.dbid,quantite)
             
             
+class SqlListeLieuK(SqlObjetK):
+    """Sous class sql Liste de lieux"""
+    SQL_ARGS=['nom','commentaire']
+    INIT_SQL_ARGS={'nom':'nom inconnu','commentaire':'sans commentaire'}
+    SQL_TABLE='listeslieux_tb'
+    NAME_DICT_MERE='dictListeLieu'
+    def __init__(self):
+        SqlObjetK.__init__(self)
+    
+    def sqlInsert(self,composentes=True):
+        """S'insert lui même et ses composentes si pas de dbid"""
+        if not self.dbid:
+            return self._sqlInsert()  
+
+    def _selectDbidLieuOrdre(self):
+        """Select les lieux en fonct du dbid"""
+        return sql_select('lieux_listeslieux_tb',['dbid_lieu','ordre'],'dbid_listelieu = %s',[self.dbid],self._verbose)
+    
+    def _upLieuOrdre(self,dbid_lieu,ordre):
+        """update la l'orde du lieu dans la liste"""
+        if self._updatable:
+            if sql_update('lieux_listeslieux_tb', {'ordre':ordre},'dbid_lieu = {} AND dbid_listelieu = {}'.format(dbid_lieu,self.dbid), True):
+                return True
+            else:return False
+ 
+    def _insLieuOrdre(self,dbid_lieu,ordre):
+        """insert  du lieu et de son l'orde dans la listex"""
+        if self._updatable:
+            if self.dbid:
+                if sql_insert('lieux_listeslieux_tb',{'dbid_listelieu':self.dbid,'dbid_lieu':dbid_lieu,'ordre':ordre},False, True):return True
+        return False           

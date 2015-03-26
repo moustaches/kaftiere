@@ -30,13 +30,15 @@ def formatageAdresseNomiatim(adresse):
     addresse:-> string
     '''
     num=0
-    adresse.adresse=adresse.adresse.replace(',', ' ')
-    for j,caractere in enumerate(adresse.adresse):
-        if caractere.isnumeric():num=j
-        if adresse.adresse[j:j+5] in ("bis ","BIS ","ter ","TER ","Bis ","Ter "):num=j+4
-    if num != 0:str_adresse="France, {}, {}, {}, {}".format(adresse.cp,adresse.ville,adresse.adresse[num+1:],adresse.adresse[:num+1])
-    else : str_adresse="France, {}, {}, {}".format(adresse.cp,adresse.ville,adresse.adresse)     
-    return str_adresse
+    if adresse.adresse:
+        adresse.adresse=adresse.adresse.replace(',', ' ')
+        for j,caractere in enumerate(adresse.adresse):
+            if caractere.isnumeric():num=j
+            if adresse.adresse[j:j+5] in ("bis ","BIS ","ter ","TER ","Bis ","Ter "):num=j+4
+        if num != 0:str_adresse="France, {}, {}, {}, {}".format(adresse.cp,adresse.ville,adresse.adresse[num+1:],adresse.adresse[:num+1])
+        else : str_adresse="France, {}, {}, {}".format(adresse.cp,adresse.ville,adresse.adresse)     
+        return str_adresse
+    else :return None
 
 def geocoder(adresse):
     '''

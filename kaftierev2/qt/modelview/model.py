@@ -4,7 +4,7 @@ Created on 8 mai 2013
 @author: moustache
 '''
 
-from PyQt5 import QtCore, QtWidgets,QtWidgets
+from PyQt5 import QtCore, QtWidgets,QtGui
 
 class Model(QtCore.QAbstractTableModel):
     def __init__(self,parent=None,mere=None,**arguments):
@@ -31,6 +31,35 @@ class Model(QtCore.QAbstractTableModel):
         self.beginInsertRows(index, count, count)
         self.endInsertRows()
         return True
+        
+    def insertColumns(self,column=0,count=0,index=QtCore.QModelIndex()):
+        count=self.columnCount(self)
+        self.beginInsertColumns(index, count, count)
+        self.endInsertColumns()
+        return True
+        
+class ModelListe(QtCore.QAbstractTableModel):
+    def __init__(self,parent=None,mere=None,**arguments):
+        super(ModelListe, self).__init__(parent)    
+        self.parent=parent
+        self.mere=mere
+        self._initNext(**arguments)
+        
+    def _initNext(self,**arguments):
+        pass
+    
+    def insertRows(self,row=0,count=0,index=QtCore.QModelIndex()):
+        count=self.rowCount(self)
+        self.beginInsertRows(index, count, count)
+        self.endInsertRows()
+        return True
+        
+    def insertColumns(self,column=0,count=0,index=QtCore.QModelIndex()):
+        count=self.columnCount(self)
+        self.beginInsertColumns(index, count, count)
+        self.endInsertColumns()
+        return True
+        
         
 class ModelLieuDB(Model):
     def _initNext(self):
@@ -246,52 +275,6 @@ class ModelContrat(Model):
             
     def rowCount(self, parent=None): 
         return len(self.listContrat)
-
-    
-class ModelPedaleur(Model):
-    """Model pourla creation,edition et gestion des pedaleur"""
-    def _initNext(self,**arguments):
-        self.HEADERDATA=['N°','Prenom','Nom', 'Pixmap']
-        self.listPedaleur=[]
-        self.initData()
-
-    def initData(self):
-        for pedaleur in self.mere.dictPedaleur.values():
-            self.ajouterPedaleur(pedaleur)
-            
-    def ajouterPedaleur(self,pedaleur):
-        self.listPedaleur.append(pedaleur)
-        self.insertRows()
- 
-    def supprimerPedaleur(self,pedaleur):
-        self.listPedaleur.remove(pedaleur)
-        self.removeRows()
-
-    def flags(self, index):
-        if not index.isValid():
-            return None
-        if index.column()==0:return QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable
-        elif index.column()==1:return QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable 
-        elif index.column()==2:return QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable 
-        elif index.column()==3:return  QtCore.Qt.ItemIsEnabled | QtCore.Qt.ItemIsSelectable| QtCore.Qt.ItemIsDragEnabled
-        
-    def data(self, index, role): 
-        if not index.isValid(): 
-            return None
-        colonne=index.column()
-        row=index.row()
-        if role == QtCore.Qt.DisplayRole:
-            if colonne==0:return self.listPedaleur[row].dbid
-            elif colonne==1:return self.listPedaleur[row].prenom
-            elif colonne==2:return self.listPedaleur[row].nom
-        if role == QtCore.Qt.DecorationRole:
-            if colonne==3:return self.listPedaleur[row].pixmap
-        if role == QtCore.Qt.UserRole:
-            return self.listPedaleur[row]
-        return None   
-            
-    def rowCount(self, parent): 
-        return len(self.listPedaleur)
 
 
 class ModelTournee(Model):
@@ -683,6 +666,10 @@ class ModelImportListing(Model):
         self.HEADERDATA=['Importer', 'Commentaire','N°','Etat','Pertinance','saturation','Lieux','Adresse','    Cp   ','  Ville  ','latitude','longitude','GEO','           Resultat geoloc             ']
         self.listLieu=[]
         self.listLieuGeoCheck=[]
+ 
+    def reset(self):
+        self.beginResetModel()
+        self.endResetModel()
         
     def ajouterLieu(self,lieu):
         lieu._choixLieu=None
@@ -732,8 +719,8 @@ class ModelImportListing(Model):
                 return  self.listLieuGeoCheck[row]
         if role == QtCore.Qt.BackgroundRole:
             if colonne==1:
-                if self.listLieu[row].isAcceptable[0]:return QtWidgets.QBrush(QtCore.Qt.green)   
-                return QtWidgets.QBrush(QtCore.Qt.red)
+                if self.listLieu[row].isAcceptable[0]:return QtGui.QBrush(QtCore.Qt.green)   
+                return QtGui.QBrush(QtCore.Qt.red)
             return None
         if role == QtCore.Qt.UserRole:return self.listLieu[row]
         return None   
@@ -971,3 +958,95 @@ class ModelDepotLieuQuantite(Model):
         self.endRemoveColumns()
         return True
         
+        
+class ModelPedaleur(ModelListe):
+    """Model pourla creation,edition et gestion des pedaleur"""
+    def _initNext(self,**arguments):
+        self.listPedaleur=[]
+        self.initData()
+
+    def initData(self):
+        for pedaleur in self.mere.dictPedaleur.values():
+            self.ajouterPedaleur(pedaleur)
+            
+    def ajouterPedaleur(self,pedaleur):
+        self.listPedaleur.append(pedaleur)
+        self.insertColumn(0)
+ 
+    def supprimerPedaleur(self,pedaleur):
+        self.removeColumn( self.listPedaleur.index(pedaleur))
+        self.listPedaleur.remove(pedaleur)
+
+    def flags(self, index):
+        if not index.isValid():
+            return None
+        else:return QtCore.Qt.ItemIsEnabled #| QtCore.Qt.ItemIsSelectable| QtCore.Qt.ItemIsDragEnabled
+        
+    def data(self, index, role): 
+        if not index.isValid(): 
+            return None
+        colonne=index.column()
+        if role == QtCore.Qt.DecorationRole:
+            return self.listPedaleur[colonne].pixmap
+        if role == QtCore.Qt.UserRole:
+            return self.listPedaleur[colonne]
+        return None   
+            
+    def rowCount(self, parent): 
+        return 1
+    
+    def columnCount(self, parent): 
+        return len(self.listPedaleur)
+        
+        
+class ModelListeLieu(ModelListe):
+    """Model pourla la gestion des listelieu"""
+    def _initNext(self,**arguments):
+        self.listListeLieu=[]     
+        self.initData()
+
+    def initData(self):
+        for liste_lieu in self.mere.dictListeLieu.values():
+            self.ajouterListeLieu(liste_lieu)
+   
+    def ajouterListeLieu(self,listelieu):
+        self.listListeLieu.append(listelieu)
+        self.insertColumns(self.listListeLieu.index(listelieu), 1)
+        
+    def supprimerListeLieu(self,listelieu):
+        if listelieu in self.listListeLieu:
+            self.removeColumns(self.listListeLieu.index(listelieu)+1, 1)
+            self.listListeLieu.remove(listelieu)
+
+    def flags(self, index):
+        if not index.isValid():
+            return None
+        else :return QtCore.Qt.ItemIsEnabled|QtCore.Qt.ItemIsSelectable| QtCore.Qt.ItemIsDropEnabled | QtCore.Qt.ItemIsDragEnabled
+        
+    def data(self, index, role): 
+        if not index.isValid(): 
+            return None
+        colonne=index.column()
+        if role == QtCore.Qt.DecorationRole:
+            return self.listListeLieu[colonne].pixmap
+        if role == QtCore.Qt.UserRole:
+            return self.listListeLieu[colonne]
+        return None   
+        
+    def rowCount(self, parent): 
+        return 1
+    
+    def columnCount(self, parent): 
+        return len(self.listListeLieu)
+
+#     def insertColumns(self,column=0,count=0,index=QtCore.QModelIndex()):
+#         count=self.columnCount(self)
+#         self.beginInsertColumns(index,count, count)
+#         self.endInsertColumns()
+#         return True
+# 
+#     def removeColumns(self, position=0, rows=1,index=QtCore.QModelIndex()):
+#         self.beginRemoveColumns(index, position, position + rows - 1)
+#         self.endRemoveColumns()
+#         return True
+

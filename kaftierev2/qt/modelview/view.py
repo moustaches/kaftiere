@@ -77,7 +77,10 @@ class ViewContrat(TableView):
 class ViewPedaleur(TableView):
     """Tableau gestion du pedaleur dans la fenetre Client/Contrat/Pedaleur"""
     def _initNext(self):
-        self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
+        self.setShowGrid(False)
+        self.horizontalHeader().hide()
+        self.verticalHeader().hide()
+        self.horizontalHeader().setStretchLastSection(True)
 
     def startDrag(self, supportedActions):
         objetK = self.model().data(self.currentIndex(),QtCore.Qt.UserRole)
@@ -214,3 +217,49 @@ class ViewDepotLieuQuantite(TableView):
     def _initNext(self):
         pass
 
+class ViewListeLieu(TableView):
+    """Tableau gestion liste lieux"""
+    def _initNext(self):
+        self.setShowGrid(False)
+        self.horizontalHeader().hide()
+        self.verticalHeader().hide()
+        self.horizontalHeader().setStretchLastSection(True)
+        
+    def dragEnterEvent(self, event):
+        if event.mimeData().hasFormat("ContratQ") or event.mimeData().hasFormat("TourneeQ"):
+            event.accept()
+        else:
+            event.ignore()
+ 
+    def dragMoveEvent(self, event):
+        if event.mimeData().hasFormat("ContratQ") or event.mimeData().hasFormat("TourneeQ"):
+            event.setDropAction(QtCore.Qt.MoveAction)
+            event.accept()
+        else:
+            event.ignore()
+ 
+    def dropEvent(self, event):
+        if event.mimeData().hasFormat('ContratQ'):
+            itemData = event.mimeData().data('ContratQ')
+            dataStream = QtCore.QDataStream(itemData, QtCore.QIODevice.ReadOnly)
+            dbid_ByAr = QtCore.QByteArray()
+            dataStream >> dbid_ByAr
+            dbid=dbid_ByAr.toInt(10)[0]
+            contrat=self.mere.Contrat(dbid)
+            if True:
+                listelieu=self.mere.nouvListeLieu(insert=True)
+                for lieu in contrat.listLieu:listelieu.ajouterLieu(lieu)
+                event.setDropAction(QtCore.Qt.MoveAction)
+                self.model().ajouterListeLieu(listelieu)
+                event.accept()
+            else:
+                event.ignore()
+        else:
+            event.ignore() 
+ 
+    def startDrag(self, supportedActions):
+        objetK = self.model().data(self.currentIndex(),QtCore.Qt.UserRole)
+        drag=KafDrag(parent=self,mere=self.mere)
+        drag.mettre(objetK)
+        if drag.exec_(QtCore.Qt.MoveAction) == QtCore.Qt.MoveAction:
+            self.model().setData(index=drag.source().currentIndex(), value=objetK, role=QtCore.Qt.UserRole+1) #pass ???

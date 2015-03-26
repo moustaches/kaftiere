@@ -7,7 +7,8 @@ import urllib.request
 from operator import attrgetter
 import json
 
-from objets.objet_sql import SqlPedaleurK,SqlParcoursK, SqlAdresseK,SqlClientK,SqlContratK,SqlDepotK,SqlLieuK,SqlTourneeK
+from objets.objet_sql import SqlPedaleurK,SqlParcoursK,SqlAdresseK,SqlClientK,SqlContratK,SqlDepotK,SqlLieuK,SqlTourneeK,\
+    SqlListeLieuK
 from objets.objet_geo import ShapeK, CheminK, PointK
 from outils.geocoding import geocoder
 
@@ -701,3 +702,59 @@ class PedaleurK(SqlPedaleurK, ObjetK):
         return dict_depot_tournee
 
 
+class ListeLieuK(ObjetK,SqlListeLieuK):
+    '''ObjetK qui represente une liste de lieux'''
+    def __init__(self,mere):
+        ObjetK.__init__(self,mere)
+        SqlListeLieuK.__init__(self)
+        self.dictLieuOrdre={}#dict sur les lieux et leur ordres
+        self._parent=None
+    
+    @property
+    def listLieu(self):
+        return self.dictLieuOrdre.keys()
+    
+    @property
+    def parent(self):
+        return self._parent    
+    @parent.setter
+    def parent(self,parent):
+        self.dbid_parent=parent.dbid
+        self._parent=parent
+               
+    def ordreLieu(self, lieu):
+        """renvoie la quantite du depot pour le lieu"""
+        return self.dictLieuOrdre.get(lieu, 0)
+   
+    def ajouterLieu(self,lieu,ordre=0):
+        if not self.dictLieuOrdre.get(lieu):
+            self.dictLieuOrdre[lieu]=int(ordre)       
+            if self._insLieuOrdre(dbid_lieu=lieu.dbid,ordre=int(ordre)):return True
+        return False
+    
+    def retirerLieu(self,lieu):
+        if self._delLieu(lieu.dbid):
+            del self.dictLieuOrdre[lieu]
+            return True
+        return False
+    
+    def upgradeLieu(self,lieu,ordre):
+        """upgrade lieu avec quantite"""
+        if self._upLieuOrdre(lieu.dbid,int(ordre)):
+            self.dictLieuOrdre[lieu]=int(ordre)
+            return True
+        return False
+   
+    def _loadComposantes(self):
+        """charges lieux/ordre"""
+        list_dbid_lieu_ordre=self._selectDbidLieuOrdre()
+        if list_dbid_lieu_ordre:
+            for dbid_lieu_ordre in list_dbid_lieu_ordre:
+                lieu=self._mere.Lieu(dbid_lieu_ordre['dbid_lieu'])
+                ordre=dbid_lieu_ordre['ordre']
+                self.dictLieuOrdre[lieu]=ordre 
+            return True
+        return False 
+    
+    
+    

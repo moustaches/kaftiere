@@ -5,7 +5,7 @@ Created on 7 mai 2013
 '''
 
 from PyQt5 import QtCore, QtWidgets,QtGui
-from objets.objet import PedaleurK,ParcoursK,AdresseK,ClientK,ContratK,DepotK,LieuK,TourneeK
+from objets.objet import PedaleurK,ParcoursK,AdresseK,ClientK,ContratK,DepotK,LieuK,TourneeK,ListeLieuK
 
 
 
@@ -185,7 +185,7 @@ class ParcoursQ(QTobjet,ParcoursK):
         return pix
         
 class PedaleurQ(QTobjet,PedaleurK):
-    """classe de controle des clients pour qt"""
+    """classe de controle des pedaleurs pour qt"""
     def __init__(self,mere):
         PedaleurK.__init__(self,mere)       
         QTobjet.__init__(self)        
@@ -219,5 +219,45 @@ class PedaleurQ(QTobjet,PedaleurK):
         painter.setPen(QtCore.Qt.white)
         painter.setBrush(QtCore.Qt.white)
         painter.drawText(QtCore.QRectF(0,0,lg_pix,17), QtCore.Qt.AlignCenter, "{}".format(self.surnom))
+        return pix
+#        self.pixmapObjetChange.emit(self._pixmap)
+
+
+class ListeLieuQ(QTobjet,ListeLieuK):
+    """classe de controle des listes leuix pour qt"""
+    def __init__(self,mere):
+        ListeLieuK.__init__(self,mere)       
+        QTobjet.__init__(self)        
+        self._pixmap=None
+        
+    @property
+    def pixmap(self):
+#        if not self._pixmap:self.dessinerPixmap()
+#        return self._pixmap     
+        return self.dessinerPixmap()
+               
+    def dessinerPixmap(self):
+        """dessinne son image"""
+        lg_pix=len(self.nom)*5+20
+        pix=QtGui.QPixmap(lg_pix,30)
+        pix.fill(QtCore.Qt.transparent)
+        painter=QtGui.QPainter(pix)
+        painter.setRenderHint(QtGui.QPainter.Antialiasing)
+        painter.setPen(QtCore.Qt.blue)
+        painter.setBrush(QtCore.Qt.blue)
+        painter.drawRoundedRect(QtCore.QRect(1,1,lg_pix-2,18),5,5) 
+        #painter.setPen(QtGui.QColor(self.couleur))
+        #painter.setBrush(QtGui.QColor(self.couleur))
+        painter.drawRoundedRect(QtCore.QRect(2,2,lg_pix-4,16),5,5)   
+        painter.setPen(QtCore.Qt.white)
+        painter.setBrush(QtCore.Qt.white)
+        painter.drawRoundedRect(QtCore.QRect(3,3,lg_pix-6,12),5,5)
+        font=QtGui.QFont("Arial", 8)
+        painter.setFont(font)
+        painter.setPen(QtCore.Qt.black)
+        painter.setBrush(QtCore.Qt.black)
+        painter.drawText(QtCore.QRectF(3,3,lg_pix-6,12), QtCore.Qt.AlignCenter, "{}".format(self.nom))
+        painter.setFont(QtGui.QFont("Arial", 6))
+        painter.drawText(QtCore.QRectF(0,20,60,10),  "L: {}".format(len(self.listLieu)))
         return pix
 #        self.pixmapObjetChange.emit(self._pixmap)

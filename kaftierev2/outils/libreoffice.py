@@ -90,7 +90,7 @@ def styleFeuilleREF(sheet =None,index=(None, None), tournee=None):
                 sheet.getCellByPosition(index[0],index[1]+ind_depot).CharPosture=uno.Enum('com.sun.star.awt.FontSlant','ITALIC')
                 dict_depot_index[ind_depot]=depot
                 i_contrat+=1
-            sheet.getCellRangeByPosition((index[0]-1, index[1]+ind_client+2,index[0]-1, index[1]+ind_client+2+i_contrat).merge(True)
+            sheet.getCellRangeByPosition(index[0]-1, index[1]+ind_client+2,index[0]-1, index[1]+ind_client+2+i_contrat).merge(True)
         ind_client+=i_contrat    
 
                 

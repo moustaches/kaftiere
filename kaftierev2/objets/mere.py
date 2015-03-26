@@ -1,7 +1,7 @@
 
 import time
 from objets.objet_sql import connectionDBPostgres,sql_select,SqlTable
-from objets.objet_qt import PedaleurQ,ParcoursQ,AdresseQ,ClientQ,ContratQ,DepotQ,LieuQ,TourneeQ 
+from objets.objet_qt import PedaleurQ,ParcoursQ,AdresseQ,ClientQ,ContratQ,DepotQ,LieuQ,TourneeQ ,ListeLieuQ
 from outils.geocoding import connectionGeocodeur
 
 class Mere(object):
@@ -15,6 +15,7 @@ class Mere(object):
         self.dictAdresse={}
         self.dictTournee={}
         self.dictLieu={}
+        self.dictListeLieu={}
         self.dictDepot={}
         self.dictTournee={}
         self.dictParcours={}
@@ -43,6 +44,7 @@ class Mere(object):
         informe _fenetre de l'avancement
         charge la kaftiere"""
         DICT_OBJK=[{'nom':'Lieux','table':'lieux_tb','fonct':self.Lieu}, 
+                   {'nom':'Liste des Lieux','table':'listeslieux_tb','fonct':self.ListeLieu}, 
                    {'nom':'Clients','table':'clients_tb','fonct':self.Client}, 
                    {'nom':'Contrats','table':'contrats_tb','fonct':self.Contrat}, 
                    {'nom':'Depots','table':'depots_tb','fonct':self.Depot}, 
@@ -201,6 +203,22 @@ class Mere(object):
         if arguments.get('insert'):
             objet.sqlInsert()
         return objet   
+    
+    def ListeLieu(self,dbid):
+        objet=self.dictListeLieu.get(dbid)
+        if not objet:
+            objet=ListeLieuQ(self)
+            self.dictListeLieu[dbid]=objet
+            objet.load(dbid)
+            return objet
+        return objet
+    
+    def nouvListeLieu(self,**arguments):
+        objet=ListeLieuQ(self)
+        objet._initData(**arguments)
+        if arguments.get('insert'):
+            objet.sqlInsert()
+        return objet 
         
     def Chemin(self,dbid):
         return self.dictChemin.get(dbid)

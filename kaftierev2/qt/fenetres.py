@@ -9,8 +9,10 @@ import os
 from PyQt5 import QtCore,QtWidgets,QtGui
 from objets.mere import Mere
 from outils.dock import DocK
-from qt.modelview.view import ViewPedaleur,ViewParcours,ViewLieuDB,ViewLieuEditAdresse,ViewMatchingLieu,ViewClient,ViewContrat, ViewTournee, ViewImportListing, ViewMatchingListing, ViewDepotLieuQuantite
-from qt.modelview.model import ModelPedaleur, ModelParcours,ModelLieuDB,ModelLieuEditAdresse,ModelMatchingLieu,ModelClient, ModelContrat, ModelTournee, ModelImportListing, ModelMatchingListing, ModelDepotLieuQuantite
+from qt.modelview.view import ViewPedaleur,ViewParcours,ViewLieuDB,ViewLieuEditAdresse,ViewMatchingLieu,ViewClient,\
+ViewContrat, ViewTournee, ViewImportListing, ViewMatchingListing, ViewDepotLieuQuantite,ViewListeLieu
+from qt.modelview.model import ModelPedaleur, ModelParcours,ModelLieuDB,ModelLieuEditAdresse,ModelMatchingLieu,\
+ModelClient, ModelContrat, ModelTournee, ModelImportListing, ModelMatchingListing, ModelDepotLieuQuantite,ModelListeLieu
 from outils.kml import Kml, KmlParser
 from qt.widget.widgets import KLabelPixmap, KComboBoxCouleur
 
@@ -80,6 +82,7 @@ class InitFenetre(Fenetre):
         if val_prog_bar:self.progressBar.setValue(val_prog_bar)
         if label:self.label.setText(label)
         if i_tot:self.text.append("Les {} {} chargé en {}s".format(i_tot,label,val_time))
+   
           
 class MainFenetre(QtWidgets.QMainWindow):
     """fenetre main kaftiere"""
@@ -101,13 +104,12 @@ class MainFenetre(QtWidgets.QMainWindow):
 #         self.listViewSelect.setModel(self.modelSelectRail)
     
     def createConnection(self):
-        self.ongletClientContratPedaleur.currentChanged.connect(self.refreshToolBarClientContratPedaleur)
+        self.ongletClientContrat.currentChanged.connect(self.refreshToolBarClientContrat)
         self.ongletTourneeParcours.currentChanged.connect(self.refreshToolBarTourneeParcours)
         
-    def refreshToolBarClientContratPedaleur(self,ind):
+    def refreshToolBarClientContrat(self,ind):
         if ind==0:self.fenetreClient.refreshToolBar()
-        elif ind==1:self.fenetreContrat.refreshToolBar()
-        else : self.fenetrePedaleur.refreshToolBar()
+        else:self.fenetreContrat.refreshToolBar()
 
     def refreshToolBarTourneeParcours(self,ind):
         if ind==0:self.fenetreTournee.refreshToolBar()
@@ -163,22 +165,19 @@ class MainFenetre(QtWidgets.QMainWindow):
         self.fenetreClient=FenetreClient(parent=self,mere=self.mere)
         self.fenetreContrat=FenetreContrat(parent=self,mere=self.mere)
         self.fenetrePedaleur=FenetrePedaleur(parent=self,mere=self.mere)
-
-        self.ongletClientContratPedaleur=QtWidgets.QTabWidget()
-        self.ongletClientContratPedaleur.addTab(self.fenetreClient,"Client")
-        self.fenetreClient.parentTab=self.ongletClientContratPedaleur
-        self.ongletClientContratPedaleur.addTab(self.fenetreContrat,"Contrat")
-        self.fenetreContrat.parentTab=self.ongletClientContratPedaleur
-        self.ongletClientContratPedaleur.addTab(self.fenetrePedaleur,"Pedaleur")
-        self.fenetreContrat.parentTab=self.ongletClientContratPedaleur
-        
-        self.dockWidgetClientContratPedaleur=QtWidgets.QDockWidget('Client - Contrat - Pedaleur', parent=self)
-        self.dockWidgetClientContratPedaleur.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea)
-        self.dockWidgetClientContratPedaleur.setWidget(self.ongletClientContratPedaleur)
-        self.addDockWidget(QtCore.Qt.LeftDockWidgetArea, self.dockWidgetClientContratPedaleur)
-
         self.fenetreTournee=FenetreTournee(parent=self,mere=self.mere)
         self.fenetreParcours=FenetreParcours(parent=self,mere=self.mere)
+        self.fenetreListeLieu=FenetreListeLieu(parent=self,mere=self.mere)
+
+        self.ongletClientContrat=QtWidgets.QTabWidget()
+        self.ongletClientContrat.addTab(self.fenetreClient,"Client")
+        self.fenetreClient.parentTab=self.ongletClientContrat
+        self.ongletClientContrat.addTab(self.fenetreContrat,"Contrat")
+
+        self.dockWidgetClientContrat=QtWidgets.QDockWidget(parent=self)
+        self.dockWidgetClientContrat.setAllowedAreas(QtCore.Qt.RightDockWidgetArea)
+        self.dockWidgetClientContrat.setWidget(self.ongletClientContrat)
+        self.addDockWidget(QtCore.Qt.RightDockWidgetArea, self.dockWidgetClientContrat)
         
         self.ongletTourneeParcours=QtWidgets.QTabWidget()
         self.ongletTourneeParcours.addTab(self.fenetreTournee,"Tournee")
@@ -186,11 +185,19 @@ class MainFenetre(QtWidgets.QMainWindow):
         self.ongletTourneeParcours.addTab(self.fenetreParcours,"Parcours")
         self.fenetreParcours.parentTab=self.ongletTourneeParcours
 
-        self.dockWidgetTourneeParcours=QtWidgets.QDockWidget('Tournee - Parcours', parent=self)
-        self.dockWidgetTourneeParcours.setAllowedAreas(QtCore.Qt.BottomDockWidgetArea)
+        self.dockWidgetTourneeParcours=QtWidgets.QDockWidget(parent=self)
+        self.dockWidgetTourneeParcours.setAllowedAreas(QtCore.Qt.LeftDockWidgetArea)
         self.dockWidgetTourneeParcours.setWidget(self.ongletTourneeParcours)
-        self.addDockWidget(QtCore.Qt.RightDockWidgetArea, self.dockWidgetTourneeParcours)
+        self.addDockWidget(QtCore.Qt.LeftDockWidgetArea, self.dockWidgetTourneeParcours)
         
+        self.ongletPedaleurListeLieu=QtWidgets.QTabWidget()
+        self.ongletPedaleurListeLieu.addTab(self.fenetreListeLieu,"ListeLieu")
+        self.ongletPedaleurListeLieu.addTab(self.fenetrePedaleur,"Pedaleur")
+
+        self.dockWidgetPedaleurListeLieu=QtWidgets.QDockWidget(parent=self)
+        self.dockWidgetPedaleurListeLieu.setAllowedAreas(QtCore.Qt.BottomDockWidgetArea)
+        self.dockWidgetPedaleurListeLieu.setWidget(self.ongletPedaleurListeLieu)
+        self.addDockWidget(QtCore.Qt.BottomDockWidgetArea, self.dockWidgetPedaleurListeLieu)        
 #        self.wOnglet2=QtWidgets.QTabWidget()
 #        self.wOnglet2.addTab(self.fenetreLieuDB,"Lieux DataBase")
 #        self.wOnglet2.addTab(self.fenetreSelectLieu,"Lieux")
@@ -992,15 +999,14 @@ class FenetreContrat(Fenetre):
         
 class FenetrePedaleur(Fenetre):
     """fenetre Pedaleur"""
-    
     def createModel(self):
         self.modelPedaleur=ModelPedaleur(parent=self,mere=self.mere)
         self.viewPedaleur.setModel(self.modelPedaleur)
 
     def createFenetre(self):
         self.viewPedaleur=ViewPedaleur(parent=self,mere=self.mere)
-        layPedaleurTable = QtWidgets.QGridLayout()
-        layPedaleurTable.addWidget(self.viewPedaleur,0,0,8,4)      
+        layPedaleurTable = QtWidgets.QHBoxLayout()
+        layPedaleurTable.addWidget(self.viewPedaleur)      
         self.setLayout(layPedaleurTable)   
 
     def _initNext(self, **arguments):
@@ -1054,13 +1060,76 @@ class FenetrePedaleur(Fenetre):
         pass
 
 
+class FenetreListeLieu(Fenetre):
+    """fenetre ListeLieu"""
+    def createModel(self):
+        self.modelListeLieu=ModelListeLieu(parent=self,mere=self.mere)
+        self.viewListeLieu.setModel(self.modelListeLieu)
+
+    def createFenetre(self):
+        self.viewListeLieu=ViewListeLieu(parent=self,mere=self.mere)
+        layListeLieu = QtWidgets.QHBoxLayout()
+        layListeLieu.addWidget(self.viewListeLieu)      
+        self.setLayout(layListeLieu)   
+
+    def _initNext(self, **arguments):
+        self.selectedPedaleur=None
+        
+#     def createConnection(self):
+#         selModelPedaleur=self.viewPedaleur.selectionModel()
+#         selModelPedaleur.currentChanged.connect(lambda :self.selPedaleurChanged(pedaleur=self.modelPedaleur.data(self.viewPedaleur.currentIndex(),QtCore.Qt.UserRole)))
+# 
+#     def createAction(self):
+#         self.actionNouveauPedaleur = QtWidgets.QAction('Nouveau pedaleur', self)
+#         self.actionNouveauPedaleur.setShortcut('Ctrl+N')
+#         self.actionNouveauPedaleur.setStatusTip('Creer un nouveau pedaleur (Ctrl+N)')
+#         self.actionNouveauPedaleur.triggered.connect(self.nouveauPedaleur)
+#         self.actionEditerPedaleur = QtWidgets.QAction('Editer pedaleur', self)
+#         self.actionEditerPedaleur.setShortcut('Ctrl+E')
+#         self.actionEditerPedaleur.setStatusTip('Editer pedaleur (Ctrl+E)')
+#         self.actionEditerPedaleur.triggered.connect(lambda : self.editerPedaleur(self.selectedPedaleur))
+#         self.actionSupprimerPedaleur = QtWidgets.QAction('Supprimer pedaleur', self)
+#         self.actionSupprimerPedaleur.setShortcut('Ctrl+S')
+#         self.actionSupprimerPedaleur.setStatusTip('Supprimer pedaleur (Ctrl+S)')
+#         self.actionSupprimerPedaleur.triggered.connect(lambda : self.supprimerPedaleur(self.selectedPedaleur))
+# 
+#     def selPedaleurChanged(self, pedaleur):
+#         '''la selection du Pedaleur a changee
+#         modification des actions toolbar'''
+#         self.selectedPedaleur=pedaleur
+#         self.refreshToolBar()     
+# 
+#     def refreshToolBar(self):
+#         '''modification des actions toolbar'''
+#         self.parent.toolBar.clear()
+#         self.parent.toolBar.addAction(self.actionNouveauPedaleur)
+#         if self.selectedPedaleur:
+#             self.parent.toolBar.addAction(self.actionEditerPedaleur)
+#             self.parent.toolBar.addAction(self.actionSupprimerPedaleur)
+#         
+#     def nouveauPedaleur(self):
+#         """ajoute un nouveau Pedaleur vierge"""
+#         nouv_pedaleur=self.mere.nouvPedaleur(insert=False)
+#         self.editerPedaleur(nouv_pedaleur)
+#         
+#     def editerPedaleur(self, pedaleur):
+#         """Editer Pedaleur"""
+#         self.fenetreEditPedaleur=FenetreEditPedaleur(parent=self,mere=self.mere,pedaleur=pedaleur)
+#         self.fenetreEditPedaleur.setWindowFlags(QtCore.Qt.Window)
+#         self.fenetreEditPedaleur.show()
+#         
+#     def supprimerPedaleur(self, pedaleur):
+#         """Editer Pedaleur"""
+#         pass
+
+
 class FenetreEditContrat(Fenetre):
     """Fenetre Edition contrat"""
     
     def _initNext(self,**arguments):
         self.contrat=arguments.get('contrat',self.mere.nouvContrat(insert=False))
-        self.dateEditOuverture.setDate(self.contrat.date_ouverture)
-        self.dateEditCloture.setDate(self.contrat.date_cloture)
+        if self.contrat.date_ouverture:self.dateEditOuverture.setDate(self.contrat.date_ouverture)
+        if self.contrat.date_cloture :self.dateEditCloture.setDate(self.contrat.date_cloture)
         self.textRemise.setText(str(self.contrat.remise))
         for genre in self.mere.genrescontrats_tb.data_arg['genre']:
             if isinstance(genre,int):genre=str(genre)
