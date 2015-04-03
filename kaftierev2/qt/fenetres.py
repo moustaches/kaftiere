@@ -106,6 +106,7 @@ class MainFenetre(QtWidgets.QMainWindow):
     def createConnection(self):
         self.ongletClientContrat.currentChanged.connect(self.refreshToolBarClientContrat)
         self.ongletTourneeParcours.currentChanged.connect(self.refreshToolBarTourneeParcours)
+        self.ongletPedaleurListeLieu.currentChanged.connect(self.refreshToolBarPedaleurListeLieu)
         
     def refreshToolBarClientContrat(self,ind):
         if ind==0:self.fenetreClient.refreshToolBar()
@@ -113,7 +114,11 @@ class MainFenetre(QtWidgets.QMainWindow):
 
     def refreshToolBarTourneeParcours(self,ind):
         if ind==0:self.fenetreTournee.refreshToolBar()
-        else : self.fenetreParcours.refreshToolBar()    
+        else : self.fenetreParcours.refreshToolBar()   
+        
+    def refreshToolBarPedaleurListeLieu(self,ind):
+        if ind==0:self.fenetreListeLieu.refreshToolBar()
+        else : self.fenetrePedaleur.refreshToolBar() 
     
     def createAction(self):
         self.exitAction = QtWidgets.QAction('Exit', self)
@@ -529,8 +534,11 @@ class FenetreSelectLieu(Fenetre):
 #         lay.addWidget(self.boutDesafecter,5,6,1,1)
 #         self.setLayout(lay)
     
+
 class FenetreEditLieuDB(Fenetre):
-    """fenetre edition lieux data-base"""    
+    """
+    fenetre edition lieux data-base
+    """    
     
     def _initNext(self,**arguments):
         self.lieu=arguments.get('lieu',self.mere.nouvLieu(insert=False,adresse="Nouvelle adresse",cp=75000))
@@ -639,6 +647,43 @@ class FenetreEditLieuDB(Fenetre):
         
     def ann(self):
         self.close()
+
+
+class FenetreGestionListeLieu(Fenetre):
+    """fenetre edition tamponnade"""
+    def _initNext(self, **arguments):
+        self.objetK1=None
+        self.objetK2=None
+        
+    def createFenetre(self):
+        self.labelObjetK1=KLabelPixmap(parent=self, mere=self.mere)
+        self.labelObjetK2=KLabelPixmap(parent=self, mere=self.mere)
+        self.tableGestionListeLieu1=modelGestionListeLieu(parent=self,mere=self.mere)
+        self.tableGestionListeLieu2=modelGestionListeLieu(parent=self,mere=self.mere)
+          
+        self.boutAjouterGD= QtWidgets.QPushButton("-->", parent=self)
+        self.boutAjouterDG= QtWidgets.QPushButton("<--", parent=self)
+        self.boutDesafecter= QtWidgets.QPushButton("Desafecter", parent=self)
+        self.textCheminFichier=QtWidgets.QLineEdit(parent=self)
+        self.labelTamponade=QtWidgets.QTextEdit("", parent=self)
+        self.boutOuvrir= QtWidgets.QPushButton("Ouvrir",parent=self)
+        self.boutTamponner= QtWidgets.QPushButton("Tamponner",parent=self)
+        self.boutImporter= QtWidgets.QPushButton("Importer",parent=self)
+
+#        self.modelLieuTamponade=ModelTamponade(parent=self,mere=self.mere)
+#        self.viewTableTamponade.setModel(self.modelTamponade)  
+
+        lay = QtWidgets.QGridLayout()
+        lay.addWidget(self.labelObjetK,0,0,1,1)
+        lay.addWidget(self.boutOuvrir,1,0,1,1)
+        lay.addWidget(self.textCheminFichier,1,1,1,2)
+        lay.addWidget(self.boutTamponner,1,3,1,1)
+        lay.addWidget(self.boutImporter,1,4,1,1)  
+        lay.addWidget(self.labelTamponade,2,0,4,6) 
+        self.setLayout(lay)
+
+    def objetKInserer(self):
+        self.labelTamponade.setText(self.infoTamponade())
 
     
 class FenetreLieuDB(Fenetre):
@@ -785,7 +830,6 @@ class FenetreClient(Fenetre):
 
 class FenetreEditClient(Fenetre):
     """fenetre Edition Client"""
-    
     def _initNext(self,**arguments):
         self.client=arguments.get('client',self.mere.nouvClient(insert=False))
         self.textNom.setText(self.client.nom)
@@ -1073,54 +1117,110 @@ class FenetreListeLieu(Fenetre):
         self.setLayout(layListeLieu)   
 
     def _initNext(self, **arguments):
-        self.selectedPedaleur=None
+        self.selectedListeLieu=None
         
-#     def createConnection(self):
-#         selModelPedaleur=self.viewPedaleur.selectionModel()
-#         selModelPedaleur.currentChanged.connect(lambda :self.selPedaleurChanged(pedaleur=self.modelPedaleur.data(self.viewPedaleur.currentIndex(),QtCore.Qt.UserRole)))
-# 
-#     def createAction(self):
-#         self.actionNouveauPedaleur = QtWidgets.QAction('Nouveau pedaleur', self)
-#         self.actionNouveauPedaleur.setShortcut('Ctrl+N')
-#         self.actionNouveauPedaleur.setStatusTip('Creer un nouveau pedaleur (Ctrl+N)')
-#         self.actionNouveauPedaleur.triggered.connect(self.nouveauPedaleur)
-#         self.actionEditerPedaleur = QtWidgets.QAction('Editer pedaleur', self)
-#         self.actionEditerPedaleur.setShortcut('Ctrl+E')
-#         self.actionEditerPedaleur.setStatusTip('Editer pedaleur (Ctrl+E)')
-#         self.actionEditerPedaleur.triggered.connect(lambda : self.editerPedaleur(self.selectedPedaleur))
-#         self.actionSupprimerPedaleur = QtWidgets.QAction('Supprimer pedaleur', self)
-#         self.actionSupprimerPedaleur.setShortcut('Ctrl+S')
-#         self.actionSupprimerPedaleur.setStatusTip('Supprimer pedaleur (Ctrl+S)')
-#         self.actionSupprimerPedaleur.triggered.connect(lambda : self.supprimerPedaleur(self.selectedPedaleur))
-# 
-#     def selPedaleurChanged(self, pedaleur):
-#         '''la selection du Pedaleur a changee
-#         modification des actions toolbar'''
-#         self.selectedPedaleur=pedaleur
-#         self.refreshToolBar()     
-# 
-#     def refreshToolBar(self):
-#         '''modification des actions toolbar'''
-#         self.parent.toolBar.clear()
-#         self.parent.toolBar.addAction(self.actionNouveauPedaleur)
-#         if self.selectedPedaleur:
-#             self.parent.toolBar.addAction(self.actionEditerPedaleur)
-#             self.parent.toolBar.addAction(self.actionSupprimerPedaleur)
-#         
-#     def nouveauPedaleur(self):
-#         """ajoute un nouveau Pedaleur vierge"""
-#         nouv_pedaleur=self.mere.nouvPedaleur(insert=False)
-#         self.editerPedaleur(nouv_pedaleur)
-#         
-#     def editerPedaleur(self, pedaleur):
-#         """Editer Pedaleur"""
-#         self.fenetreEditPedaleur=FenetreEditPedaleur(parent=self,mere=self.mere,pedaleur=pedaleur)
-#         self.fenetreEditPedaleur.setWindowFlags(QtCore.Qt.Window)
-#         self.fenetreEditPedaleur.show()
-#         
-#     def supprimerPedaleur(self, pedaleur):
-#         """Editer Pedaleur"""
-#         pass
+    def createConnection(self):
+        selModelListeLieu=self.viewListeLieu.selectionModel()
+        selModelListeLieu.currentChanged.connect(lambda :self.selListeLieuChanged(listeLieu=self.modelListeLieu.data(self.viewListeLieu.currentIndex(),QtCore.Qt.UserRole)))
+ 
+    def createAction(self):
+        self.actionNouveauListeLieu = QtWidgets.QAction('Nouvelle liste de lieu', self)
+        self.actionNouveauListeLieu.setShortcut('Ctrl+N')
+        self.actionNouveauListeLieu.setStatusTip('Creer une nouvelle liste de lieu (Ctrl+N)')
+        self.actionNouveauListeLieu.triggered.connect(self.nouveauListeLieu)
+        self.actionEditerListeLieu = QtWidgets.QAction('Editer liste lieu', self)
+        self.actionEditerListeLieu.setShortcut('Ctrl+E')
+        self.actionEditerListeLieu.setStatusTip('Editer la Liste de Lieu (Ctrl+E)')
+        self.actionEditerListeLieu.triggered.connect(lambda : self.editerListeLieu(self.selectedListeLieu))
+        self.actionSupprimerListeLieu = QtWidgets.QAction('Supprimer pedaleur', self)
+        self.actionSupprimerListeLieu.setShortcut('Ctrl+S')
+        self.actionSupprimerListeLieu.setStatusTip('Supprimer Liste de Lieu (Ctrl+S)')
+        self.actionSupprimerListeLieu.triggered.connect(lambda : self.supprimerListeLieu(self.selectedListeLieu))
+ 
+    def selListeLieuChanged(self, listeLieu):
+        '''la selection du listeLieu a changee
+        modification des actions toolbar'''
+        self.selectedListeLieu=listeLieu
+        self.refreshToolBar()     
+ 
+    def refreshToolBar(self):
+        '''modification des actions toolbar'''
+        self.parent.toolBar.clear()
+        self.parent.toolBar.addAction(self.actionNouveauListeLieu)
+        if self.selectedListeLieu:
+            self.parent.toolBar.addAction(self.actionEditerListeLieu)
+            self.parent.toolBar.addAction(self.actionSupprimerListeLieu)
+         
+    def nouveauListeLieu(self):
+        """ajoute un nouveau ListeLieu vierge"""
+        nouv_listeLieu=self.mere.nouvListeLieu(insert=True)
+        self.editerListeLieu(nouv_listeLieu)
+        self.modelListeLieu.ajouterListeLieu(nouv_listeLieu)
+        
+         
+    def editerListeLieu(self, listeLieu):
+        """Editer listeLieu"""
+        self.fenetreEditListeLieu=FenetreEditListeLieu(parent=self,mere=self.mere,listeLieu=listeLieu)
+        self.fenetreEditListeLieu.setWindowFlags(QtCore.Qt.Window)
+        self.fenetreEditListeLieu.show()
+         
+    def supprimerListeLieu(self, listeLieu):
+        """supprimer listeLieu"""
+        pass
+
+
+class FenetreEditListeLieu(Fenetre):
+    """
+    fenetre Edition ListeLieu
+    """
+    def _initNext(self,**arguments):
+        self.listeLieu=arguments.get('listeLieu',self.mere.nouvListeLieu(insert=False))
+        self.textNom.setText(self.listeLieu.nom)
+        self.textCommentaire.setText(self.listeLieu.commentaire)
+#         for genre in self.mere.genreslisteLieus_tb.data_arg['genre']:
+#             if isinstance(genre,int):genre=str(genre)
+#             self.comboGenre.addItem(genre)
+#         self.comboGenre.setEditText(self.listeLieu.genre)
+#         self.comboGenre.model().sort(0,QtCore.Qt.AscendingOrder)
+
+    def createFenetre(self):
+        self.labelNom=QtWidgets.QLabel("Nom",parent=self)
+        self.textNom=QtWidgets.QLineEdit("Sans Nom",parent=self)
+        self.labelNom.setBuddy(self.textNom)  
+        self.labelCommentaire=QtWidgets.QLabel("Commentaire",parent=self)
+        self.textCommentaire=QtWidgets.QLineEdit(parent=self)
+        self.labelCommentaire.setBuddy(self.textCommentaire)  
+#         self.labelGenre=QtWidgets.QLabel("Genre",parent=self)
+#         self.comboGenre=QtWidgets.QComboBox(parent=self)
+#         self.labelGenre.setBuddy(self.comboGenre)    
+        self.boutOk= QtWidgets.QPushButton("Ok",parent=self)
+        self.boutAnn= QtWidgets.QPushButton("Annuler",parent=self)
+        lay = QtWidgets.QGridLayout()
+        lay.addWidget(self.labelNom,0,0,1,1)
+        lay.addWidget(self.textNom,0,1,1,1)
+        lay.addWidget(self.labelCommentaire,1, 0,1,1)
+        lay.addWidget(self.textCommentaire, 1,1,1,2)      
+#         lay.addWidget(self.labelGenre,2,0,1,1)
+#         lay.addWidget(self.comboGenre, 2,1,1,1)
+        lay.addWidget(self.boutOk,4,1,1,1)
+        lay.addWidget(self.boutAnn,4,2,1,1)
+        self.setLayout(lay)  
+            
+    def createConnection(self):
+        self.boutOk.clicked.connect(self.ok)
+        self.boutAnn.clicked.connect(self.ann)
+
+    def ok(self):
+        self.listeLieu.nom=self.textNom.text()
+        self.listeLieu.commentaire=self.textCommentaire.text()
+#         self.listeLieu.genre=self.comboGenre.currentText()
+        if self.listeLieu.sqlInsert():
+            self.parent.modelListeLieu.ajouterListeLieu(self.listeLieu)
+        self.close()
+        
+    def ann(self):
+        self.close()
+
 
 
 class FenetreEditContrat(Fenetre):
@@ -1615,7 +1715,6 @@ class FenetreTamponade(Fenetre):
         
     def createFenetre(self):
         self.labelObjetK=KLabelPixmap(parent=self, mere=self.mere)
-        
         self.textCheminFichier=QtWidgets.QLineEdit(parent=self)
         self.labelTamponade=QtWidgets.QTextEdit("", parent=self)
         self.boutOuvrir= QtWidgets.QPushButton("Ouvrir",parent=self)

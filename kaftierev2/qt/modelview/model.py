@@ -144,6 +144,14 @@ class ModelLieuDB(Model):
     def rowCount(self, parent): 
         return len(self.listLieu) 
  
+ 
+class ModelGestionListeLieu(Model):
+    """Model pourla gestion des listes de lieux"""
+    def _initNext(self,**arguments):
+        self.HEADERDATA=['N°','Nom', 'Pixmap']
+        self.listClient=[]
+        self.initData()
+ 
 
 class ModelClient(Model):
     """Model pourla creation,edition et gestion des clients"""

@@ -251,6 +251,7 @@ class ViewListeLieu(TableView):
                 for lieu in contrat.listLieu:listelieu.ajouterLieu(lieu)
                 event.setDropAction(QtCore.Qt.MoveAction)
                 self.model().ajouterListeLieu(listelieu)
+                self.parent.editerListeLieu(listelieu)
                 event.accept()
             else:
                 event.ignore()
