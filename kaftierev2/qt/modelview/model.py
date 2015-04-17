@@ -6,6 +6,8 @@ Created on 8 mai 2013
 
 from PyQt5 import QtCore, QtWidgets,QtGui
 
+from collections import deque
+
 class Model(QtCore.QAbstractTableModel):
     def __init__(self,parent=None,mere=None,**arguments):
         super(Model, self).__init__(parent)    
@@ -37,6 +39,10 @@ class Model(QtCore.QAbstractTableModel):
         self.beginInsertColumns(index, count, count)
         self.endInsertColumns()
         return True
+
+    def reset(self):
+        self.beginResetModel()
+        self.endResetModel()        
         
 class ModelListe(QtCore.QAbstractTableModel):
     def __init__(self,parent=None,mere=None,**arguments):
@@ -59,14 +65,136 @@ class ModelListe(QtCore.QAbstractTableModel):
         self.beginInsertColumns(index, count, count)
         self.endInsertColumns()
         return True
+ 
+ 
+class ModelComboCheck(QtCore.QAbstractListModel):
+    signalListSelected=QtCore.pyqtSignal(list)
+    critereDataChanged = QtCore.pyqtSignal(int, int)
+    def __init__(self,parent=None,mere=None,titre=None,list_data_check=None,**arguments):
+        super(ModelComboCheck, self).__init__(parent)    
+        self.parent=parent
+        self.mere=mere
+        self.titre=titre
+        self.listData=[]
+        self.listCheck=[]
+        for data,check in list_data_check:
+            self.listData.append(data)
+            self.listCheck.append(check)
+        self._initNext(**arguments)
         
+    def _initNext(self,**arguments):
+        self.dataChanged.connect(self.createListSelected)
         
+    def createListSelected(self,a=0,b=0):
+        listSelected=[]
+        for n,check in enumerate(self.listCheck):
+            if check==QtCore.Qt.Checked:listSelected.append(self.listData[n])
+        self.signalListSelected.emit(listSelected)
+        return listSelected
+
+    def flags(self, index):
+        if not index.isValid():
+            return None
+        if index.row()!=0:return QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled
+        else :return QtCore.Qt.ItemIsEnabled
+    def rowCount(self, parent=None):
+        return len(self.listData)+1   
+    
+    def data(self, index, role): 
+        if not index.isValid(): 
+            return None
+        if index.row()==0 and role == QtCore.Qt.DisplayRole:return self.titre
+        elif index.row()!=0:
+            if role == QtCore.Qt.DisplayRole:return self.listData[index.row()-1]
+            elif role == QtCore.Qt.UserRole:return self.listData[index.row()-1]
+            elif role == QtCore.Qt.CheckStateRole:return self.listCheck[index.row()-1]
+        return None
+                
+    def setData(self, index, value, role):
+        if not index.isValid(): 
+            return None
+        if index.row()!=0:
+            if role == QtCore.Qt.CheckStateRole:
+                self.listCheck[index.row()-1]=value
+                self.dataChanged.emit(self.createIndex(index.row(),0),self.createIndex(index.row(),0))
+                self.critereDataChanged.emit(index.row(),value)
+                return True
+        return None
+        
+class ModelListCheckDataFiltre(QtCore.QAbstractListModel):
+    signalListCheckSelected=QtCore.pyqtSignal(list,int)
+    def __init__(self,parent=None,model_filtre=None):
+        super(ModelListCheckDataFiltre, self).__init__(parent)    
+        self.parent=parent
+        self.listData=[]
+        self.listCheck=[]
+        self.dictDataIndex={}
+        self.modelFiltre=model_filtre
+        #self.listIndexHidden=self.modelFiltre.listIndexHidden
+        self.initData()
+
+    def initData(self):
+        i=0
+        column=self.parent.index_colonne
+        while i < self.modelFiltre.sourceModel().rowCount(None):
+            index=self.modelFiltre.sourceModel().createIndex(i,column)
+            data=self.modelFiltre.sourceModel().data(index,QtCore.Qt.DisplayRole)
+            if data not in self.listData:
+                self.listData.append(data)
+                self.listCheck.append(QtCore.Qt.Checked)
+#                 self.dictDataIndex[data]=[i]
+#             else: self.dictDataIndex[data].append(i)
+            i+=1
+
+    def assosData(self,data):
+        i=0
+        dictDataIndex={}
+        column=self.parent.index_colonne
+        while i < self.modelFiltre.sourceModel().rowCount(None):
+            index=self.modelFiltre.sourceModel().createIndex(i,column)
+            data=self.modelFiltre.sourceModel().data(index,QtCore.Qt.DisplayRole)
+            h=self.modelFiltre.mapFromSource(index).row()
+            if data not in dictDataIndex:
+                dictDataIndex[data]=[h]
+            else: 
+                dictDataIndex[data].append(h)
+            i+=1
+        return dictDataIndex
+            
+    def flags(self, index):
+        if not index.isValid():
+            return None
+        return QtCore.Qt.ItemIsUserCheckable | QtCore.Qt.ItemIsEnabled
+
+    def rowCount(self, parent=None):
+        return len(self.listData) 
+    
+    def data(self, index, role): 
+        if not index.isValid(): 
+            return None
+        if role == QtCore.Qt.DisplayRole:return self.listData[index.row()]
+        elif role == QtCore.Qt.UserRole:return self.listData[index.row()]
+        elif role == QtCore.Qt.CheckStateRole:return self.listCheck[index.row()]
+        return None
+                
+    def setData(self, index, value, role):
+        if not index.isValid(): 
+            return None
+        if role == QtCore.Qt.CheckStateRole:
+            self.listCheck[index.row()]=value
+            self.dataChanged.emit(index,index)
+            self.signalListCheckSelected.emit(self.assosData(self.listData[index.row()])[self.listData[index.row()]],value)
+            return True
+        return None
+
+
 class ModelLieuDB(Model):
     def _initNext(self):
-        self.HEADERDATA=['N°','Lieux','Adresse Principale','Cp','Ville','Genre','Pertinence','Saturation','Latitude','Longitude']
+        self.HEADERDATA=['DBID','Lieux','Adresse','Cp','Ville','Genre','Pertinence','Saturation','Latitude','Longitude']
         self.recherche_bas=True
         self.listLieu=[]
         self.initData()
+        
         
     def _rechercher(self,texte):
         texte_user=texte.lower()
@@ -74,7 +202,7 @@ class ModelLieuDB(Model):
             num=lieu.nom.lower().find(texte_user)
             if num != -1: return self.listLieu.index(lieu),self.HEADERDATA.index('Lieux')
             num=lieu.adresse.adresse.lower().find(texte_user)
-            if num != -1: return self.listLieu.index(lieu),self.HEADERDATA.index('Adresse Principale')
+            if num != -1: return self.listLieu.index(lieu),self.HEADERDATA.index('Adresse')
         return None
            
     def rechercher(self,texte):
@@ -125,8 +253,12 @@ class ModelLieuDB(Model):
             elif colonne==5:return self.listLieu[row].genre
             elif colonne==6:return self.listLieu[row].pertinence
             elif colonne==7:return 0
-            elif colonne==8:return self.listLieu[row].adresse.latitude
-            elif colonne==9:return self.listLieu[row].adresse.longitude
+            elif colonne==8:
+                if self.listLieu[row].adresse:return self.listLieu[row].adresse.latitude
+                else :return "Pas d'adresse"
+            elif colonne==9:
+                if self.listLieu[row].adresse:return self.listLieu[row].adresse.longitude
+                else :return "Pas d'adresse"
         elif role == QtCore.Qt.UserRole:
             return self.listLieu[row]
             
@@ -143,8 +275,39 @@ class ModelLieuDB(Model):
     
     def rowCount(self, parent): 
         return len(self.listLieu) 
+        
+ 
+
  
  
+class ModelDataFiltre(QtCore.QSortFilterProxyModel):
+    def __init__(self,parent=None,mere=None,source=None):
+        super(ModelDataFiltre, self).__init__(parent)    
+        self.parent=parent
+        self.mere=mere
+        self.setSourceModel(source)
+        self.listFiltreWidget=[]
+        self.listFiltreWidgetOrdre=deque()
+        self.listIndexHidden=[]
+
+    @QtCore.pyqtSlot(int)
+    def critereDataHeaderUpdate(self, colonne, value):
+        if value==0 :self.hideColumn(colonne-1)
+        else : self.showColumn(colonne-1)
+   
+    def ajouterFiltreWidgetOrdre(self,widgetFiltre):
+        if not widgetFiltre in self.listFiltreWidgetOrdre:
+            self.listFiltreWidgetOrdre.appendleft(widgetFiltre)
+
+
+    def retirerFiltreWidgetOrdre(self,widgetFiltre):
+        self.listFiltreWidgetOrdre.remove(widgetFiltre)
+                        
+    def multiSort(self):
+        for widgetFiltre in self.listFiltreWidgetOrdre:
+            self.sort(self.sourceModel().HEADERDATA.index(widgetFiltre.data),widgetFiltre.ordre)
+            
+
 class ModelGestionListeLieu(Model):
     """Model pourla gestion des listes de lieux"""
     def _initNext(self,**arguments):
@@ -351,6 +514,7 @@ class ModelTournee(Model):
             if index.column()>0:
                 self.retirerContrat(value, index.row(), index.column())
                 self.dataChanged.emit(self.createIndex(index.row(),0),self.createIndex(index.row(),self.columnCount()))
+                
     def rowCount(self, parent=None): 
         return len(self.listTournee)
         
@@ -1057,4 +1221,5 @@ class ModelListeLieu(ModelListe):
 #         self.beginRemoveColumns(index, position, position + rows - 1)
 #         self.endRemoveColumns()
 #         return True
+
 

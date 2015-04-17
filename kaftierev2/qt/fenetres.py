@@ -12,10 +12,10 @@ from outils.dock import DocK
 from qt.modelview.view import ViewPedaleur,ViewParcours,ViewLieuDB,ViewLieuEditAdresse,ViewMatchingLieu,ViewClient,\
 ViewContrat, ViewTournee, ViewImportListing, ViewMatchingListing, ViewDepotLieuQuantite,ViewListeLieu
 from qt.modelview.model import ModelPedaleur, ModelParcours,ModelLieuDB,ModelLieuEditAdresse,ModelMatchingLieu,\
-ModelClient, ModelContrat, ModelTournee, ModelImportListing, ModelMatchingListing, ModelDepotLieuQuantite,ModelListeLieu
+ModelClient, ModelContrat, ModelTournee, ModelImportListing, ModelMatchingListing, ModelDepotLieuQuantite,ModelListeLieu,\
+ModelComboCheck,ModelDataFiltre
 from outils.kml import Kml, KmlParser
-from qt.widget.widgets import KLabelPixmap, KComboBoxCouleur
-
+from qt.widget.widgets import KLabelPixmap, KComboBoxCouleur,KWidgetTableDataFiltre
 
 class Fenetre(QtWidgets.QWidget):
     """super class fenetre
@@ -137,6 +137,11 @@ class MainFenetre(QtWidgets.QMainWindow):
         self.fenetreOutilLieuDBAction.setShortcut('Ctrl+L')
         self.fenetreOutilLieuDBAction.triggered.connect(self.outilLieuDBAction)
 
+        self.fenetreGestionListeAction= QtWidgets.QAction('Gestion des listings', self)
+        self.fenetreGestionListeAction.setShortcut('Ctrl+G')
+        self.fenetreGestionListeAction.triggered.connect(self.outilGestionListeLieuAction)
+
+
     def outilKmlAction(self):
         fenetreKml=FenetreKml(parent=self, mere=self.mere)
         fenetreKml.setWindowFlags(QtCore.Qt.Window)
@@ -152,6 +157,11 @@ class MainFenetre(QtWidgets.QMainWindow):
         fenetreTamponade.setWindowFlags(QtCore.Qt.Window)
         fenetreTamponade.show() 
 
+    def outilGestionListeLieuAction(self):
+        fenetreGestionListeLieu=FenetreGestionListeLieu(parent=self, mere=self.mere)
+        fenetreGestionListeLieu.setWindowFlags(QtCore.Qt.Window)
+        fenetreGestionListeLieu.show() 
+
     def createFenetre(self):
         self.toolBar = self.addToolBar('Exit')
         self.toolBar.addAction(self.exitAction)    
@@ -161,6 +171,7 @@ class MainFenetre(QtWidgets.QMainWindow):
         self.menuFentreOutils.addAction(self.fenetreOutilLieuDBAction)
         self.menuFentreOutils.addAction(self.fenetreOutilKmlAction)        
         self.menuFentreOutils.addAction(self.fenetreOutilTamponadeAction)
+        self.menuFentreOutils.addAction(self.fenetreGestionListeAction)
         self.menuFentreOutils.addAction(self.exitAction)
         self.menuBarK.addAction(self.menuFentreOutils.menuAction())
 
@@ -655,51 +666,83 @@ class FenetreGestionListeLieu(Fenetre):
         self.objetK1=None
         self.objetK2=None
         
+        
+        
+        
     def createFenetre(self):
-        self.labelObjetK1=KLabelPixmap(parent=self, mere=self.mere)
-        self.labelObjetK2=KLabelPixmap(parent=self, mere=self.mere)
-        self.tableGestionListeLieu1=modelGestionListeLieu(parent=self,mere=self.mere)
-        self.tableGestionListeLieu2=modelGestionListeLieu(parent=self,mere=self.mere)
-          
-        self.boutAjouterGD= QtWidgets.QPushButton("-->", parent=self)
-        self.boutAjouterDG= QtWidgets.QPushButton("<--", parent=self)
-        self.boutDesafecter= QtWidgets.QPushButton("Desafecter", parent=self)
-        self.textCheminFichier=QtWidgets.QLineEdit(parent=self)
-        self.labelTamponade=QtWidgets.QTextEdit("", parent=self)
-        self.boutOuvrir= QtWidgets.QPushButton("Ouvrir",parent=self)
-        self.boutTamponner= QtWidgets.QPushButton("Tamponner",parent=self)
-        self.boutImporter= QtWidgets.QPushButton("Importer",parent=self)
-
-#        self.modelLieuTamponade=ModelTamponade(parent=self,mere=self.mere)
-#        self.viewTableTamponade.setModel(self.modelTamponade)  
-
+        list_data_check=[('lala',QtCore.Qt.Checked),('lolo',QtCore.Qt.Checked),('iiii',QtCore.Qt.Checked),('aaaa',QtCore.Qt.Checked)]
+        self.comboCheckListingK1=QtWidgets.QComboBox(parent=self)
+        self.comboCheckListingK1.setStyle(QtWidgets.QStyleFactory.create("Gtk+"))
+        #self.comboCheckListingK1.setStyle(QtWidgets.QStyleFactory.create("plastique"))
+        self.modelComboCheckListingK1=ModelComboCheck(parent=self, mere=self.mere, list_data_check=list_data_check,titre="bbbbb")
+        self.comboCheckListingK1.setModel(self.modelComboCheckListingK1)
+        
+        
+        
+        
+#         self.labelObjetK1=KLabelPixmap(parent=self, mere=self.mere)
+#         self.labelObjetK2=KLabelPixmap(parent=self, mere=self.mere)
+#         self.tableGestionListeLieu1=modelGestionListeLieu(parent=self,mere=self.mere)
+#         self.tableGestionListeLieu2=modelGestionListeLieu(parent=self,mere=self.mere)
+#           
+#         self.boutAjouterGD= QtWidgets.QPushButton("-->", parent=self)
+#         self.boutAjouterDG= QtWidgets.QPushButton("<--", parent=self)
+#         self.boutDesafecter= QtWidgets.QPushButton("Desafecter", parent=self)
+#         self.textCheminFichier=QtWidgets.QLineEdit(parent=self)
+#         self.labelTamponade=QtWidgets.QTextEdit("", parent=self)
+#         self.boutOuvrir= QtWidgets.QPushButton("Ouvrir",parent=self)
+#         self.boutTamponner= QtWidgets.QPushButton("Tamponner",parent=self)
+#         self.boutImporter= QtWidgets.QPushButton("Importer",parent=self)
+# 
+# #        self.modelLieuTamponade=ModelTamponade(parent=self,mere=self.mere)
+# #        self.viewTableTamponade.setModel(self.modelTamponade)  
+# 
         lay = QtWidgets.QGridLayout()
-        lay.addWidget(self.labelObjetK,0,0,1,1)
-        lay.addWidget(self.boutOuvrir,1,0,1,1)
-        lay.addWidget(self.textCheminFichier,1,1,1,2)
-        lay.addWidget(self.boutTamponner,1,3,1,1)
-        lay.addWidget(self.boutImporter,1,4,1,1)  
-        lay.addWidget(self.labelTamponade,2,0,4,6) 
+        lay.addWidget(self.comboCheckListingK1,0,0,1,1)
+#         lay.addWidget(self.boutOuvrir,1,0,1,1)
+#         lay.addWidget(self.textCheminFichier,1,1,1,2)
+#         lay.addWidget(self.boutTamponner,1,3,1,1)
+#         lay.addWidget(self.boutImporter,1,4,1,1)  
+#         lay.addWidget(self.labelTamponade,2,0,4,6) 
         self.setLayout(lay)
-
-    def objetKInserer(self):
-        self.labelTamponade.setText(self.infoTamponade())
+# 
+#     def objetKInserer(self):
+#         self.labelTamponade.setText(self.infoTamponade())
 
     
 class FenetreLieuDB(Fenetre):
     """fenetre lieux data-base"""
     def _initNext(self,**arguments):
         self._selectionLieu=None
+        self.modelComboCheck.createListSelected()
     
     def createModel(self):
         self.modelLieuDB=ModelLieuDB(parent=self,mere=self.mere)
-        self.modelProxyLieuDB=QtCore.QSortFilterProxyModel(parent=self)
-        self.modelProxyLieuDB.setSourceModel(self.modelLieuDB)
-        self.modelProxyLieuDB.setDynamicSortFilter(True)
-        self.viewTableLieuDB.setModel(self.modelProxyLieuDB)  
-        self.selectModelProxyLieuDB=self.viewTableLieuDB.selectionModel()
+        self.modelDataFiltreLieuDB=ModelDataFiltre(parent=self, mere=self.mere,source=self.modelLieuDB)
+        #self.modelProxyLieuDB.setDynamicSortFilter(True)
+        self.viewTableLieuDB.setModel(self.modelDataFiltreLieuDB)  
+        self.selectModelViewTableLieuDB=self.viewTableLieuDB.selectionModel()        
+        list_data_check=[('DBID',QtCore.Qt.Checked),
+                         ('Lieux',QtCore.Qt.Checked),
+                         ('Adresse',QtCore.Qt.Checked),
+                         ('Ville',QtCore.Qt.Checked),
+                         ('Cp',QtCore.Qt.Checked),
+                         ('Genre',QtCore.Qt.Checked),
+                         ('Pertinence',QtCore.Qt.Checked),
+                         ('Saturation',QtCore.Qt.Checked),
+                         ('Latitude',QtCore.Qt.Checked),
+                         ('Longitude',QtCore.Qt.Checked)]
+        self.modelComboCheck=ModelComboCheck(parent=self, mere=self.mere, list_data_check=list_data_check,titre="Critere")
+        self.comboCheck.setModel(self.modelComboCheck)
+        for critere in self.modelLieuDB.HEADERDATA:
+            self.modelDataFiltreLieuDB.listFiltreWidget.append(KWidgetTableDataFiltre(parent=self.viewTableLieuDB,
+                                                                model_data=self.modelLieuDB,
+                                                                model_filtre=self.modelDataFiltreLieuDB,
+                                                                data=critere))  
   
     def createFenetre(self):
+        self.comboCheck=QtWidgets.QComboBox(parent=self)
+        self.comboCheck.setStyle(QtWidgets.QStyleFactory.create("Gtk+"))
         self.viewTableLieuDB=ViewLieuDB(parent=self,mere=self.mere)
         self.boutNouv= QtWidgets.QPushButton("Nouveau",parent=self)
         self.boutEdit= QtWidgets.QPushButton("Editer",parent=self)
@@ -710,7 +753,8 @@ class FenetreLieuDB(Fenetre):
         self.labelRechecher.setBuddy(self.textRechercher)
         self.labelComment=QtWidgets.QLabel("Commentaire", parent=self)
         lay = QtWidgets.QGridLayout()
-        lay.addWidget(self.viewTableLieuDB,0,0,8,8)
+        lay.addWidget(self.comboCheck,0,0,1,1)
+        lay.addWidget(self.viewTableLieuDB,1,0,8,8)
         lay.addWidget(self.boutNouv,9,4,1,1)
         lay.addWidget(self.boutEdit,9,5,1,1)        
         lay.addWidget(self.boutSupp,9,6,1,1)
@@ -719,25 +763,30 @@ class FenetreLieuDB(Fenetre):
         lay.addWidget(self.textRechercher,9,1,1,2)
         lay.addWidget(self.labelComment,10,0,2,8)
         self.setLayout(lay)
+        
           
     def createConnection(self):
         self.boutNouv.clicked.connect(self.nouvLieu)
         self.boutEdit.clicked.connect(self.editLieu)
         self.textRechercher.textChanged.connect(self.rechercher)
-        self.selectModelProxyLieuDB.currentChanged.connect(self.selectLieu)
-
+        #self.modelComboCheck.signalListSelected.connect(self.modelLieuDB2.rafraichirCritere)
+        self.modelComboCheck.critereDataChanged.connect(self.viewTableLieuDB.critereDataHeaderUpdate)
+        self.selectModelViewTableLieuDB.currentChanged.connect(self.selectLieu)
+        self.viewTableLieuDB.horizontalHeader().sectionClicked.connect(self.afficherFiltreColonne)
         
+    @QtCore.pyqtSlot(int)
+    def afficherFiltreColonne(self,index_colonne):
+        self.modelDataFiltreLieuDB.listFiltreWidget[index_colonne].afficherVsCacher()
+
     def selectLieu(self, a, b):
         #self._selectionLieu= self.modelLieuDB.data(self.modelProxyLieuDB.mapToSource(a), QtCore.Qt.UserRole)
-        self._selectionLieu=self.modelProxyLieuDB.data(a,QtCore.Qt.UserRole)
-        print(self._selectionLieu)
+        self._selectionLieu=self.modelDataFiltreLieuDB.data(a,QtCore.Qt.UserRole)
         
-          
     def nouvLieu(self):
         self.fenetreEditLieu=FenetreEditLieuDB(parent=self,mere=self.mere,lieu=self.mere.nouvLieu(insert=False,adresse="Nouvelle adresse",cp=75000))
         self.fenetreEditLieu.setWindowFlags(QtCore.Qt.Window)
         if self.fenetreEditLieu.show():
-            self.modelLieuDB.ajouterLieu()
+            self.modelLieuDB2.ajouterLieu()
 
     def editLieu(self):
         self.fenetreEditLieu=FenetreEditLieuDB(parent=self,mere=self.mere,lieu=self._selectionLieu)

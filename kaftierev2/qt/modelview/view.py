@@ -175,10 +175,26 @@ class ViewParcours(TableView):
 
 class ViewLieuDB(TableView):
     def _initNext(self):
-        self.setSortingEnabled(True)
+        #self.setSortingEnabled(False)
+        self.horizontalHeader().setSectionResizeMode(QtWidgets.QHeaderView.Interactive)
+        self.horizontalHeader().setSectionsClickable(True)
+        self.resizeColumnsToContents()
         self.setSelectionBehavior(QtWidgets.QAbstractItemView.SelectRows)
         genre_delegate=ComboBoxDelegate(parent=self,comboBoxTable=self.mere.genreslieux_tb,comboBoxArg='genre')
         self.setItemDelegateForColumn(3,genre_delegate)
+        
+    @QtCore.pyqtSlot(int,int)
+    def critereDataHeaderUpdate(self, colonne, value):
+        if value==0 :self.hideColumn(colonne-1)
+        else : self.showColumn(colonne-1)
+
+    @QtCore.pyqtSlot(int,list)
+    def listRowsHiden(self, list_rows, value):
+        print(list_rows)
+        if value==0 :
+            for row in list_rows:self.hideRow(row)
+        else :
+            for row in list_rows:self.showRow(row)
 
 
 class ViewLieuEditAdresse(TableView):
